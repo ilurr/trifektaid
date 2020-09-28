@@ -1,0 +1,52 @@
+<!-- comment -->
+<div class="comment">
+	<div class="comment-feed">
+		{{#if channel.comment}}
+		<div class="comment-item">
+			<!-- comment -->
+			<div class="comment-row">
+				<div class="comment-avatar">
+					<a href="profile-view.html">
+						<img src="{{channel.avatars.[0].url}}" alt="">	
+					</a>
+				</div>
+				<div class="comment-col">
+					<div class="comment-user">
+						<a href="profile-view.html">{{channel.first_name}} {{channel.first_name}}</a>
+						<div class="comment-time">2 minutes ago</div>
+					</div>
+					<div class="comment-content">
+						<div class="comment-text">
+							{{channel.comment}}
+						</div>
+						<div class="comment-reaction">
+							{{>button type="button" name="btn-reply" class="-transparent" label="Reply"}}
+						</div>
+					</div>
+				</div>
+			</div>
+			{{#if channel.reply}}
+			<!-- reply -->
+			<div class="comment-row -reply">
+				<div class="comment-avatar">
+					<a href="profile-view.html">
+						<img src="{{channel.avatars.[0].url}}" alt="">	
+					</a>
+				</div>
+				<div class="comment-col">
+					<div class="comment-user">
+						<a href="profile-view.html">{{channel.first_name}} {{channel.first_name}}</a>
+						<div class="comment-time">2 minutes ago</div>
+					</div>
+					<div class="comment-content">
+						<div class="comment-text">
+							{{channel.reply}}
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/if}}
+		</div>
+		{{/if}}
+	</div>
+</div>

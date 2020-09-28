@@ -1,0 +1,44 @@
+.profile {
+	&-header {
+		position: relative;
+		text-align: center;
+		padding: 2rem 0;
+	}
+	&-avatar,
+	&-img {
+		position: relative;
+		width: 70px;
+		height: 70px;
+		border-radius: 40px;
+		margin: 0 auto 0.250rem;
+		overflow: hidden;
+		img {
+			height: 100%;
+		}
+	}
+	&-avatar {
+		background: #c7c7c7;
+		&:before {
+			content: attr(data-init);
+			display: block;
+			position: absolute;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			padding: 22px 0;
+			font-size: 28px;
+			line-height: 1;
+			color: #fff;			
+		}
+	}
+	&-name {
+		position: relative;
+		margin: 0;
+		@include font-pack(false, 1.500rem, 700, false, #042049);	
+	}
+	&-email {
+		padding-top: 0.250rem;
+		@include font-pack(false, 0.875rem, false, false, false);	
+	}
+}

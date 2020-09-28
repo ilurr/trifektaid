@@ -1,0 +1,96 @@
+.root {
+	position: relative;
+	padding-top: 4.375rem;
+	// padding-top: 5rem;
+	min-height: 100vh;
+	&-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-size: cover;
+		background-position: center center;
+		width: $screen-tablet;
+		@include min-responsive($screen-desktop) {
+			width: 100%;
+		}
+	}
+}
+
+.grid {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 0.938rem;
+	padding-right: 0.938rem;
+	// width: $screen-tablet;
+	width: 100%;
+	@include min-responsive($screen-desktop) {
+		width: $screen-desktop;
+	}
+	@include min-responsive($screen-large-desktop) {
+		width: $screen-large-desktop;
+	}
+	
+	// 
+	&-full {
+		// min-height: 70vh;
+		padding-left: 0;
+		padding-right: 0;
+		width: $screen-tablet;
+		// width: $screen-tablet;
+		width: 100%;
+		// @include min-responsive($screen-desktop) {
+		// }
+	}
+	// &-middle {
+	// 	@include display-flex();
+	// 	min-height: calc(100vh - 70px);
+	// 	align-items: center;
+	// 	justify-content: center;
+	// }
+
+	// flex
+	&-flex {
+		position: relative;
+		@include display-flex();
+	}
+	&-col {
+		position: relative;
+		padding-left: 0.938rem;
+		padding-right: 0.938rem;
+		flex-grow: 0;
+		&.-wide {
+			padding-top: 0.625rem;
+			padding-bottom: 3.125rem;
+			flex-grow: 1;
+			flex-basis: 0;
+		}
+	}
+}
+
+.box {
+	position: relative;
+	border-radius: 6px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.-nav {
+	width: 85px;
+	@include min-responsive($screen-desktop) {
+		width: 210px;
+	}
+}
+.-aside {
+	display: none;
+	@include min-responsive($screen-desktop) {
+		display: block;
+		width: 260px;
+	}
+	@include min-responsive($screen-large-desktop) {
+		width: 310px;
+	}
+}

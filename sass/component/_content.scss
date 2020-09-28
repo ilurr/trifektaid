@@ -1,0 +1,6 @@
+.content {
+	&-read {
+		position: relative;
+		@include font-pack($font-primary, 0.875rem, 400, 1.625rem, #3d3b46);
+	}
+}

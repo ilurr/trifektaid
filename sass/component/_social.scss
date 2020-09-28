@@ -1,0 +1,76 @@
+.social {
+	position: relative;
+	&-block {
+		display: block;
+	}
+	&-item {
+		display: inline-block;
+		padding: 0 2px;
+	}
+	&-link {
+		@include display-flex();
+		align-items: center;
+		// width: 35px;
+		// height: 35px;
+		border-radius: 100%;
+		padding: 7px;
+		background: transparent;
+		opacity: .3;
+		@include transform(scale(1.1));
+		//color: #fff;
+		&.-facebook {
+			background: $color-facebook;
+			//&:hover {
+				//background: darken($color-facebook, 20%);
+			//}
+		}
+		&.-twitter {
+			background: $color-twitter;
+			//&:hover {
+				//background: darken($color-twitter, 20%);
+			//}
+		}
+		&.-instagram {
+			background: $color-instagram;
+			//&:hover {
+				//background: darken($color-instagram, 20%);
+			//}
+		}
+		&.-youtube {
+			background: $color-youtube;
+			//&:hover {
+				//background: darken($color-youtube, 20%);
+			//}
+		}
+		&.-pinterest {
+			background: $color-pinterest;
+			//&:hover {
+				//background: darken($color-pinterest, 20%);
+			//}
+		}
+		&.-whatsapp {
+			background: $color-whatsapp;
+			//&:hover {
+				//background: darken($color-whatsapp, 20%);
+			//}
+		}
+		&.-line {
+			background: $color-line;
+			//&:hover {
+				//background: darken($color-line, 20%);
+			//}
+		}
+		&.-linkedin {
+			background: $color-linkedin;
+			//&:hover {
+				//background: darken($color-linkedin, 20%);
+			//}
+		}
+		&:hover {
+			opacity: 1;
+			color: #fff;
+			background: darken(#585858, 5%);
+			@include transform(scale(1.2));
+		}
+	}
+}

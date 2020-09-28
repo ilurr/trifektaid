@@ -1,0 +1,15 @@
+<div class="form-row">
+	{{#eq type compare="submit"}}
+	<input type="{{type}}" name="{{name}}" id="{{name}}" value="{{label}}" class="button{{#if class}} {{class}}{{/if}}"{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}>
+	{{/eq}}
+	{{#eq type compare="button"}}
+	<button name="{{name}}" id="{{name}}" class="button{{#if class}} {{class}}{{/if}}"{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}>{{label}}</button>
+	{{/eq}}
+	{{#eq type compare="link"}}
+	<a href="{{href}}" class="button{{#if class}} {{class}}{{/if}}" role="link">{{#if icon}}<span class="icon icon-general icon-{{icon}}"></span> {{/if}}{{label}}</a>
+	{{/eq}}
+	{{#eq type compare="follow"}}
+	{{!-- custom --}}
+	<button type="button" name="{{name}}" class="button{{#if class}} {{class}}{{/if}}"{{#eq disabled compare="true"}} disabled="disabled"{{/eq}} data-follow="{{label}}"></button>
+	{{/eq}}
+</div>

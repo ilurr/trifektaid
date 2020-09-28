@@ -1,0 +1,10 @@
+<div class="form-row{{#if txterror}} form-error{{/if}}"{{#if parent}} id="{{parent}}"{{/if}}>
+	{{#eq nolabel compare=true}}
+	{{else}}
+	<label for="{{name}}">{{label}}</label>
+	{{/eq}}
+	<div class="form-input">
+		<input type="{{type}}" id="{{name}}" name="{{name}}" class="input{{#if txterror}} -error{{/if}}{{#if function}} {{function}}{{/if}}" placeholder="{{placeholder}}"{{#eq required compare="true"}} required="required"{{/eq}}{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}{{#eq readonly compare="true"}} readonly="readonly"{{/eq}}{{#if txtVal}} value="{{txtVal}}"{{/if}}>
+	</div>
+	<div class="form-hint">{{{txthint}}}</div>
+</div>

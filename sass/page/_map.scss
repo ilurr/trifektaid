@@ -1,0 +1,208 @@
+.map {
+	position: relative;
+	margin: .938rem 0;
+	border: solid 1px #cecece;
+	&-block {
+		position: relative;
+		min-height: 75vh;
+	}
+
+	&-link {
+		position: relative;
+		display: block;
+	}
+	&-thumb {
+		position: relative;
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		border: 2px solid #fff;
+		overflow: hidden;
+		background: #fff;
+		z-index: 1;
+		img {
+			@include ratio-flexible(auto, 100%);
+			z-index: 2;
+		}
+	}
+	&-row {
+		position: relative;
+		@include display-flex();
+		padding: 5px 0;
+	}
+	&-title {
+		position: relative;
+		margin-bottom: 5px;
+		@include font-pack(false, 1.313rem, 700, false, #000);
+		&:empty {
+			width: 80%;
+			height: 25px;
+			overflow: hidden;
+		}
+	}
+	&-rating {
+		position: relative;
+		height: 16px;
+		margin: 6px 0;
+	}
+	&-suptitle,
+	&-nearby {
+		position: relative;
+		margin: 7px 0;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		@include font-pack(false, 0.625rem, 500, false, #9b9b9b);
+		&:empty {
+			width: 40%;
+			height: 13px;
+			overflow: hidden;
+		}
+	}
+	&-img {
+		position: relative;
+		width: 185px;
+		flex-basis: 185px;
+		span {
+			position: relative;
+			display: block;
+			padding-top: calc(2 / 3 * 100%);
+			overflow: hidden;
+			border-radius: 3px;
+		}
+		img {
+			@include ratio-flexible(auto, 100%);
+			z-index: 2;
+		}
+	}
+	&-col {
+		position: relative;
+		flex-grow: 1;
+		flex-basis: 0;
+		padding-left: 15px;
+		@include display-flex();
+		flex-wrap: wrap;
+	}
+	&-lead {
+		position: relative;
+		margin-bottom: 10px;
+		@include title-overflow(auto, 4.844rem);
+		@include font-pack($font-primary, .75rem, 500, normal, #3d3b46);
+	}
+
+	// detail
+	&-info {
+		&-icon {
+			width: 30px;
+			flex-basis: 30px;
+			.icon-general {
+				display: block;
+				//@include transform(scale(.8));
+			}
+		}
+		&-content {
+			flex-grow: 1;
+			flex-basis: 0;
+			// @include font-pack(false, 0.813rem, 400, false, #3d3b46);
+			@include font-pack(false, 0.875rem, 400, false, #3d3b46);
+		}
+	}
+
+	// checkin
+	&-checkin {
+		position: relative;
+		padding: 20px 0 10px;
+		@include display-flex();
+		align-items: center;
+		&-user {
+			position: relative;
+		}
+		&-text {
+			padding: 0 20px;
+			text-transform: uppercase;
+			@include font-pack(false, 0.688rem, 500, false, #5f5d70);
+		}
+		&-avatar {
+			position: relative;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			border: 2px solid #fff;
+			border-radius: 30px;
+			overflow: hidden;
+			margin-left: -20px;
+			&:first-child {
+				margin-left: 0;
+			}
+			img {
+				@include ratio-flexible(auto, 100%);
+			}
+		}
+	}
+
+	// box
+	&-box {
+		&-google {
+			position: relative;
+			max-width: 375px;
+			height: auto;
+			z-index: 2;
+			background: #fff;
+			overflow: hidden;
+			padding: 20px;
+			border-radius: 3px;
+			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+			@include font-pack($font-primary, initial, initial, initial, #000);
+			&.-popup {
+				position: absolute;
+				visibility: hidden;
+				pointer-events: none;
+			}
+		}
+		&-detail,
+		&-modal {
+			position: relative;
+			margin: 20px 30px;
+			.map-img {
+				margin-top: -20px;
+				margin-left: -30px;
+				margin-right: -30px;
+				width: auto;
+				flex-basis: auto;
+				span {
+					padding-top: 50%;
+					border-radius: 0;
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+			.map-title {
+				font-size: 1.688rem;
+				margin: 1rem 0 .25rem;
+			}
+			.map-nearby {
+				float: right;
+				margin-top: 1.75rem;
+				font-size: 0.688rem;
+			}
+			.map-row {
+				padding: 0.469rem 0;
+				align-items: center;
+			}
+		}
+	}
+
+	// maps
+	&-marker {
+		position: absolute;
+		@include transform(translate(-20px, -40px));
+		&:hover {
+			.map-box-google {
+				visibility: visible;
+				pointer-events: all;
+			}
+		}
+	}
+}
+//.htmlMarker { border: 1px solid #888; background-color: white; padding: 2px; font-size: 14px; position: absolute; }

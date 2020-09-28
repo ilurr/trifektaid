@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+		<span class="root-bg" style="background-image: url('../asset/images/hero-bg.jpg');"></span>
+
+		{{>header}}
+
+		<!-- grid -->
+		<div class="grid grid-full">
+
+			<div class="grid-flex sign">
+
+				<div class="sign-wrap">
+					<!-- s: signup -->
+					<div class="panel -signup">
+						<div class="panel-header">
+							{{>title title="Sign Up"}}
+						</div>
+						<div class="panel-body">
+							<form action="signin.html">
+								{{>input type="text" label="Email Address" name="name"}}
+								{{>input type="text" label="Password" name="password" txthint="Password must content at least 8 characters."}}
+								<div class="form-row">
+									<div class="text-center">
+										<p>By signing up you are agreeing to our <a href="#">Terms of Services</a>.</p>
+										<p>View our <a href="#">Privacy Policy</a>.</p>
+									</div>
+								</div>
+								{{>button type="submit" label="Agree and Sign up" name="signup" class="-primary"}}
+							</form>
+						</div>
+					</div>
+					<!-- e: signup -->
+
+					{{>app_widget}}
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+</body>
+</html>

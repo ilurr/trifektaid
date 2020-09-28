@@ -1,0 +1,45 @@
+.header {
+	position: relative;
+	@include display-flex();
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+	background: #fff;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	&.-fixed {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 9;
+	}
+	&-col {
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
+		@include min-responsive($screen-tablet) {
+			padding-left: 0.938rem;
+			padding-right: 0.938rem;
+			width: 30%;
+			&:nth-child(2) {
+				width: 40%;
+			}
+		}
+		@include min-responsive($screen-desktop) {
+			width: calc(100% / 3);
+			margin-right: auto;
+			margin-left: auto;
+		}
+		@include min-responsive($screen-super-desktop) {
+			padding-left: 1.563rem;
+			padding-right: 1.563rem;
+		}
+	}
+}
+
+.logo {
+	position: relative;
+	text-align: center;
+	img {
+		height: 36px;
+	}
+}

@@ -1,0 +1,75 @@
+.nav {
+	position: relative;
+	// padding: 0;
+	padding: 0.625rem 0;
+	&.-fixed {
+		width: 55px;
+		@include min-responsive($screen-tablet) {
+			position: fixed;
+			top: 70px;
+		}
+		@include min-responsive($screen-desktop) {
+			width: 180px;
+		}
+	}
+	&-wrap {
+		position: relative;
+		margin: .5rem 0;
+	}
+	&-item {
+		padding: 0;
+		margin: 0;
+	}
+	&-flex {
+		@include display-inline-flex();
+		align-items: center;	
+		padding: 10px 15px;
+		border-radius: 25px;
+		@include transition(all .2s ease);
+	}
+	&-icon {
+		position: relative;
+		color: #ccc;
+		@include transition(all .2s ease);
+		svg {
+			font-size: 22px;
+			vertical-align: top;
+		}
+	}
+	&-text {
+		margin-left: 15px;
+		@include transition(all .2s ease);
+		@include font-pack(false, 1.063rem, 700, 1, #14171A);
+		display: none;
+		@include min-responsive($screen-desktop) {
+			display: inline-block;
+		}
+	}
+	&-badge {
+		position: absolute;
+		padding: 2px 4px;
+		background: $color-notification;
+		top: -2px;
+		right: -7px;
+		border-radius: 10px;
+		@include font-pack(false, 0.625rem, 700, 1, #fff);
+		&:empty {
+			padding: 4px;
+		}
+	}
+	&-link {
+		display: block;
+		padding: 5px 0;
+		&:hover {
+			.nav-flex {
+				background: #fff;
+			}
+		}
+		&.-active {
+			.nav-icon,
+			.nav-text {
+				color: $color-theme;
+			}
+		}
+	}
+}

@@ -1,0 +1,71 @@
+.wp {
+	flex-wrap: wrap;
+	@include min-responsive($screen-desktop) {
+		flex-wrap: nowrap;
+	}
+	&-form {
+		background: #fff;
+		width: 450px;
+		margin: -10vh auto 0;
+		padding: 10px 25px;
+		@include min-responsive($screen-desktop) {
+			width: 100%;
+			margin: 0;
+			// padding: 0;
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 450px;
+			// padding: 0 10vw .75rem 25px;
+		}
+	}
+	&-hero {
+		position: relative;
+		min-height: 40vh;
+		width: 100%;
+		@include min-responsive($screen-desktop) {
+			min-height: calc(100vh - 70px);
+			width: calc(60vw);
+		}
+	}
+	&-intro {
+		position: relative;
+		width: 100%;
+		background: #fff;
+		@include min-responsive($screen-desktop) {
+			width: calc(40vw);
+			@include display-flex();
+			align-items: flex-end;
+			// flex-wrap: wrap;
+		}
+	}
+	&-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-size: cover;
+		background-position: center center;
+	}
+	&-line {
+		position: relative;
+		padding: .5rem 0;
+		margin: 1rem 0;
+		text-align: center;
+		span {
+			letter-spacing: 1.4px;
+			text-transform: uppercase;
+			@include font-pack(false, .875rem, 400, false, rgba(#17264f, .5));	
+		}
+	}
+
+	// override
+	&-form {
+		.app-badge {
+			padding-top: 2.5rem;
+		}
+		.form-row {
+			padding: 0.313rem 0;
+		}
+	}
+}

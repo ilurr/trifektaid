@@ -1,0 +1,365 @@
+{
+	"navigation": [
+	  {
+		"title": "Home",
+		"icon": "home",
+		"link": "index.html",
+		"notification": "",
+		"badge": false
+	  },
+	  {
+		"title": "Map",
+		"icon": "map",
+		"link": "map.html",
+		"notification": "",
+		"badge": false
+	  },
+	  {
+		"title": "Discover",
+		"icon": "trifekta",
+		"link": "discover.html",
+		"notification": "",
+		"badge": false
+	  },
+	  {
+		"title": "Challenges",
+		"icon": "trophy",
+		"link": "challenges.html",
+		"notification": "",
+		"badge": false
+	  },
+	  {
+		"title": "Profile",
+		"icon": "user",
+		"link": "profile.html",
+		"notification": "",
+		"badge": false
+	  },
+	  {
+		"title": "Notification",
+		"icon": "bell",
+		"link": "notification.html",
+		"notification": 9,
+		"badge": true
+	  },
+	  {
+		"title": "Messages",
+		"icon": "message",
+		"link": "#",
+		"notification": "",
+		"badge": true
+	  },
+	  {
+		"title": "Setting",
+		"icon": "setting",
+		"link": "setting.html",
+		"notification": "",
+		"badge": false
+	  }
+	],
+	"setting": [
+	  {
+		"title": "Change Email",
+		"link": "setting-email.html",
+		"toggle": false,
+		"toggle_value": false
+	  },
+	  {
+		"title": "Change Password",
+		"link": "setting-password.html",
+		"toggle": false,
+		"toggle_value": false
+	  },
+	  {
+		"title": "Push Notification",
+		"link": "",
+		"toggle": true,
+		"toggle_value": true
+	  },
+	  {
+		"title": "Email Notification",
+		"link": "",
+		"toggle": true,
+		"toggle_value": true
+	  },
+	  {
+		"title": "Discover by Other",
+		"link": "",
+		"toggle": true,
+		"toggle_value": false
+	  },
+	  {
+		"title": "Terms & Conditions",
+		"link": "static-term.html",
+		"toggle": false,
+		"toggle_value": false
+	  },
+	  {
+		"title": "Policy Privacy",
+		"link": "static-policy.html",
+		"toggle": false,
+		"toggle_value": false
+	  },
+	  {
+		"title": "About",
+		"link": "static-about.html",
+		"toggle": false,
+		"toggle_value": false
+	  },
+	  {
+		"title": "FAQ",
+		"link": "static-faq.html",
+		"toggle": false,
+		"toggle_value": false
+	  },
+	  {
+		"title": "Version",
+		"link": "static-version.html",
+		"toggle": false,
+		"toggle_value": false
+	  },
+	  {
+		"title": "Logout",
+		"link": "index-wp.html",
+		"toggle": false,
+		"toggle_value": false
+	  },
+	  {
+		"title": "Delete Account",
+		"link": "setting-account-remove.html",
+		"toggle": false
+	  }
+	],
+	"people": [
+	  {
+		"avatars": [
+		  {
+			"height": 200,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 500,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Stevy",
+		"gender": "male",
+		"bio": "Run Enthusiast",
+		"last_name": "Michienzi",
+		"lat": -6.176523,
+		"lng": 106.825093,
+		"post": "Last long run before the actual marathon which I’ll be running next Sunday. I’m almost there and I can’t believe it! But I trust myself, I’ve got this",
+		"img": ""
+	  },
+	  {
+		"avatars": [
+		  {
+			"height": 200,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 500,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Abagael",
+		"gender": "female",
+		"bio": "Bike Addict",
+		"last_name": "Tanguma",
+		"lat": -6.175286,
+		"lng": 106.82535,
+		"post": "The Autumn wind returned this evening and made for some tricky crosswinds out on the cycle commute. Still, I always enjoy the challenge and daily dose of fresh air and exercise cycling brings.",
+		"img": "https://source.unsplash.com/giFeTshEYYQ/750x500",
+		"comment":"Wow I wish I looked half as good as you after a 30 km run! Good luck for Sunday, I know you’ll absolutely smash it!",
+		"reply":"So beautiful! I wish been there, hiks.."
+	  },
+	  {
+		"avatars": [
+		  {
+			"height": 200,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 500,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Cobbie",
+		"gender": "male",
+		"bio": "Full-time Traveler",
+		"last_name": "Javarone",
+		"lat": -6.175393,
+		"lng": 106.8271521,
+		"place": "National Monument",
+		"lead": "Well-known obelisk built to commemorate Indonesian independence from the Netherlands.",
+		"placeimg": "https://source.unsplash.com/_oeQmY1zcBE/500x333"
+	  },
+	  {
+		"avatars": [
+		  {
+			"height": 200,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 500,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Daisi",
+		"gender": "female",
+		"bio": "Love Swimming",
+		"last_name": "Widdows",
+		"lat": -6.177307,
+		"lng": 106.824396,
+		"img": "https://source.unsplash.com/X1WgDUvRcA8/750x500"
+	  },
+	  {
+		"avatars": [
+		  {
+			"height": 133,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 333,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Constantin",
+		"gender": "male",
+		"bio": "Urban Traveler",
+		"last_name": "Hoeffliger",
+		"lat": -6.175322,
+		"lng": 106.824377
+	  },
+	  {
+		"avatars": [
+		  {
+			"height": 133,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 333,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Brody",
+		"gender": "male",
+		"bio": "Run! Run! Run!",
+		"last_name": "Wilch",
+		"lat": -6.176624,
+		"lng": 106.823691
+	  },
+	  {
+		"avatars": [
+		  {
+			"height": 200,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 500,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Olaf",
+		"gender": "male",
+		"bio": "Biker",
+		"last_name": "Dobos",
+		"lat": -6.175365,
+		"lng": 106.82662
+	  },
+	  {
+		"avatars": [
+		  {
+			"height": 246,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 615,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Clinten",
+		"gender": "male",
+		"bio": "Sport Lover",
+		"last_name": "Donohoe",
+		"lat": -6.1762758,
+		"lng": 106.8211255
+	  },
+	  {
+		"avatars": [
+		  {
+			"height": 200,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 499,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Averill",
+		"gender": "male",
+		"bio": "Runner",
+		"last_name": "Vonner",
+		"lat": -6.1771051,
+		"lng": 106.8228594
+	  },
+	  {
+		"avatars": [
+		  {
+			"height": 200,
+			"size": "small",
+			"url": "https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-200w.jpeg",
+			"width": 200
+		  },
+		  {
+			"height": 500,
+			"size": "medium",
+			"url": "https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-500w.jpeg",
+			"width": 500
+		  }
+		],
+		"first_name": "Geof",
+		"gender": "male",
+		"bio": "Swimmer",
+		"last_name": "Vaughner",
+		"lat": -6.177136,
+		"lng": 106.8227496
+	  }
+	]
+  }

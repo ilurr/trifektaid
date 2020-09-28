@@ -1,0 +1,85 @@
+<section class="post box">
+	<div class="post-block">
+		<div class="post-avatar">
+			<img src="../asset/images/dummy/avatar.jpg" alt="">	
+		</div>
+		<div class="post-write">
+			<button id="modalPost1" type="button" data-toggle="modal" data-target="#modalPost" class="button">Share something...</button>
+		</div>
+	</div>
+	<div class="post-footer">
+		<div class="post-icon">
+			<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+				<svg class="icon-post icon-image" title="icon-image">
+					<use xlink:href="../asset/images/icon/icon.svg#icon-image" />
+				</svg>
+			</button>
+			<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+				<svg class="icon-post icon-place" title="icon-place">
+					<use xlink:href="../asset/images/icon/icon.svg#icon-place" />
+				</svg>
+			</button>
+			<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+				<svg class="icon-post icon-emoji" title="icon-emoji">
+					<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+				</svg>				
+			</button>
+		</div>
+	</div>
+</section>
+
+<!-- modal post -->
+<div id="modalPost" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalPost" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalPostTitle">Create post</h5>
+			</div>
+			<div class="modal-body">
+				<div class="post-modal">
+					<form action="#">
+						<div class="post-modal-top">
+							<div class="post-avatar">
+								<img src="../asset/images/dummy/avatar.jpg" alt="">	
+							</div>
+							<div class="post-user">Chelsea Islan</div>
+						</div>
+						<div class="post-modal-content">
+							<textarea name="post-content" id="post-content" placeholder="Share something..."></textarea>
+						</div>
+						<div class="post-modal-media">
+							<div class="post-modal-img"></div>
+						</div>
+						<div class="post-modal-icon">
+							<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+								<svg class="icon-post icon-image" title="icon-image">
+									<use xlink:href="../asset/images/icon/icon.svg#icon-image" />
+								</svg>
+								Add Photos
+							</button>
+							<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+								<svg class="icon-post icon-place" title="icon-place">
+									<use xlink:href="../asset/images/icon/icon.svg#icon-place" />
+								</svg>
+								Tag Place
+							</button>
+							<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+								<svg class="icon-post icon-emoji" title="icon-emoji">
+									<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+								</svg>
+								Add Emoji
+							</button>
+						</div>
+						<div class="post-modal-action">
+							<div class="form-row">
+								<input type="submit" name="btn-post" id="btn-post" value="Post" class="button -primary">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

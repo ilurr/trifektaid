@@ -1,0 +1,93 @@
+.challenge {
+	position: relative;
+	margin: .938rem 0;
+
+	// banner
+	&Banner {
+		position: relative;
+		padding: 1.063rem 1.875rem;
+		margin: .938rem 0;
+		background: #fff1da;
+		@include transition(all .2s ease);
+		&:hover {
+			background: darken(#fff1da, 5%);
+		}
+		&-block {
+			position: relative;
+			@include display-flex();
+			align-items: center;
+		}
+		&-icon {
+			width: 20%;
+			position: relative;
+			padding-right: 1.875rem;
+			img {
+				display: block;
+				margin: 0 auto;
+				height: 40px;
+			}
+		}
+		&-info {
+			position: relative;
+		}
+		&-title {
+			@include font-pack(false, 1rem, 700, false, #17264f);
+		}
+		&-lead {
+			@include font-pack(false, 1rem, 400, false, #17264f);
+		}
+	}
+
+	// page 
+	&-block {
+		position: relative;
+	}
+	&-img {
+		position: relative;
+		img {
+			width: 100%;
+		}
+	}
+	&-info {
+		position: relative;
+		padding: 30px;
+	}
+	&-title {
+		margin-top: 0;
+		margin-bottom: 0;
+		@include font-pack(false, 1.375rem, 700, false, #3d3b46);
+	}
+	&-lead {
+		margin-top: 0;
+		margin-bottom: 1.250rem;
+		@include font-pack(false, 1.375rem, 700, false, #3d3b46);
+	}
+	&-content {
+		position: relative;
+	}
+	&-action {
+		display: block;
+		@include min-responsive($screen-desktop) {
+			display: none;
+		}
+		.form-row {
+			text-align: center;
+			// padding-top: 0;
+			// padding-bottom: 0;
+		}
+		.button {
+			width: 160px;
+			border-radius: 21px;
+			font-size: 1rem;
+			font-weight: 500;
+		}
+	}
+
+	// app
+	.app-badge {
+		justify-content: space-around;
+		img {
+			height: 43px;
+		}
+	}
+}

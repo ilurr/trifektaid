@@ -1,0 +1,28 @@
+<div class="aside -fixed">
+	<aside class="aside-block">
+		<!-- people list -->
+		<h3 class="title-aside">Suggestions For You</h3>
+		<div class="people-aside">
+			<div class="people-list">
+				{{>people_list channel=people index_start=0 index_end=4}}
+			</div>
+			<div class="people-aside-footer">
+				<a href="follow.html" role="link">See All</a>
+			</div>
+		</div>
+	</aside>
+
+	<footer class="footer-aside">
+		<nav class="footer-nav" aria-label="Footer">
+			<ul>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Career</a></li>
+				<li><a href="#">Terms & Policies</a></li>
+			</ul>
+		</nav>
+		<div class="footer-copy">© 2020 Trifekta.id</div>
+		{{>app_widget}}
+	</footer>
+</div>

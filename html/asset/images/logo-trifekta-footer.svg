@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="117px" height="27px" viewBox="0 0 117 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>trifekta 2 + trifekta Mask</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="117" height="27"></rect>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-157.000000, -930.000000)" id="footer">
+            <g transform="translate(-2.000000, 880.000000)">
+                <g id="trifekta-2-+-trifekta-Mask" transform="translate(159.000000, 50.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g id="trifekta-2" mask="url(#mask-2)">
+                        <g transform="translate(0.000000, -5.000000)"></g>
+                    </g>
+                    <text id="trifekta" mask="url(#mask-2)" font-family="Gotham-Ultra, Gotham" font-size="30" font-weight="600" line-spacing="36" letter-spacing="0.133333" fill="#797979">
+                        <tspan x="0" y="19">trifekta</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

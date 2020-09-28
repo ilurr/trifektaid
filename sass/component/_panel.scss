@@ -1,0 +1,16 @@
+.panel {
+	position: relative;
+	background: #fff;
+	// padding: 1rem 0.938rem;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	padding: 2rem 2.5rem;
+	// @include min-responsive($screen-tablet) {
+	// }
+	&-body {
+		@include font-pack(false, .75rem, false, false, false);
+		p {
+			margin: .25rem 0;
+			font-size: inherit;
+		}
+	}
+}

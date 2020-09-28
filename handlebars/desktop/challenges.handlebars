@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header login=true}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav active="Challenges"}}
+				</div>
+
+				<div class="grid-col -wide">
+					{{>challenge_page}}
+				</div>
+
+				<div class="grid-col -aside">
+					{{>sidebar}}
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+</body>
+</html>

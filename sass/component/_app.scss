@@ -1,0 +1,14 @@
+.app {
+	&-badge {
+		@include display-flex();
+		justify-content: space-between;
+		padding-top: 1.250rem;
+		padding-bottom: 1.250rem;
+		img {
+			height: 32px;
+			@include min-responsive($screen-large-desktop) {
+				height: 38px;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.aside {
+	position: relative;
+	padding: 0.625rem 0;
+	&.-fixed {
+		@include min-responsive($screen-tablet) {
+			position: fixed;
+			top: 70px;
+			width: 230px;
+		}
+		@include min-responsive($screen-large-desktop) {
+			width: 280px;
+		}
+	}
+	&-block {
+		position: relative;
+		padding: 0;
+		margin: .938rem 0;
+	}
+}

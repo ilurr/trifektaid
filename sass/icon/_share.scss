@@ -1,0 +1,35 @@
+.icon {
+	&-social {
+		display: inline-block;
+		padding: 2px;
+		margin-right: 5px;
+		border-radius: 20px;
+		.icon-general {
+			vertical-align: middle;
+		}
+		&.-facebook {
+			background: $color-facebook;
+		}
+		&.-twitter {
+			background: $color-twitter;
+		}
+		&.-instagram {
+			background: $color-instagram;
+		}
+		&.-youtube {
+			background: $color-youtube;
+		}
+		&.-pinterest {
+			background: $color-pinterest;
+		}
+		&.-whatsapp {
+			background: $color-whatsapp;
+		}
+		&.-line {
+			background: $color-line;
+		}
+		&.-linkedin {
+			background: $color-linkedin;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.sign {
+	align-items: center;
+	justify-content: center;
+	min-height: calc(100vh - 70px);
+	padding: 20px 0;
+	&-text {
+		position: relative;
+		padding: .5rem 0;
+		margin: .5rem 0;
+		// text-align: center;
+		@include font-pack(false, .875rem, 400, false, false);	
+		// text-transform: uppercase;
+		& ~ .form-row {
+			padding: 0.313rem 0;
+		}
+	
+	}
+
+	// override
+	.panel {
+		width: 80%;
+		@include min-responsive($screen-desktop) {
+			width: 450px;
+		}
+	}
+}

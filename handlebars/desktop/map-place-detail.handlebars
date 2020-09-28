@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header login=true}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav active="Map"}}
+				</div>
+
+				<div class="grid-col -wide">
+					{{!-- <h2 class="title">Map</h2> --}}
+					{{>map_detail}}
+				</div>
+
+				<div class="grid-col -aside">
+					{{>sidebar}}
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+<script>
+// Create the script tag, set the appropriate attributes
+var script = document.createElement('script');
+script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDLHHNn69HegtzbO5SwYhvOluzTlv_mMpA&callback=initMap';
+script.defer = true;
+
+
+
+// Attach your callback function to the `window` object
+window.initMap = function() {
+  // JS API is loaded and available
+        // Create a <script> tag and set the USGS URL as the source.
+        var script = document.createElement('script');
+        // This example uses a local copy of the GeoJSON stored at
+        script.src = '../asset/js/dummy-place.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+
+	var pos = {lat: -6.176523, lng: 106.825093};
+  var bounds = new google.maps.LatLngBounds();
+
+	map = new google.maps.Map(document.getElementById('jsMaps'), {
+		center: {lat: -6.1760114, lng: 106.8260832},
+		zoom: 16
+	});
+
+      let infowindow = new google.maps.InfoWindow();
+
+function HTMLMarker(place) {
+    var lat = place.lat;
+    var lng = place.lng;
+    this.id = place.id;
+    this.title = place.title;
+    this.img = place.img;
+    this.lead = place.lead;
+    this.pos = new google.maps.LatLng( lat, lng );
+			//console.log(this.pos)
+}
+
+HTMLMarker.prototype = new google.maps.OverlayView();
+
+HTMLMarker.prototype.onRemove = function () {};
+
+HTMLMarker.prototype.onAdd = function () {
+    var div = this.div = document.createElement('DIV');
+    div.className = "map-marker";
+    div.id = this.id;
+    div.innerHTML = '<a href="#" class="map-link" data-name="' + this.title + '"><div class="map-thumb"><img src="' + this.img + '"></div></a>';
+	div.innerHTML += '<div class="map-box-google -popup"><div class="map-title">' + this.title + '</div><div class="map-rating"><div class="icon-rating"><div class="icon-general icon-star" data-rating="4.5"></div><div class="icon-general icon-star-bg"></div></div></div><div class="map-nearby">1.3 Km nearby</div><div class="map-row"><div class="map-img"><span><img src="' + this.img + '"></span></div><div class="map-col"><div class="map-lead">' + this.lead + '</div><a href="#" class="button -map">Explore</a></div></div></div>';
+
+    var panes = this.getPanes();
+    panes.overlayMouseTarget.appendChild(div);
+
+	var me = this;
+	google.maps.event.addDomListener(me, 'click', function() {
+		//infowindow.open(map, me);
+		//infowindow.setContent('klok')
+		console.log(this);
+	});
+	google.maps.event.addDomListener(div, 'click', function() {
+		google.maps.event.trigger(me, 'click');
+	});
+
+};
+
+HTMLMarker.prototype.draw = function () {
+    var overlayProjection = this.getProjection();
+    var position = overlayProjection.fromLatLngToDivPixel(this.pos);
+    var panes = this.getPanes();
+    this.div.style.left = position.x + 'px';
+    this.div.style.top = position.y + 'px';
+};
+
+      window.eqfeed_callback = function(results) {
+        for (var i = 0; i < results.place.length; i++) {
+          var latLng = new google.maps.LatLng(results.place[i].lat,results.place[i].lng);
+          //var marker = new google.maps.Marker({
+          //  position: latLng,
+          //  map: map
+          //});
+			addMarker(results.place[i]);
+				//console.log(results.place[i])
+
+		  bounds.extend(latLng);
+        }
+		    function addMarker(place) {
+				var htmlMarker = new HTMLMarker(place);
+				htmlMarker.setMap(map);
+				//console.log(htmlMarker.setMap(map))
+			}
+
+		  map.fitBounds(bounds);
+      }
+
+  
+    
+    //to use it
+
+};
+
+// Append the 'script' element to 'head'
+document.head.appendChild(script);
+
+
+
+</script>
+</body>
+</html>

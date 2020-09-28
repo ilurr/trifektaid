@@ -1,0 +1,148 @@
+input[type=submit],
+button,
+.button {
+	@include reset-appearance();
+	@include transition(all .2s ease);
+	position: relative;
+	// display: inline-block;
+	width: 100%;
+	height: 42px;
+	margin: 0;
+	padding: 0;
+	border-radius: 4px;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #dcdcdc;
+	cursor: pointer;
+	@include font-pack(false, 0.875rem, 700, false, #5e5e5e);
+	&:hover {
+		color: inherit;
+		background: #dcdcdc;
+	}
+	@include display-inline-flex();
+	justify-content: center;
+	align-items: center;
+	&[data-follow] {
+		width: 72px;
+		height: 28px;
+		font-size: 0.688rem;
+		letter-spacing: 0.13px;
+		border: 1px solid $color-theme;
+		color: $color-theme;
+		background: transparent;
+		&:before {
+			content: attr(data-follow);
+		}
+		&:hover {
+			color: #fff;
+			border: 1px solid $color-secondary;
+			background: $color-secondary;
+		}
+	}
+	&[data-follow="Following"] {
+		color: #fff;
+		border: 1px solid $color-theme;
+		background: $color-theme;
+		&:hover {
+			&:before {
+				content: "Unfollow";
+			}
+		}
+	}
+	&.-facebook {
+		border: 1px solid $color-facebook;
+		background: $color-facebook;
+		color: #fff;
+		&:hover {
+			background: darken($color-facebook, 12%);
+		}
+	}
+	// &.-google {
+	// 	border: 1px solid #5e5e5e;
+	// 	background: #fff;
+	// 	color: #5e5e5e;
+	// 	&:hover {
+	// 		background: darken(#fff, 12%);
+	// 	}
+	// }
+	&.-twitter {
+		border: 1px solid $color-twitter;
+		background: $color-twitter;
+		color: #fff;
+		&:hover {
+			background: darken($color-twitter, 12%);
+		}
+	}
+	&.-apple {
+		border: 1px solid $color-apple;
+		background: $color-apple;
+		color: #fff;
+		&:hover {
+			background: lighten($color-apple, 12%);
+		}
+	}
+	&.-transparent {
+		background: transparent;
+		border: transparent;
+		&:hover {
+			background: transparent;
+			border: transparent;
+		}
+	}
+	&.-tertiary {
+		width: 120px;
+		height: 35px;
+		font-size: .75rem;
+		// border-radius: 40px;
+		background: $color-theme;
+		border: 1px solid $color-theme;
+		color: $color-button-primary;
+		&:hover {
+			border: 1px solid darken($color-theme, 12%);
+			background: darken($color-theme, 12%);
+		}
+	}
+	&.-secondary {
+		// background: #fff;
+		border: 1px solid $color-theme;
+		color: $color-theme;
+		&:hover {
+			border: 1px solid lighten($color-theme, 12%);
+			background: lighten($color-theme, 12%);
+			color: #fff;
+		}
+	}
+	&.-primary {
+		background: $color-theme;
+		border: 1px solid $color-theme;
+		color: $color-button-primary;
+		&:hover {
+			border: 1px solid darken($color-theme, 12%);
+			background: darken($color-theme, 12%);
+		}
+	}
+	// override
+	&.-map {
+		@extend .button.-primary;
+		height: 32px;
+		font-size: 0.750rem;
+		align-self: flex-end;
+		padding: 0 1rem;
+	}
+	&[disabled="disabled"],
+	&[disabled="true"],
+	&.-disabled {
+		background: $color-disabled;
+		border: 1px solid $color-disabled;
+		color: #ccc;
+		// font-weight: 700;
+		&:hover {
+			border: 1px solid $color-disabled;
+			background: $color-disabled;	
+		}
+	}
+	& > .icon {
+		position: absolute;
+		left: 12px;
+	}
+}

@@ -1,0 +1,36 @@
+.menu {
+	&-header {
+		position: relative;
+		text-align: right;
+		padding-left: 0.938rem;
+		padding-right: 0.938rem;
+		& > * {
+			display: inline-block;
+		}
+		button {
+			border: transparent;
+			padding: 0 .5rem;
+			&:hover {
+				background: transparent;
+			}
+		}	
+	}
+	&-user {
+		position: relative;
+		@include display-flex();
+		align-items: center;
+		&-img {
+			width: 32px;
+			height: 32px;
+			border-radius: 15px;
+			margin-right: 5px;
+			overflow: hidden;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+// .dropdown-menu {
+// 	display: none;
+// }

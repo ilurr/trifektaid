@@ -1,0 +1,23 @@
+{{#each setting}}
+<div class="setting-item">
+	{{#if link}}
+	<a class="setting-link" href="{{link}}">
+	{{else}}
+	<label for="setting-{{hyphenate (lowercase title)}}">
+	{{/if}}
+		<div class="setting-row">
+			<div class="setting-text">{{title}}</div>
+			{{#if toggle}}
+			<div class="setting-toggle form-toggle">
+				<input name="setting-{{hyphenate (lowercase title)}}" id="setting-{{hyphenate (lowercase title)}}" type="checkbox" autocomplete="off"{{#eq toggle_value compare=true}} checked="checked"{{/eq}}>
+				<span></span>
+			</div>
+			{{/if}}
+		</div>
+	{{#if link}}
+	</a>
+	{{else}}
+	</label>
+	{{/if}}
+</div>
+{{/each}}

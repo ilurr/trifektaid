@@ -1,0 +1,35 @@
+.small {
+	font-size: 0.625rem;
+}
+.text {
+	&-center {
+		text-align: center;
+	}
+}
+.clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+.fade {
+	opacity: 0;
+	-webkit-transition: opacity 0.15s linear;
+	-o-transition: opacity 0.15s linear;
+	transition: opacity 0.15s linear;
+  }
+  .fade.in {
+	opacity: 1;
+  }
+
+  .more {
+	&-block {
+		position: relative;
+		padding-top: 1rem;
+		text-align: center;
+	}
+  }

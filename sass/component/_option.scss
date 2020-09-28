@@ -1,0 +1,21 @@
+.option {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	.dropdown-toggle {
+		height: 34px;
+	}
+	.button {
+		padding: 0 .5rem;
+	}
+	&:hover {
+		.icon-option {
+			i,
+			i:after,
+			i:before {
+				background: darken(#d8d8d8, 50%);
+			}
+		}
+	}
+}

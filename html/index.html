@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- url bar color theme -->
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
+	<!-- icon -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="images/favicon-16x16.png">
+    
+    <title>Trifekta</title>
+    
+	<!-- font -->
+	<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<style>
+	@font-face {
+	  font-family: 'Roboto';
+	  font-display: swap;
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	@font-face {
+	  font-family: 'Roboto';
+	  font-display: swap;
+	  font-style: normal;
+	  font-weight: 700;
+	  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');
+	  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	
+	</style>
+
+    <link href="asset/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="form-row">
+			<label for="name">Name</label>
+			<div class="form-input">
+				<input type="text" id="name" name="name" class="input" placeholder="Your Fullname">
+			</div>
+		</div>
+		<div class="form-row">
+			<label for="email">Email</label>
+			<div class="form-input">
+				<input type="text" id="email" name="email" class="input" placeholder="Your Email" disabled="disabled">
+			</div>
+		</div>
+		<div class="form-row">
+			<label for="gender">Gender</label>
+			<div class="form-select" data-placeholder="Your Gender">
+				<select id="gender" name="gender" class="select ">
+					<option value="0" selected="selected" disabled="disabled">Your Gender</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-row">
+			<label for="education">Education</label>
+			<div class="form-select" data-placeholder="Your Education">
+				<select id="education" name="education" class="select " disabled="disabled">
+					<option value="0" selected="selected" disabled="disabled">Your Education</option>
+					<option value="Diploma">Diploma</option>
+					<option value="Bachelor">Bachelor</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="./asset/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.people {
+	&-list {
+		position: relative;
+		padding: 0;
+	}
+	&-item {
+		position: relative;
+		@include display-flex();
+		align-items: center;
+		margin: 0;
+		padding: 10px 0;
+		border-bottom: 1px solid #EDEEEE;
+		// &:hover {
+		// 	background: lighten($bg-base, 2%);
+		// }
+	}
+	&-col {
+		position: relative;
+	}
+	&-row {
+		position: relative;
+		@include display-flex();
+		align-items: center;
+		flex-grow: 1;
+	}
+	&-info {
+		flex-basis: 0;
+		flex-grow: 1;
+		padding-left: 10px;
+		padding-right: .5rem;
+	}
+	&-name {
+		margin: 0 0 4px;
+		@include font-pack(false, 0.875rem, 700, 1.2, #5a5959);
+		@include title-overflow(auto, 33px);
+		@include transition(all .2s ease);
+		&:hover {
+			color: #000;
+		}
+	}
+	&-bio {
+		margin: 0;
+		@include font-pack(false, 0.75rem, 500, 1.2, #818488);
+		@include title-overflow(auto, 28px);
+	}
+	&-img {
+		flex-basis: 36px;
+		flex-grow: 0;
+		width: 36px;
+		height: 36px;
+		overflow: hidden;
+		border-radius: 30px;
+	}
+
+	// 
+	&-aside {
+		position: relative;
+		&-footer {
+			text-align: right;
+			padding: 10px;
+			a {
+				text-transform: uppercase;
+				@include font-pack(false, 0.688rem, 500, false, #818488);
+				&:hover {
+					color: inherit;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,126 @@
+.footer {
+	position: relative;
+	background: #585858;
+	padding: 0 0 3rem;
+	width: $screen-tablet;
+	@include min-responsive($screen-tablet) {
+		width: 100%;
+	}
+	.grid-flex {
+		flex-wrap: wrap;
+	}
+	&-col {
+		width: calc(100% / 2);
+		padding-top: 3rem;
+		padding-left: 0.938rem;
+		padding-right: 0.938rem;
+		&:first-child {
+			width: 100%;
+		}
+		@include min-responsive($screen-desktop) {
+			width: calc(100% / 3);
+			&:first-child {
+				width: calc(100% / 3);
+			}
+		}
+	}
+	&-logo {
+		img {
+			height: 30px;
+		}
+	}
+	&-lead {
+		padding: .5rem 0 .25rem;
+		@include font-pack(false, 0.875rem, 400, false, rgba(#fff, .5));
+	}
+	&-copy {
+		padding: .75rem 0;
+		@include font-pack(false, 0.625rem, 400, false, rgba(#fff, .5));
+	}
+	&-nav {
+		position: relative;
+		padding: 0;
+		ul {
+			display: block;
+			@include display-flex();
+			flex-wrap: wrap;
+		}
+		li {
+			display: block;
+			width: 50%;
+			a {
+				display: inline-block;
+				padding: 0.500rem;
+				@include font-pack(false, 0.875rem, 700, false, #fff);
+				&:hover {
+					color: $color-secondary;
+				}
+			}
+		}
+	}
+	&-social {
+		@include display-flex();
+		align-items: center;
+		&-text {
+			padding-right: 20px;
+			@include font-pack(false, .75rem, false, false, rgba(#fff, .5));
+		}
+	}
+	&-subscribe {
+		position: relative;
+		padding: 1rem 0;
+		&-text {
+			@include font-pack(false, .75rem, false, false, rgba(#fff, .5));
+		}
+		&-form {
+			position: relative;
+			padding: .5rem 0;
+			width: 260px;
+		}
+		.input {
+			height: 40px;
+			&::placeholder {
+				font-size: .75rem;
+			}
+		}
+		.button {
+			position: absolute;
+			width: 60px;
+			height: 30px;
+			top: 13px;
+			right: 5px;
+			z-index: 1;
+			font-size: 0.688rem;
+			text-transform: uppercase;
+		}
+	}
+
+	&-aside {
+		// width: 280px;
+		position: relative;
+		text-align: center;
+		padding: 0 0;
+		margin: .938rem 0;
+		.footer-nav ul {
+			display: block;
+		}
+		.footer-nav li {
+			display: inline-block;
+			width: auto;
+		}
+		.footer-nav li a {
+			text-transform: uppercase;
+			padding: 0 .25rem;
+			@include font-pack(false, 0.625rem, 600, false, #818488);
+			&:hover {
+				color: $color-theme;
+			}
+		}
+
+		.footer-copy {
+			text-transform: uppercase;
+			font-weight: 600;
+			color: rgba(#818488, .6);
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{{#each channel}}
+{{#gte @index compare=../index_start}}
+{{#gte @index compare=../index_end}}
+{{else}}
+<div class="people-item">
+	<div class="people-row">
+		<div class="people-img">
+			<a href="profile.html">
+				<img src="{{avatars.[0].url}}" alt="{{avatars.first_name}}">
+			</a>
+		</div>
+		<div class="people-info">
+			<a href="profile.html"><h4 class="people-name">{{first_name}} {{last_name}}</h4></a>
+			<div class="people-bio">{{bio}}</div>
+		</div>
+	</div>
+	<div class="people-action">
+		{{#eq @index compare=0}}
+		{{>button type="follow" name="btn-follow" label="Following"}}
+		{{else}}
+		{{>button type="follow" name="btn-follow" label="Follow"}}
+		{{/eq}}
+	</div>
+</div>
+{{/gte}}
+{{/gte}}
+{{/each}}

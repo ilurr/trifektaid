@@ -1,0 +1,76 @@
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	@include font-pack($font-primary, $font-size-base, 400, 1.4, $color-base);
+	background: $bg-base;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeSpeed;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: $color-theme;
+	text-decoration: none;
+	vertical-align: baseline;
+	@include transition(all .2s ease);
+	&:hover {
+		color: #000;
+		text-decoration: none;
+	}
+}
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	vertical-align: top;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+table {
+	border-collapse: collapse;
+}
+iframe {
+	border: none;
+	vertical-align: top;
+}
+video {
+	vertical-align: top;
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+input,
+button,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 2rem 0 1rem;
+}
+p {
+	margin: 1rem 0;
+	@include font-pack(false, 1rem, 400, false, $color-text-primary);
+}
+hr {
+	position: relative;
+	border: none;
+	margin: 1rem 0;
+}

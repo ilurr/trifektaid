@@ -1,0 +1,47 @@
+.setting {
+	position: relative;
+	padding: 1.875rem 2rem;
+	margin: .938rem 0;
+	&-item {
+		position: relative;
+		border-bottom: 1px solid #e7e7e7;
+		&:first-child {
+			margin-top: -10px;
+		}
+		&:last-child {
+			border-bottom: transparent;
+		}
+	}
+	&-row {
+		position: relative;
+		@include display-flex();
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+	}
+	&-text {
+		text-transform: inherit;
+		@include font-pack(inherit, 0.875rem, 500, inherit, #000);
+		@include transition(all .2s ease);
+	}
+	&-link {
+		display: block;
+		&:hover {
+			// background: #dfdfdf;
+			.setting-text {
+				color: $color-theme;
+			}
+		}
+	}
+
+	// override 
+	label {
+		text-transform: inherit;
+		letter-spacing: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		color: inherit;
+		font-weight: inherit;
+		padding: 0;
+	}
+}

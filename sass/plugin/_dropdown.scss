@@ -1,0 +1,124 @@
+.dropup,
+.dropdown {
+	position: relative;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 8;
+	display: none;
+	float: left;
+	min-width: 160px;
+	// max-width: 250px;
+	padding: 5px 0;
+	margin: 5px 0 0;
+	font-size: 14px;
+	text-align: left;
+	list-style: none;
+	background-color: #ffffff;
+	border-radius: 6px;
+	box-shadow: 0 8px 16px 0 rgba(47, 83, 151, 0.1), 0 0 2px 0 rgba(47, 83, 151, 0.1);
+}
+
+.dropdown-menu.pull-right {
+	right: 0;
+	left: auto;
+}
+
+.dropdown-menu .divider {
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+	background-color: #e5e5e5;
+}
+
+.dropdown-item {
+	display: block;
+	padding: 9px 20px;
+	clear: both;
+	//white-space: nowrap;
+	@include font-pack(false, 0.875rem, 500, false, #000);
+}
+button.dropdown-item {
+	border: transparent;
+	justify-content: flex-start;
+	text-align: left;
+	height: auto;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+	color: #262626;
+	text-decoration: none;
+	background-color: #f5f5f5;
+}
+
+// 
+
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus {
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #337ab7;
+}
+
+.dropdown-menu>.disabled>a,
+.dropdown-menu>.disabled>a:hover,
+.dropdown-menu>.disabled>a:focus {
+	color: #777777;
+}
+
+.dropdown-menu>.disabled>a:hover,
+.dropdown-menu>.disabled>a:focus {
+	text-decoration: none;
+	cursor: not-allowed;
+	background-color: transparent;
+	background-image: none;
+}
+
+.open>.dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu-right {
+	right: 0;
+	left: auto;
+}
+
+.dropdown-menu-left {
+	right: auto;
+	left: 0;
+}
+
+.dropdown-header {
+	display: block;
+	padding: 3px 20px;
+	font-size: 12px;
+	line-height: 1.42857143;
+	color: #777777;
+	white-space: nowrap;
+}
+
+.dropdown-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 8;
+}
+
+.pull-right>.dropdown-menu {
+	right: 0;
+	left: auto;
+}
+
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+	top: auto;
+	bottom: 100%;
+	margin-bottom: 2px;
+}

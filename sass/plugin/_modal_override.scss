@@ -1,0 +1,14 @@
+.modal {
+	&-title {
+		position: relative;
+		text-align: center;
+		@include font-pack(false, 1.250rem, 700, false, $color-theme);
+	}
+	&-footer {
+		.button {
+			width: auto;
+			min-width: 75px;
+			padding: 0 .75rem;
+		}
+	}
+}

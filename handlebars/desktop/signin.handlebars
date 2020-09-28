@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+		<span class="root-bg" style="background-image: url('../asset/images/hero-bg.jpg');"></span>
+
+		{{>header}}
+
+		<!-- grid -->
+		<div class="grid grid-full">
+
+			<div class="grid-flex sign">
+
+				<div class="sign-wrap">
+					<!-- s: sign in -->
+					<div class="panel -signin">
+						<div class="panel-header">
+							{{>title title="Login"}}
+						</div>
+						<div class="panel-body">
+							<form action="index.html">
+								{{>input type="text" label="Email Address" name="name"}}
+								{{>input type="text" label="Password" name="password"}}
+
+								{{>checkbox type="checkbox" label="Remember Me" name="remember"}}
+
+								{{>button type="submit" label="Login" name="signup" class="-primary"}}
+
+								<div class="sign-text">
+									<div class="text-center">OR</div>
+								</div>
+
+								{{>button type="link" label="Continue with Facebook" class="-facebook" icon="facebook" href="index.html"}}
+								{{>button type="link" label="Continue with Google" class="-google" icon="google-color" href="index.html"}}
+
+								<div class="sign-text">
+									<div class="text-center"><a href="reset.html">Forgot your password?</a></div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- e: sign in -->
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+</body>
+</html>

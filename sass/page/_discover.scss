@@ -1,0 +1,176 @@
+.discover {
+	position: relative;
+	margin: .938rem 0;
+	background: #ebebeb;
+	border: solid 1px #cecece;
+	overflow: hidden;
+	&-block {
+		position: relative;
+		min-height: 75vh;
+		padding: 20px 0;
+	}
+	&-flex {
+		position: relative;
+		@include display-flex();
+		justify-content: center;
+		align-items: center;
+	}
+	&-bg {
+		&:after {
+			content: '';
+			width: 200px;
+			height: 200px;
+			background: #FDF5EE;
+			border: solid 4px #fdeee0;
+			border-radius: 100%;
+			-webkit-animation: pulse 2s infinite;
+			-o-animation: pulse 2s infinite;
+			animation: pulse 2s infinite;
+			position: absolute;
+			z-index: 1;
+			// left: 50%;
+			// top: 50%;
+			// @include transform(translate(-50%, -50%));
+		}
+	}
+	&-user {
+		position: absolute;
+		width: 95px;
+		height: 95px;
+		border-radius: 50px;
+		overflow: hidden;
+		border: 3px solid #fff;
+		z-index: 2;
+		img {
+			@include ratio-flexible(auto, 100%);
+		}
+	}
+	&-card {
+		position: relative;
+		z-index: 3;
+		width: 300px;
+		// min-height: 60vh;
+		// opacity: 1;
+		// visibility: visible;
+		@include transition(all .5s ease);
+		// @include transform(translateY(5%));
+		&.-hide {
+			opacity: 0;
+			visibility: hidden;
+			@include transform(translateY(5%));
+		}
+		&-item {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			@include transition(all .2s ease);
+			&:last-child {
+				z-index: 1;
+				position: relative;
+			}
+		}
+	}
+	&-img {
+		position: relative;
+		overflow: hidden;
+		border-radius: 12px;
+		padding-top: calc(4 / 3 * 100%);
+		box-shadow: 0 2px 5px rgba(0,0,0,.2);
+		z-index: 1;
+		@include transition(all .2s ease);
+		img {
+			max-width: none;
+			@include ratio-flexible(auto, 100%);
+			z-index: 2;
+		}
+	}
+	&-info {
+		position: absolute;
+		z-index: 3;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 70% 15px 20px;
+		background-image: linear-gradient(to bottom, rgba(255, 123, 0, 0) 40%, #df4b01);
+	}
+	&-place {
+		&-name {
+			@include font-pack(false, 1.250rem, 700, false, #fff);
+		}
+		&-address {
+			padding-bottom: 2px;
+			@include font-pack(false, 0.750rem, 500, false, #fff);
+		}
+		&-lead {
+			@include font-pack(false, 0.625rem, 500, false, #fff);
+			@include title-overflow(auto, 28px);
+		}
+	}
+	&-people {
+		&-name {
+			@include font-pack(false, 1.250rem, 700, false, #fff);
+		}
+		&-bio {
+			padding-bottom: 2px;
+			@include font-pack(false, 0.750rem, 500, false, #fff);
+		}
+		&-stat {
+			@include font-pack(false, 0.625rem, 500, false, #fff);
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+	&-action {
+		.form-row {
+			text-align: center;
+			padding-top: 1.5rem;
+			padding-bottom: 0;
+		}
+		.button {
+			width: 160px;
+			border-radius: 21px;
+			font-size: 1rem;
+			font-weight: 500;
+		}
+	}
+	&-swipe {
+		&right {
+			pointer-events: none;
+			opacity: 0;
+			visibility: hidden;
+			.discover-img {
+				@include transform(translate(180px, -40px) rotate(30deg) scale(0.8));
+			}
+		}
+		&left {
+			pointer-events: none;
+			opacity: 0;
+			visibility: hidden;
+			.discover-img {
+				@include transform(translate(-180px, -40px) rotate(-30deg) scale(0.8));
+			}
+		}
+	}
+	&-message {
+		position: relative;
+		overflow: hidden;
+		border-radius: 12px;
+		padding-top: calc(4 / 3 * 100%);
+		// box-shadow: 0 2px 5px rgba(0,0,0,.2);
+		z-index: 1;
+		span {
+			position: absolute;
+			width: 100%;
+			//top: 50%;
+			top: 0;
+			left: 0;
+			padding: 30px;
+			z-index: 1;
+			text-align: center;
+			// @include transform(translateY(-50%));
+			@include font-pack(false, 0.875rem, 600, false, #000);
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.search {
+	&-header {
+		position: relative;
+		padding-left: 0.938rem;
+		padding-right: 0.938rem;
+		width: 100%;
+		@include min-responsive($screen-desktop) {
+			width: 260px;
+		}
+		.input {
+			height: 32px;
+			border-radius: 8px;
+			border: solid 1px #e6e7ee;
+			background-color: #f7f7fa;	
+			font-size: 1rem;	  
+			@include min-responsive($screen-desktop) {
+				font-size: 0.813rem;	  
+			}
+		}
+		.icon-general {
+			position: absolute;
+			top: calc(50% - 8px);
+			right: 26px;
+			z-index: 1;
+		}
+		.button {
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			top: 0;
+			right: 0.938rem;
+			z-index: 2;
+			opacity: 0;
+		}
+	}
+}

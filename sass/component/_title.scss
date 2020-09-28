@@ -1,0 +1,25 @@
+.title {
+	position: relative;
+	margin: .875rem 0 1rem;
+	@include font-pack(false, 1.250rem, 700, false, false);
+	&-big {
+		font-size: 2.813rem;
+		line-height: normal;
+		color: #717171;
+		margin: 1rem 0;
+	}
+	&-aside {
+		position: relative;
+		margin: 0;
+		padding: .25rem 0 .75rem;
+		text-transform: uppercase;
+		border-bottom: 1px solid #EDEEEE;
+		@include font-pack(false, .688rem, 500, false, #9d9fa3);
+	}
+}
+// h1.title {
+// 	font-size: 1.188rem;
+// }
+// h2.title {
+// 	font-size: 1.188rem;
+// }
