@@ -1,0 +1,21 @@
+<!-- modal above modal -front -->
+<div id="modalPeopleCheckin" class="modal -front fade" tabindex="-1" role="dialog" aria-labelledby="modalPeopleHere" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+			<div class="modal-header">
+				<h5 class="modal-title">National Monument</h5>
+			</div>
+			<div class="modal-body">
+				<!-- people here -->
+				<div class="people-block -modal">
+					<div class="people-block">
+						<div class="people-list">
+							{{>people_list channel=people index_start=0 index_end=10}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

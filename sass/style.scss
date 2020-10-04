@@ -36,6 +36,7 @@
 @import 'component/feed';
 @import 'component/option';
 @import 'component/comment';
+@import 'component/emoji';
 
 // layout
 @import 'layout/header';
@@ -53,6 +54,7 @@
 @import 'page/user';
 @import 'page/notify';
 @import 'page/setting';
+@import 'page/search';
 
 // utility
 @import 'utility/helper';
@@ -60,6 +62,8 @@
 @import 'utility/animate';
 
 // plugin
+@import 'plugin/tiny_slider';
+@import 'plugin/tab';
 @import 'plugin/datepicker';
 @import 'plugin/datepicker_config';
 @import 'plugin/dropdown';

@@ -4,7 +4,7 @@
 			<img src="../asset/images/dummy/avatar.jpg" alt="">	
 		</div>
 		<div class="post-write">
-			<button id="modalPost1" type="button" data-toggle="modal" data-target="#modalPost" class="button">Share something...</button>
+			<button type="button" data-toggle="modal" data-target="#modalPost" class="button">Share something...</button>
 		</div>
 	</div>
 	<div class="post-footer">
@@ -19,11 +19,11 @@
 					<use xlink:href="../asset/images/icon/icon.svg#icon-place" />
 				</svg>
 			</button>
-			<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+			{{!-- <button type="button" data-toggle="emoji" data-container="feed" data-target="#emoji" class="button">
 				<svg class="icon-post icon-emoji" title="icon-emoji">
 					<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
 				</svg>				
-			</button>
+			</button> --}}
 		</div>
 	</div>
 </section>
@@ -46,10 +46,35 @@
 							<div class="post-user">Chelsea Islan</div>
 						</div>
 						<div class="post-modal-content">
-							<textarea name="post-content" id="post-content" placeholder="Share something..."></textarea>
+							<textarea name="post-content" id="post-content" class="post-input" placeholder="Share something..."></textarea>
 						</div>
 						<div class="post-modal-media">
-							<div class="post-modal-img"></div>
+							<!-- image -->
+							<div class="post-modal-img">
+								<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
+								<span>
+									<img src="https://source.unsplash.com/CYOFvtpOIpU/750x500" alt="">
+								</span>
+							</div>
+							<div class="post-modal-img">
+								<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
+								<span>
+									<img src="https://source.unsplash.com/3NhTyPZ8CO8/750x500" alt="">
+								</span>
+							</div>
+							<!-- place -->
+							<!-- <div class="post-modal-place">
+								<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
+								<div class="post-modal-place-loc">
+									<img src="../asset/images/dummy/feed-place.png" alt="">	
+								</div>
+								<div class="post-modal-place-info">
+									<div class="post-modal-place-icon">
+										<img src="https://source.unsplash.com/3qPQtPoyqUg/50x50">
+									</div>
+									<div class="post-modal-place-title">Istiqlal Mosque <span>Mosquee</span></div>
+								</div>
+							</div> -->
 						</div>
 						<div class="post-modal-icon">
 							<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
@@ -64,7 +89,7 @@
 								</svg>
 								Tag Place
 							</button>
-							<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+							<button type="button" data-toggle="emoji" data-container="post-modal" data-target="post-input" class="button">
 								<svg class="icon-post icon-emoji" title="icon-emoji">
 									<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
 								</svg>

@@ -1,4 +1,7 @@
 .people {
+	position: relative;
+	padding: 1rem 1.563rem;
+	margin: .938rem 0;
 	&-list {
 		position: relative;
 		padding: 0;
@@ -8,8 +11,11 @@
 		@include display-flex();
 		align-items: center;
 		margin: 0;
-		padding: 10px 0;
+		padding: 0.625rem 0;
 		border-bottom: 1px solid #EDEEEE;
+		&:last-child {
+			border-bottom: transparent;
+		}
 		// &:hover {
 		// 	background: lighten($bg-base, 2%);
 		// }
@@ -26,17 +32,17 @@
 	&-info {
 		flex-basis: 0;
 		flex-grow: 1;
-		padding-left: 10px;
+		padding-left: 1.125rem;
 		padding-right: .5rem;
 	}
 	&-name {
 		margin: 0 0 4px;
-		@include font-pack(false, 0.875rem, 700, 1.2, #5a5959);
+		@include font-pack(false, 0.875rem, 700, 1.2, #161f3d);
 		@include title-overflow(auto, 33px);
 		@include transition(all .2s ease);
-		&:hover {
-			color: #000;
-		}
+		// &:hover {
+		// 	color: #000;
+		// }
 	}
 	&-bio {
 		margin: 0;
@@ -44,17 +50,71 @@
 		@include title-overflow(auto, 28px);
 	}
 	&-img {
-		flex-basis: 36px;
+		position: relative;
 		flex-grow: 0;
-		width: 36px;
-		height: 36px;
+		flex-basis: 50px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50px;
 		overflow: hidden;
-		border-radius: 30px;
+		img {
+			@include ratio-flexible(auto, 100%);
+		}
 	}
 
 	// 
+	&-block {
+		position: relative;
+		a {
+			color: inherit;
+			&:hover {
+				color: $color-theme;
+			}
+		}
+		.button {
+			&[data-follow] {
+				width: 100px;
+				height: 35px;
+				font-size: 0.75rem;
+				// padding: 0 .75rem;
+			}		
+		}
+		&.-modal {
+			padding: 0 1.25rem;
+		}
+	}
 	&-aside {
 		position: relative;
+		a {
+			color: inherit;
+			&:hover {
+				color: $color-theme;
+			}
+		}
+		.people-img {
+			flex-basis: 36px;
+			width: 36px;
+			height: 36px;
+			border-radius: 36px;	
+		}
+		.people-item {
+			padding: .5rem 0;
+		}
+		.people-info {
+			padding-left: 0.625rem;
+		}
+		.people-name {
+			color: #5a5959;
+		}
+		.button {
+			&[data-follow] {
+				width: 72px;
+				height: 28px;
+				font-size: 0.688rem;
+				letter-spacing: 0.13px;
+				padding: 0;
+			}		
+		}
 		&-footer {
 			text-align: right;
 			padding: 10px;

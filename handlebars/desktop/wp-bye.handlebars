@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+		<span class="root-bg" style="background-image: url('../asset/images/hero-bg.jpg');"></span>
+
+		{{>header}}
+
+		<!-- grid -->
+		<div class="grid grid-full">
+
+			<div class="grid-flex sign">
+
+				<div class="sign-wrap">
+					<!-- s: sign in -->
+					<div class="panel -signin">
+						<div class="panel-body">
+							<div class="notes-block">
+								{{>title title="Deleting your account"}}
+								<p>Your account have been deleted. We are sorry for letting you go. See you again later.</p>
+								<p><a href="index-wp.html">Back to home</a></p>
+							</div>
+						</div>
+					</div>
+					<!-- e: sign in -->
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+</body>
+</html>

@@ -1,7 +1,13 @@
 .title {
 	position: relative;
-	margin: .875rem 0 1rem;
+	margin: .25rem 0 1rem;
 	@include font-pack(false, 1.250rem, 700, false, false);
+	&-medium {
+		position: relative;
+		margin: 1rem 0 .938rem;
+		padding: 0 .25rem;
+		@include font-pack(false, 1.250rem, 700, false, false);
+	}
 	&-big {
 		font-size: 2.813rem;
 		line-height: normal;

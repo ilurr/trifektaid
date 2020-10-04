@@ -6,7 +6,7 @@
 	}
 	&-item {
 		position: relative;
-		padding: .25rem 0;
+		padding: 0.313rem 0;
 	}
 	&-row {
 		position: relative;
@@ -62,6 +62,20 @@
 	}
 	&-reaction {
 		position: relative;
+		.form-row {
+			padding: 0.25rem 0;
+		}
+		.button {
+			width: auto;
+			height: auto;
+			padding: 0 .125rem;
+			font-size: .75rem;
+			color: #b5b5b5;
+		}
+	}
+	&-more {
+		position: relative;
+		//text-align: center;
 		.form-row {
 			padding: 0.25rem 0;
 		}

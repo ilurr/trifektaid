@@ -2,6 +2,9 @@
 	position: relative;
 	padding: 1.875rem 2rem;
 	margin: .938rem 0;
+	&-block {
+		position: relative;
+	}
 	&-item {
 		position: relative;
 		border-bottom: 1px solid #e7e7e7;
@@ -35,13 +38,15 @@
 	}
 
 	// override 
-	label {
-		text-transform: inherit;
-		letter-spacing: inherit;
-		font-size: inherit;
-		line-height: inherit;
-		color: inherit;
-		font-weight: inherit;
-		padding: 0;
+	&-block {
+		label {
+			text-transform: inherit;
+			letter-spacing: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			color: inherit;
+			font-weight: inherit;
+			padding: 0;
+		}
 	}
 }

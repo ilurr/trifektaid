@@ -22,33 +22,6 @@ button,
 	@include display-inline-flex();
 	justify-content: center;
 	align-items: center;
-	&[data-follow] {
-		width: 72px;
-		height: 28px;
-		font-size: 0.688rem;
-		letter-spacing: 0.13px;
-		border: 1px solid $color-theme;
-		color: $color-theme;
-		background: transparent;
-		&:before {
-			content: attr(data-follow);
-		}
-		&:hover {
-			color: #fff;
-			border: 1px solid $color-secondary;
-			background: $color-secondary;
-		}
-	}
-	&[data-follow="Following"] {
-		color: #fff;
-		border: 1px solid $color-theme;
-		background: $color-theme;
-		&:hover {
-			&:before {
-				content: "Unfollow";
-			}
-		}
-	}
 	&.-facebook {
 		border: 1px solid $color-facebook;
 		background: $color-facebook;
@@ -119,6 +92,54 @@ button,
 		&:hover {
 			border: 1px solid darken($color-theme, 12%);
 			background: darken($color-theme, 12%);
+		}
+	}
+	&[data-follow] {
+		// width: 72px;
+		// height: 28px;
+		// font-size: 0.688rem;
+		// letter-spacing: 0.13px;
+		border: 1px solid $color-theme;
+		color: $color-theme;
+		background: transparent;
+		&:before {
+			content: attr(data-follow);
+		}
+		// &:hover {
+		// 	border: 1px solid darken($color-theme, 12%);
+		// 	color: darken($color-theme, 12%);
+		// }
+		&.-primary {
+			color: #fff;
+			border: 1px solid $color-primary;
+			background: $color-primary;	
+			&:hover {
+				border: 1px solid darken($color-theme, 12%);
+				background: darken($color-theme, 12%);
+			}
+		}
+	}
+	&[data-follow="Following"] {
+		color: #fff;
+		border: 1px solid $color-secondary;
+		background: $color-secondary;
+		&:hover {
+			&:before {
+				content: "Remove";
+			}
+		}
+		&:focus {
+			&:before {
+				content: "Following";
+			}			
+		}
+		&.-primary {
+			border: 1px solid $color-secondary;
+			background: $color-secondary;	
+			&:hover {
+				border: 1px solid darken($color-secondary, 12%);
+				background: darken($color-secondary, 12%);
+			}
 		}
 	}
 	// override

@@ -1,0 +1,106 @@
+<div class="feed-block">
+	<div class="feed-header">
+		<div class="feed-avatar">
+			<a href="profile-view.html">
+				<img src="{{channel.avatars.[0].url}}" alt="">	
+			</a>
+		</div>
+		<div class="feed-header-col">
+			<div class="feed-user"><a href="profile-view.html">{{channel.first_name}} {{channel.first_name}}</a>{{#if channel.place}} <span>is at</span> <a href="map-place-detail.html">{{channel.place}}</a>{{/if}}</div>
+			<div class="feed-time">2 minutes ago</div>
+			{{>option}}
+		</div>
+	</div>
+	<div class="feed-content">
+		{{#if channel.post}}
+		<!-- text -->
+		<div class="feed-text">
+			{{channel.post}}
+		</div>
+		{{/if}}
+		{{#if channel.img}}
+		<!-- image -->
+		<div class="feed-img">
+			{{#if (isArray channel.img)}}
+			<div class="feed-img-block" data-slider="true">
+			{{else}}
+			<div class="feed-img-block">
+			{{/if}}
+				{{#if (isArray channel.img)}}
+				{{#each channel.img as |item|}}
+				<div class="feed-img-item">
+					<div class="feed-img-object">
+						<span>
+							<img data-src="{{item}}" alt="" class="tns-lazy-img">
+						</span>
+					</div>
+				</div>
+				{{/each}}
+				{{else}}
+				<div class="feed-img-item">
+					<div class="feed-img-object">
+						<span>
+							<img src="{{channel.img}}" alt="">
+						</span>
+					</div>
+				</div>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{#if channel.place}}
+		<!-- place -->
+		<div class="feed-place">
+			<div class="feed-place-maps">
+				<a href="map-place-detail.html">
+					<img src="../asset/images/dummy/feed-place.png" alt="">	
+				</a>
+			</div>
+			<div class="feed-place-info">
+				<div class="feed-place-thumb">
+					<span>
+						<img src="{{channel.placeimg}}" alt="">
+					</span>
+				</div>
+				<div class="feed-place-col">
+					<div class="feed-place-cat">{{channel.place_cat}}</div>
+					<div class="feed-place-name"><a href="map-place-detail.html">{{channel.place}}</a></div>
+					<div class="feed-place-checkin">You and 19 others have been here</div>
+				</div>
+			</div>
+		</div>
+		{{/if}}
+	</div>
+	<div class="feed-stat">
+		<div class="feed-stat-item"><a href="#" role="button" data-toggle="modal" data-target="#modalLikedBy">8K Likes</a></div>
+		<div class="feed-stat-item"><a href="post-detail.html">698 Comments</a></div>
+	</div>
+	{{#if search}}
+	{{else}}
+	<div class="feed-action">
+		{{>interact}}
+	</div>
+	{{/if}}
+	{{#if comment}}
+	<div class="feed-comment">
+		{{>comment channel=channel commentall=commentall}}
+	</div>
+	{{/if}}
+	{{#if search}}
+	{{else}}
+	<div class="feed-footer">
+		<div class="feed-avatar">
+			<img src="../asset/images/dummy/avatar.jpg" alt="">	
+		</div>
+		<div class="feed-reply">
+			<input type="text" class="feed-reply-input" placeholder="Write comment...">
+			<button type="button" data-toggle="emoji" data-container="feed-reply" data-target="feed-reply-input" class="button feed-reply-emoji">
+				<svg class="icon-post icon-emoji" title="icon-emoji">
+					<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+				</svg>				
+			</button>
+			{{!-- <textarea name="feed-reply" class="feed-reply-input" placeholder="Write comment..."></textarea> --}}
+		</div>
+	</div>
+	{{/if}}
+</div>

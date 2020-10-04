@@ -9,17 +9,24 @@
 			<div class="user-stat">21 <span>Posts</span></div>
 		</div>
 		<div class="user-col">
-			<a class="user-stat-link" href="people-followers.html">
+			<a class="user-stat-link" href="people.html">
 				<div class="user-stat">1234 <span>Followers</span></div>
 			</a>
 		</div>
 		<div class="user-col">
-			<a class="user-stat-link" href="people-following.html">
+			<a class="user-stat-link" href="people.html">
 				<div class="user-stat">2 <span>Following</span></div>
 			</a>
 		</div>
 	</div>
+	{{#eq edit compare="true"}}
 	<div class="user-action">
 		{{>button type="link" href="profile-edit.html" name="btn-edit-user" class="-secondary" label="Edit Profile"}}
 	</div>
+	{{/eq}}
+	{{#eq view compare="true"}}
+	<div class="user-action">
+		{{>button type="follow" name="btn-follow" class="-primary" label="Follow"}}
+	</div>
+	{{/eq}}
 </div>

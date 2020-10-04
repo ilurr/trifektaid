@@ -42,7 +42,7 @@
 			<div class="header-col">
 				<!-- search -->
 				<div class="search-header">
-					<form action="#">
+					<form action="search.html">
 						<input type="text" class="input" name="search" placeholder="Search">
 						<input type="submit" class="button" name="search-btn" value="Search">
 						<span class="icon-general icon-search"></span>
@@ -161,19 +161,6 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link" role="link" aria-label="Messages">
-									<div class="nav-flex">
-										<div class="nav-icon">
-											<span class="nav-badge"></span>
-											<svg class="icon-nav icon-message" title="icon-message">
-												<use xlink:href="../asset/images/icon/icon.svg#icon-message" />
-											</svg>
-										</div>
-										<div class="nav-text">Messages</div>
-									</div>
-								</a>
-							</li>
-							<li class="nav-item">
 								<a href="setting.html" class="nav-link" role="link" aria-label="Setting">
 									<div class="nav-flex">
 										<div class="nav-icon">
@@ -192,10 +179,10 @@
 				<div class="grid-col -wide">
 
 					<!-- pofile edit -->
-					<div class="user-edit box">
+					<div class="user-profile box">
 						<form action="profile.html">
 							<div class="user-form">
-								<div class="user-avatar-wrap">
+								<div class="user-form-avatar">
 									<div class="user-avatar">
 										<img src="../asset/images/dummy/avatar.jpg" alt="">
 									</div>
@@ -220,8 +207,9 @@
 									</div>
 									<div class="form-row">
 										<label for="gender">Gender</label>
-										<div class="form-select" data-placeholder="">
+										<div class="form-select" data-placeholder="-">
 											<select id="gender" name="gender" class="select ">
+												<option value="0" selected="selected" disabled="disabled">-</option>
 												<option value="Male">Male</option>
 												<option value="Female">Female</option>
 												<option value="Other">Other</option>
@@ -250,7 +238,7 @@
 										<div class="form-hint"></div>
 									</div>
 								</div>
-								<div class="user-action">
+								<div class="user-form-action">
 									<div class="form-row">
 										<input type="submit" name="btn-save-user" id="btn-save-user" value="Save" class="button -primary">
 									</div>
@@ -258,7 +246,7 @@
 							</div>		
 						</form>
 					</div>
-					
+
 					<!-- modal change avatar -->
 					<div id="modalAvatar" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="changeAvatar" aria-hidden="true">
 						<div class="modal-dialog">
@@ -293,12 +281,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Stevy Michienzi</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
 												<div class="people-bio">Run Enthusiast</div>
 											</div>
 										</div>
@@ -311,12 +299,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Abagael Tanguma</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
 												<div class="people-bio">Bike Addict</div>
 											</div>
 										</div>
@@ -329,12 +317,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Cobbie Javarone</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
 												<div class="people-bio">Full-time Traveler</div>
 											</div>
 										</div>
@@ -347,12 +335,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Daisi Widdows</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
 												<div class="people-bio">Love Swimming</div>
 											</div>
 										</div>
@@ -364,7 +352,7 @@
 									</div>
 								</div>
 								<div class="people-aside-footer">
-									<a href="follow.html" role="link">See All</a>
+									<a href="people.html" role="link">See All</a>
 								</div>
 							</div>
 						</aside>
@@ -401,12 +389,8 @@
 
 <script type="text/javascript" src="../asset/js/jquery.min.js"></script>
 <script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugin-pack.min.js"></script>
 <script type="text/javascript" src="../asset/js/main.js"></script>
-<script type="text/javascript" src="../asset/js/svgxuse.js" defer></script>
-<script type="text/javascript">
-//  $(document).ready(function() {
-//    $("#post-content").emojioneArea();
-//  });
-</script>
+<script type="text/javascript" src="../asset/js/svgxuse.min.js" defer></script>
 </body>
 </html>

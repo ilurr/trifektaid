@@ -11,7 +11,7 @@ input:not([type=checkbox]) {
 	border: 1px solid #e7e7e7;
 	@include font-pack(false, 1rem, 400, false, $color-text-primary);
 	@include min-responsive($screen-desktop) {
-		font-size: .875rem;
+		font-size: 0.938rem;
 	}
 	&:focus {
 		// border-radius: 4px;
@@ -25,6 +25,18 @@ input:not([type=checkbox]) {
 		@include min-responsive($screen-desktop) {
 			font-size: 1rem;
 		}
+	}
+	&[radonly="radonly"],
+	&[radonly="true"] {
+		color: darken($color-disabled, 5%);
+	}
+	&[disabled="disabled"],
+	&[disabled="true"],
+	&.-disabled {
+		border: 1px solid $color-disabled;
+		background: lighten($color-disabled, 5%);
+		color: darken($color-disabled, 10%);
+		cursor: not-allowed;
 	}
 }
 input[type=checkbox] {

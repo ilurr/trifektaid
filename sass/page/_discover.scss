@@ -80,7 +80,6 @@
 		z-index: 1;
 		@include transition(all .2s ease);
 		img {
-			max-width: none;
 			@include ratio-flexible(auto, 100%);
 			z-index: 2;
 		}

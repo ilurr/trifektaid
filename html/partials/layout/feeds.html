@@ -1,80 +1,284 @@
-<section class="feed">
-	<div class="feed-header">
-		<div class="feed-avatar">
-			<a href="profile-view.html">
-				<img src="" alt="">	
-			</a>
+<section class="feed box">
+	<div class="feed-block">
+		<div class="feed-header">
+			<div class="feed-avatar">
+				<a href="profile-view.html">
+					<img src="" alt="">	
+				</a>
+			</div>
+			<div class="feed-header-col">
+				<div class="feed-user"><a href="profile-view.html"> </a></div>
+				<div class="feed-time">2 minutes ago</div>
+				<!-- option -->
+				<div class="option">
+					<div class="dropdown">
+						<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span class="icon-option"><i></i></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
+							<a class="dropdown-item" href="#">Hide Post</a>
+							<a class="dropdown-item" href="#">Unfollow</a>
+						</div>
+					</div>
+				</div>
+				<!-- option -->
+			</div>
 		</div>
-		<div class="feed-header-col">
-			<div class="feed-user"><a href="profile-view.html"> </a></div>
-			<div class="feed-time">2 minutes ago</div>
-			<!-- option -->
-			<div class="option">
-				<div class="dropdown">
-					<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span class="icon-option"><i></i></span>
+		<div class="feed-content">
+		</div>
+		<div class="feed-stat">
+			<div class="feed-stat-item"><a href="#" role="button" data-toggle="modal" data-target="#modalLikedBy">8K Likes</a></div>
+			<div class="feed-stat-item"><a href="post-detail.html">698 Comments</a></div>
+		</div>
+		<div class="feed-action">
+			<!-- like button -->
+			<div class="feed-action-item">
+				<button type="button" id="btn-feed-like" name="btn-feed-like" class="button btn -action" data-toggle="button" aria-pressed="false">
+					<svg class="icon-post icon-comment" title="icon-like">
+						<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
+					</svg>
+					Like
+				</button>
+			</div>
+			
+			<!-- comment button -->
+			<div class="feed-action-item">
+				<button type="button" id="btn-feed-comment" name="btn-feed-comment" class="button -action">
+					<svg class="icon-post icon-comment" title="icon-comment">
+						<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
+					</svg>
+					Comment
+				</button>
+			</div>
+			
+			<!-- share button -->
+			<div class="feed-action-item">
+				<div class="dropup">
+					<button type="button" id="btn-feed-share" name="btn-feed-share" class="button -action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<svg class="icon-post icon-share" title="icon-share">
+							<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
+						</svg>
+						Share
 					</button>
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
-						<a class="dropdown-item" href="#">Hide Post</a>
-						<a class="dropdown-item" href="#">Unfollow</a>
-						<button type="button" class="dropdown-item" role="link">Edit Post</button>
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btn-feed-share">
+						<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
+						<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
+						<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
+						<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
 					</div>
 				</div>
 			</div>
-			<!-- option -->
 		</div>
-	</div>
-	<div class="feed-content">
-	</div>
-	<div class="feed-stat">
-		<div class="feed-stat-item">8K Likes</div>
-		<div class="feed-stat-item">698 Comments</div>
-	</div>
-	<div class="feed-action">
-		<!-- like button -->
-		<div class="feed-action-item">
-			<button type="button" class="button btn -action" data-toggle="button" aria-pressed="false">
-				<svg class="icon-post icon-comment" title="icon-like">
-					<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
-				</svg>
-				Like
-			</button>
-		</div>
-		
-		<!-- comment button -->
-		<div class="feed-action-item">
-			<button type="button" class="button -action">
-				<svg class="icon-post icon-comment" title="icon-comment">
-					<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
-				</svg>
-				Comment
-			</button>
-		</div>
-		
-		<!-- share button -->
-		<div class="feed-action-item">
-			<div class="dropup">
-				<button type="button" class="button -action dropdown-toggle" role="button" id="menuShare" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<svg class="icon-post icon-share" title="icon-share">
-						<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
-					</svg>
-					Share
+		<div class="feed-footer">
+			<div class="feed-avatar">
+				<img src="../asset/images/dummy/avatar.jpg" alt="">	
+			</div>
+			<div class="feed-reply">
+				<input type="text" class="feed-reply-input" placeholder="Write comment...">
+				<button type="button" data-toggle="emoji" data-container="feed-reply" data-target="feed-reply-input" class="button feed-reply-emoji">
+					<svg class="icon-post icon-emoji" title="icon-emoji">
+						<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+					</svg>				
 				</button>
-				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuShare">
-					<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
-					<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
-					<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
-					<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
-				</div>
 			</div>
 		</div>
 	</div>
-	<div class="feed-footer">
-		<div class="feed-avatar">
-			<img src="../asset/images/dummy/avatar.jpg" alt="">	
-		</div>
-		<div class="feed-reply">
-			<textarea name="feed-reply" id="feed-reply" placeholder="Write comment..."></textarea>
+
+	<!-- feed like modal -->
+	<div id="modalLikedBy" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLikedBy" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+				<div class="modal-header">
+					<h5 class="modal-title">Liked by</h5>
+				</div>
+				<div class="modal-body">
+					<div class="people-block -modal">
+						<div class="people-list">
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
+										<div class="people-bio">Run Enthusiast</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Following"></button>
+									</div>
+								</div>
+							</div>
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
+										<div class="people-bio">Bike Addict</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
+										<div class="people-bio">Full-time Traveler</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
+										<div class="people-bio">Love Swimming</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Constantin Hoeffliger</a></h4>
+										<div class="people-bio">Urban Traveler</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Brody Wilch</a></h4>
+										<div class="people-bio">Run! Run! Run!</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Olaf Dobos</a></h4>
+										<div class="people-bio">Biker</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Clinten Donohoe</a></h4>
+										<div class="people-bio">Sport Lover</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Averill Vonner</a></h4>
+										<div class="people-bio">Runner</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="people-item">
+								<div class="people-row">
+									<div class="people-img">
+										<a href="profile-view.html">
+											<img src="https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-200w.jpeg" alt="">
+										</a>
+									</div>
+									<div class="people-info">
+										<h4 class="people-name"><a href="profile-view.html">Geof Vaughner</a></h4>
+										<div class="people-bio">Swimmer</div>
+									</div>
+								</div>
+								<div class="people-action">
+									<div class="form-row">
+										<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

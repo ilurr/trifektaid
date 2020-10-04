@@ -1,8 +1,23 @@
 .modal {
+	z-index: 10;
+	&-backdrop {
+		z-index: 9;
+		& + & {
+			z-index: 10;
+		}
+	}
 	&-title {
 		position: relative;
 		text-align: center;
 		@include font-pack(false, 1.250rem, 700, false, $color-theme);
+	}
+	&-body {
+		max-height: 80vh;
+	}
+	&-header {
+		& + .modal-body {
+			max-height: calc(80vh - 59px);
+		}
 	}
 	&-footer {
 		.button {
@@ -11,4 +26,17 @@
 			padding: 0 .75rem;
 		}
 	}
+	&-text {
+		position: relative;
+		height: 100%;
+		padding: 2rem 1rem;
+		text-align: center;
+		@include font-pack(false, .875rem, 500, false, false);
+	}
+	&.-front {
+		z-index: 11;
+	}
 }
+// #modalPost {
+// 	over
+// }

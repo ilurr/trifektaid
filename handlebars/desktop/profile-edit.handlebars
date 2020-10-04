@@ -21,7 +21,53 @@
 				<div class="grid-col -wide">
 
 					<!-- pofile edit -->
-					{{>profile_edit}}
+					<div class="user-profile box">
+						<form action="profile.html">
+							<div class="user-form">
+								<div class="user-form-avatar">
+									<div class="user-avatar">
+										<img src="../asset/images/dummy/avatar.jpg" alt="">
+									</div>
+									<a href="#modalAvatar" data-toggle="modal" class="user-avatar-button">
+										<span class="icon-general icon-photo"></span>
+									</a>
+								</div>
+								<div class="user-form-row">
+									{{>input type="text" label="Name" name="name" txtVal="Chelsea Islan"}}
+									{{>input type="text" label="Birthday" name="birthday" txtVal="19 Jan 1990" function="js-datepicker" parent="js-datepicker-container" readonly="true"}}
+									{{>select type="select" label="Gender" name="gender" option="Male,Female,Other" placeholder="-" selected="Male"}}
+									{{>input type="text" label="Phone" name="phone" txtVal="0987654321"}}
+									{{>input type="text" label="Location" name="location" txtVal="South Jakarta, Indonesia"}}
+									{{>input type="text" label="Short Bio" name="short-bio" txtVal="Run Enthusiast"}}
+								</div>
+								<div class="user-form-action">
+									{{>button type="submit" name="btn-save-user" class="-primary" label="Save"}}
+								</div>
+							</div>		
+						</form>
+					</div>
+
+					<!-- modal change avatar -->
+					<div id="modalAvatar" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="changeAvatar" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+								<div class="modal-header">
+									<h5 class="modal-title" id="changeAvatar">Preview Avatar</h5>
+								</div>
+								<div class="modal-body">
+									<div class="user-modal-body">
+										<p>Your profile avatar will look like this. Best image ratio should be 1:1 (square)</p>
+										<p>* Maximum size 2Mb. File type should be .jpg, .jpeg or .png format</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="button" data-dismiss="modal">Cancel</button>
+									<button type="button" class="button -primary">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
 				</div>
 

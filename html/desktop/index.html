@@ -42,7 +42,7 @@
 			<div class="header-col">
 				<!-- search -->
 				<div class="search-header">
-					<form action="#">
+					<form action="search.html">
 						<input type="text" class="input" name="search" placeholder="Search">
 						<input type="submit" class="button" name="search-btn" value="Search">
 						<span class="icon-general icon-search"></span>
@@ -161,19 +161,6 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link" role="link" aria-label="Messages">
-									<div class="nav-flex">
-										<div class="nav-icon">
-											<span class="nav-badge"></span>
-											<svg class="icon-nav icon-message" title="icon-message">
-												<use xlink:href="../asset/images/icon/icon.svg#icon-message" />
-											</svg>
-										</div>
-										<div class="nav-text">Messages</div>
-									</div>
-								</a>
-							</li>
-							<li class="nav-item">
 								<a href="setting.html" class="nav-link" role="link" aria-label="Setting">
 									<div class="nav-flex">
 										<div class="nav-icon">
@@ -213,7 +200,7 @@
 								<img src="../asset/images/dummy/avatar.jpg" alt="">	
 							</div>
 							<div class="post-write">
-								<button id="modalPost1" type="button" data-toggle="modal" data-target="#modalPost" class="button">Share something...</button>
+								<button type="button" data-toggle="modal" data-target="#modalPost" class="button">Share something...</button>
 							</div>
 						</div>
 						<div class="post-footer">
@@ -227,11 +214,6 @@
 									<svg class="icon-post icon-place" title="icon-place">
 										<use xlink:href="../asset/images/icon/icon.svg#icon-place" />
 									</svg>
-								</button>
-								<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
-									<svg class="icon-post icon-emoji" title="icon-emoji">
-										<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
-									</svg>				
 								</button>
 							</div>
 						</div>
@@ -255,10 +237,35 @@
 												<div class="post-user">Chelsea Islan</div>
 											</div>
 											<div class="post-modal-content">
-												<textarea name="post-content" id="post-content" placeholder="Share something..."></textarea>
+												<textarea name="post-content" id="post-content" class="post-input" placeholder="Share something..."></textarea>
 											</div>
 											<div class="post-modal-media">
-												<div class="post-modal-img"></div>
+												<!-- image -->
+												<div class="post-modal-img">
+													<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
+													<span>
+														<img src="https://source.unsplash.com/CYOFvtpOIpU/750x500" alt="">
+													</span>
+												</div>
+												<div class="post-modal-img">
+													<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
+													<span>
+														<img src="https://source.unsplash.com/3NhTyPZ8CO8/750x500" alt="">
+													</span>
+												</div>
+												<!-- place -->
+												<!-- <div class="post-modal-place">
+													<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
+													<div class="post-modal-place-loc">
+														<img src="../asset/images/dummy/feed-place.png" alt="">	
+													</div>
+													<div class="post-modal-place-info">
+														<div class="post-modal-place-icon">
+															<img src="https://source.unsplash.com/3qPQtPoyqUg/50x50">
+														</div>
+														<div class="post-modal-place-title">Istiqlal Mosque <span>Mosquee</span></div>
+													</div>
+												</div> -->
 											</div>
 											<div class="post-modal-icon">
 												<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
@@ -273,7 +280,7 @@
 													</svg>
 													Tag Place
 												</button>
-												<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+												<button type="button" data-toggle="emoji" data-container="post-modal" data-target="post-input" class="button">
 													<svg class="icon-post icon-emoji" title="icon-emoji">
 														<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
 													</svg>
@@ -294,222 +301,669 @@
 					
 
 					<!-- feeds -->
-					<section class="feed">
-						<div class="feed-header">
-							<div class="feed-avatar">
-								<a href="profile-view.html">
-									<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">	
-								</a>
-							</div>
-							<div class="feed-header-col">
-								<div class="feed-user"><a href="profile-view.html">Stevy Stevy</a></div>
-								<div class="feed-time">2 minutes ago</div>
-								<!-- option -->
-								<div class="option">
-									<div class="dropdown">
-										<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<span class="icon-option"><i></i></span>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
-											<a class="dropdown-item" href="#">Hide Post</a>
-											<a class="dropdown-item" href="#">Unfollow</a>
-											<button type="button" class="dropdown-item" role="link">Edit Post</button>
-										</div>
-									</div>
+					<section class="feed box">
+						<div class="feed-block">
+							<div class="feed-header">
+								<div class="feed-avatar">
+									<a href="profile-view.html">
+										<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">	
+									</a>
 								</div>
-								<!-- option -->
-							</div>
-						</div>
-						<div class="feed-content">
-							<!-- text -->
-							<div class="feed-text">
-								Last long run before the actual marathon which I’ll be running next Sunday. I’m almost there and I can’t believe it! But I trust myself, I’ve got this
-							</div>
-						</div>
-						<div class="feed-stat">
-							<div class="feed-stat-item">8K Likes</div>
-							<div class="feed-stat-item">698 Comments</div>
-						</div>
-						<div class="feed-action">
-							<!-- like button -->
-							<div class="feed-action-item">
-								<button type="button" class="button btn -action" data-toggle="button" aria-pressed="false">
-									<svg class="icon-post icon-comment" title="icon-like">
-										<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
-									</svg>
-									Like
-								</button>
-							</div>
-							
-							<!-- comment button -->
-							<div class="feed-action-item">
-								<button type="button" class="button -action">
-									<svg class="icon-post icon-comment" title="icon-comment">
-										<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
-									</svg>
-									Comment
-								</button>
-							</div>
-							
-							<!-- share button -->
-							<div class="feed-action-item">
-								<div class="dropup">
-									<button type="button" class="button -action dropdown-toggle" role="button" id="menuShare" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<svg class="icon-post icon-share" title="icon-share">
-											<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
-										</svg>
-										Share
-									</button>
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuShare">
-										<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="feed-footer">
-							<div class="feed-avatar">
-								<img src="../asset/images/dummy/avatar.jpg" alt="">	
-							</div>
-							<div class="feed-reply">
-								<textarea name="feed-reply" id="feed-reply" placeholder="Write comment..."></textarea>
-							</div>
-						</div>
-					</section>
-
-					<section class="feed">
-						<div class="feed-header">
-							<div class="feed-avatar">
-								<a href="profile-view.html">
-									<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">	
-								</a>
-							</div>
-							<div class="feed-header-col">
-								<div class="feed-user"><a href="profile-view.html">Abagael Abagael</a></div>
-								<div class="feed-time">2 minutes ago</div>
-								<!-- option -->
-								<div class="option">
-									<div class="dropdown">
-										<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<span class="icon-option"><i></i></span>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
-											<a class="dropdown-item" href="#">Hide Post</a>
-											<a class="dropdown-item" href="#">Unfollow</a>
-											<button type="button" class="dropdown-item" role="link">Edit Post</button>
-										</div>
-									</div>
-								</div>
-								<!-- option -->
-							</div>
-						</div>
-						<div class="feed-content">
-							<!-- text -->
-							<div class="feed-text">
-								The Autumn wind returned this evening and made for some tricky crosswinds out on the cycle commute. Still, I always enjoy the challenge and daily dose of fresh air and exercise cycling brings.
-							</div>
-							<!-- image -->
-							<div class="feed-img">
-								<div class="feed-img-block" data-slider="false">
-									<div class="feed-img-item">
-										<div class="feed-img-object">
-											<span>
-												<img src="https://source.unsplash.com/giFeTshEYYQ/750x500" alt="">
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="feed-stat">
-							<div class="feed-stat-item">8K Likes</div>
-							<div class="feed-stat-item">698 Comments</div>
-						</div>
-						<div class="feed-action">
-							<!-- like button -->
-							<div class="feed-action-item">
-								<button type="button" class="button btn -action" data-toggle="button" aria-pressed="false">
-									<svg class="icon-post icon-comment" title="icon-like">
-										<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
-									</svg>
-									Like
-								</button>
-							</div>
-							
-							<!-- comment button -->
-							<div class="feed-action-item">
-								<button type="button" class="button -action">
-									<svg class="icon-post icon-comment" title="icon-comment">
-										<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
-									</svg>
-									Comment
-								</button>
-							</div>
-							
-							<!-- share button -->
-							<div class="feed-action-item">
-								<div class="dropup">
-									<button type="button" class="button -action dropdown-toggle" role="button" id="menuShare" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<svg class="icon-post icon-share" title="icon-share">
-											<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
-										</svg>
-										Share
-									</button>
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuShare">
-										<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="feed-comment">
-							<!-- comment -->
-							<div class="comment">
-								<div class="comment-feed">
-									<div class="comment-item">
-										<!-- comment -->
-										<div class="comment-row">
-											<div class="comment-avatar">
-												<a href="profile-view.html">
-													<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">	
-												</a>
+								<div class="feed-header-col">
+									<div class="feed-user"><a href="profile-view.html">Stevy Stevy</a></div>
+									<div class="feed-time">2 minutes ago</div>
+									<!-- option -->
+									<div class="option">
+										<div class="dropdown">
+											<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<span class="icon-option"><i></i></span>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
+												<a class="dropdown-item" href="#">Hide Post</a>
+												<a class="dropdown-item" href="#">Unfollow</a>
 											</div>
-											<div class="comment-col">
-												<div class="comment-user">
-													<a href="profile-view.html">Abagael Abagael</a>
-													<div class="comment-time">2 minutes ago</div>
-												</div>
-												<div class="comment-content">
-													<div class="comment-text">
-														Wow I wish I looked half as good as you after a 30 km run! Good luck for Sunday, I know you’ll absolutely smash it!
+										</div>
+									</div>
+									<!-- option -->
+								</div>
+							</div>
+							<div class="feed-content">
+								<!-- text -->
+								<div class="feed-text">
+									Last long run before the actual marathon which I’ll be running next Sunday. I’m almost there and I can’t believe it! But I trust myself, I’ve got this
+								</div>
+							</div>
+							<div class="feed-stat">
+								<div class="feed-stat-item"><a href="#" role="button" data-toggle="modal" data-target="#modalLikedBy">8K Likes</a></div>
+								<div class="feed-stat-item"><a href="post-detail.html">698 Comments</a></div>
+							</div>
+							<div class="feed-action">
+								<!-- like button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-like" name="btn-feed-like" class="button btn -action" data-toggle="button" aria-pressed="false">
+										<svg class="icon-post icon-comment" title="icon-like">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
+										</svg>
+										Like
+									</button>
+								</div>
+								
+								<!-- comment button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-comment" name="btn-feed-comment" class="button -action">
+										<svg class="icon-post icon-comment" title="icon-comment">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
+										</svg>
+										Comment
+									</button>
+								</div>
+								
+								<!-- share button -->
+								<div class="feed-action-item">
+									<div class="dropup">
+										<button type="button" id="btn-feed-share" name="btn-feed-share" class="button -action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<svg class="icon-post icon-share" title="icon-share">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
+											</svg>
+											Share
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btn-feed-share">
+											<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="feed-footer">
+								<div class="feed-avatar">
+									<img src="../asset/images/dummy/avatar.jpg" alt="">	
+								</div>
+								<div class="feed-reply">
+									<input type="text" class="feed-reply-input" placeholder="Write comment...">
+									<button type="button" data-toggle="emoji" data-container="feed-reply" data-target="feed-reply-input" class="button feed-reply-emoji">
+										<svg class="icon-post icon-emoji" title="icon-emoji">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+										</svg>				
+									</button>
+								</div>
+							</div>
+						</div>
+					
+						<!-- feed like modal -->
+						<div id="modalLikedBy" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLikedBy" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+									<div class="modal-header">
+										<h5 class="modal-title">Liked by</h5>
+									</div>
+									<div class="modal-body">
+										<div class="people-block -modal">
+											<div class="people-list">
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
+															<div class="people-bio">Run Enthusiast</div>
+														</div>
 													</div>
-													<div class="comment-reaction">
+													<div class="people-action">
 														<div class="form-row">
-															<button name="btn-reply" id="btn-reply" class="button -transparent">Reply</button>
+															<button type="button" name="btn-follow" class="button" data-follow="Following"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
+															<div class="people-bio">Bike Addict</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
+															<div class="people-bio">Full-time Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
+															<div class="people-bio">Love Swimming</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Constantin Hoeffliger</a></h4>
+															<div class="people-bio">Urban Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Brody Wilch</a></h4>
+															<div class="people-bio">Run! Run! Run!</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Olaf Dobos</a></h4>
+															<div class="people-bio">Biker</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Clinten Donohoe</a></h4>
+															<div class="people-bio">Sport Lover</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Averill Vonner</a></h4>
+															<div class="people-bio">Runner</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Geof Vaughner</a></h4>
+															<div class="people-bio">Swimmer</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<!-- reply -->
-										<div class="comment-row -reply">
-											<div class="comment-avatar">
-												<a href="profile-view.html">
-													<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">	
-												</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="feed box">
+						<div class="feed-block">
+							<div class="feed-header">
+								<div class="feed-avatar">
+									<a href="profile-view.html">
+										<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">	
+									</a>
+								</div>
+								<div class="feed-header-col">
+									<div class="feed-user"><a href="profile-view.html">Abagael Abagael</a></div>
+									<div class="feed-time">2 minutes ago</div>
+									<!-- option -->
+									<div class="option">
+										<div class="dropdown">
+											<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<span class="icon-option"><i></i></span>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
+												<a class="dropdown-item" href="#">Hide Post</a>
+												<a class="dropdown-item" href="#">Unfollow</a>
 											</div>
-											<div class="comment-col">
-												<div class="comment-user">
-													<a href="profile-view.html">Abagael Abagael</a>
-													<div class="comment-time">2 minutes ago</div>
+										</div>
+									</div>
+									<!-- option -->
+								</div>
+							</div>
+							<div class="feed-content">
+								<!-- text -->
+								<div class="feed-text">
+									The Autumn wind returned this evening and made for some tricky crosswinds out on the cycle commute. Still, I always enjoy the challenge and daily dose of fresh air and exercise cycling brings.
+								</div>
+								<!-- image -->
+								<div class="feed-img">
+									<div class="feed-img-block">
+										<div class="feed-img-item">
+											<div class="feed-img-object">
+												<span>
+													<img src="https://source.unsplash.com/giFeTshEYYQ/750x500" alt="">
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="feed-stat">
+								<div class="feed-stat-item"><a href="#" role="button" data-toggle="modal" data-target="#modalLikedBy">8K Likes</a></div>
+								<div class="feed-stat-item"><a href="post-detail.html">698 Comments</a></div>
+							</div>
+							<div class="feed-action">
+								<!-- like button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-like" name="btn-feed-like" class="button btn -action" data-toggle="button" aria-pressed="false">
+										<svg class="icon-post icon-comment" title="icon-like">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
+										</svg>
+										Like
+									</button>
+								</div>
+								
+								<!-- comment button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-comment" name="btn-feed-comment" class="button -action">
+										<svg class="icon-post icon-comment" title="icon-comment">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
+										</svg>
+										Comment
+									</button>
+								</div>
+								
+								<!-- share button -->
+								<div class="feed-action-item">
+									<div class="dropup">
+										<button type="button" id="btn-feed-share" name="btn-feed-share" class="button -action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<svg class="icon-post icon-share" title="icon-share">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
+											</svg>
+											Share
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btn-feed-share">
+											<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="feed-comment">
+								<!-- comment -->
+								<div class="comment">
+									<div class="comment-feed">
+										<div class="comment-more">
+											<div class="form-row">
+												<button name="btn-comment-load" id="btn-comment-load" class="button -transparent">View more comments</button>
+											</div>
+										</div>
+										<div class="comment-item">
+											<!-- comment -->
+											<div class="comment-row">
+												<div class="comment-avatar">
+													<a href="profile-view.html">
+														<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">	
+													</a>
 												</div>
-												<div class="comment-content">
-													<div class="comment-text">
-														So beautiful! I wish been there, hiks..
+												<div class="comment-col">
+													<div class="comment-user">
+														<a href="profile-view.html">Abagael Abagael</a>
+														<div class="comment-time">2 minutes ago</div>
+													</div>
+													<div class="comment-content">
+														<div class="comment-text">
+															Wow I wish I looked half as good as you after a 30 km run! Good luck for Sunday, I know you’ll absolutely smash it!
+														</div>
+														<div class="comment-reaction">
+															<div class="form-row">
+																<button name="btn-reply" id="btn-reply" class="button -transparent">Reply</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- reply -->
+											<div class="comment-row -reply">
+												<div class="comment-avatar">
+													<a href="profile-view.html">
+														<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">	
+													</a>
+												</div>
+												<div class="comment-col">
+													<div class="comment-user">
+														<a href="profile-view.html">Abagael Abagael</a>
+														<div class="comment-time">2 minutes ago</div>
+													</div>
+													<div class="comment-content">
+														<div class="comment-text">
+															So beautiful! I wish been there, hiks..
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="comment-item">
+											<!-- comment -->
+											<div class="comment-row">
+												<div class="comment-avatar">
+													<a href="profile-view.html">
+														<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">	
+													</a>
+												</div>
+												<div class="comment-col">
+													<div class="comment-user">
+														<a href="profile-view.html">Abagael Abagael</a>
+														<div class="comment-time">2 minutes ago</div>
+													</div>
+													<div class="comment-content">
+														<div class="comment-text">
+															Wow I wish I looked half as good as you after a 30 km run! Good luck for Sunday, I know you’ll absolutely smash it!
+														</div>
+														<div class="comment-reaction">
+															<div class="form-row">
+																<button name="btn-reply" id="btn-reply" class="button -transparent">Reply</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="feed-footer">
+								<div class="feed-avatar">
+									<img src="../asset/images/dummy/avatar.jpg" alt="">	
+								</div>
+								<div class="feed-reply">
+									<input type="text" class="feed-reply-input" placeholder="Write comment...">
+									<button type="button" data-toggle="emoji" data-container="feed-reply" data-target="feed-reply-input" class="button feed-reply-emoji">
+										<svg class="icon-post icon-emoji" title="icon-emoji">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+										</svg>				
+									</button>
+								</div>
+							</div>
+						</div>
+					
+						<!-- feed like modal -->
+						<div id="modalLikedBy" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLikedBy" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+									<div class="modal-header">
+										<h5 class="modal-title">Liked by</h5>
+									</div>
+									<div class="modal-body">
+										<div class="people-block -modal">
+											<div class="people-list">
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
+															<div class="people-bio">Run Enthusiast</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Following"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
+															<div class="people-bio">Bike Addict</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
+															<div class="people-bio">Full-time Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
+															<div class="people-bio">Love Swimming</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Constantin Hoeffliger</a></h4>
+															<div class="people-bio">Urban Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Brody Wilch</a></h4>
+															<div class="people-bio">Run! Run! Run!</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Olaf Dobos</a></h4>
+															<div class="people-bio">Biker</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Clinten Donohoe</a></h4>
+															<div class="people-bio">Sport Lover</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Averill Vonner</a></h4>
+															<div class="people-bio">Runner</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Geof Vaughner</a></h4>
+															<div class="people-bio">Swimmer</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -518,217 +972,917 @@
 								</div>
 							</div>
 						</div>
-						<div class="feed-footer">
-							<div class="feed-avatar">
-								<img src="../asset/images/dummy/avatar.jpg" alt="">	
-							</div>
-							<div class="feed-reply">
-								<textarea name="feed-reply" id="feed-reply" placeholder="Write comment..."></textarea>
-							</div>
-						</div>
 					</section>
 
-					<section class="feed">
-						<div class="feed-header">
-							<div class="feed-avatar">
-								<a href="profile-view.html">
-									<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">	
-								</a>
-							</div>
-							<div class="feed-header-col">
-								<div class="feed-user"><a href="profile-view.html">Cobbie Cobbie</a></div>
-								<div class="feed-time">2 minutes ago</div>
-								<!-- option -->
-								<div class="option">
-									<div class="dropdown">
-										<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<span class="icon-option"><i></i></span>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
-											<a class="dropdown-item" href="#">Hide Post</a>
-											<a class="dropdown-item" href="#">Unfollow</a>
-											<button type="button" class="dropdown-item" role="link">Edit Post</button>
+					<section class="feed box">
+						<div class="feed-block">
+							<div class="feed-header">
+								<div class="feed-avatar">
+									<a href="profile-view.html">
+										<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">	
+									</a>
+								</div>
+								<div class="feed-header-col">
+									<div class="feed-user"><a href="profile-view.html">Cobbie Cobbie</a> <span>is at</span> <a href="map-place-detail.html">National Monument</a></div>
+									<div class="feed-time">2 minutes ago</div>
+									<!-- option -->
+									<div class="option">
+										<div class="dropdown">
+											<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<span class="icon-option"><i></i></span>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
+												<a class="dropdown-item" href="#">Hide Post</a>
+												<a class="dropdown-item" href="#">Unfollow</a>
+											</div>
 										</div>
 									</div>
+									<!-- option -->
 								</div>
-								<!-- option -->
 							</div>
-						</div>
-						<div class="feed-content">
-							<!-- place -->
-							<div class="feed-place">
-								<div class="feed-place-maps">
-									<img src="../asset/images/dummy/feed-place.png" alt="">	
-								</div>
-								<div class="feed-place-info">
-									<div class="feed-place-thumb">
-										<span>
-											<img src="https://source.unsplash.com/_oeQmY1zcBE/500x333" alt="">
-										</span>
+							<div class="feed-content">
+								<!-- place -->
+								<div class="feed-place">
+									<div class="feed-place-maps">
+										<a href="map-place-detail.html">
+											<img src="../asset/images/dummy/feed-place.png" alt="">	
+										</a>
 									</div>
-									<div class="feed-place-col">
-										<div class="feed-place-name">National Monument</div>
-										<div class="feed-place-checkin">You and 19 others have been here</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="feed-stat">
-							<div class="feed-stat-item">8K Likes</div>
-							<div class="feed-stat-item">698 Comments</div>
-						</div>
-						<div class="feed-action">
-							<!-- like button -->
-							<div class="feed-action-item">
-								<button type="button" class="button btn -action" data-toggle="button" aria-pressed="false">
-									<svg class="icon-post icon-comment" title="icon-like">
-										<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
-									</svg>
-									Like
-								</button>
-							</div>
-							
-							<!-- comment button -->
-							<div class="feed-action-item">
-								<button type="button" class="button -action">
-									<svg class="icon-post icon-comment" title="icon-comment">
-										<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
-									</svg>
-									Comment
-								</button>
-							</div>
-							
-							<!-- share button -->
-							<div class="feed-action-item">
-								<div class="dropup">
-									<button type="button" class="button -action dropdown-toggle" role="button" id="menuShare" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<svg class="icon-post icon-share" title="icon-share">
-											<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
-										</svg>
-										Share
-									</button>
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuShare">
-										<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="feed-comment">
-							<!-- comment -->
-							<div class="comment">
-								<div class="comment-feed">
-								</div>
-							</div>
-						</div>
-						<div class="feed-footer">
-							<div class="feed-avatar">
-								<img src="../asset/images/dummy/avatar.jpg" alt="">	
-							</div>
-							<div class="feed-reply">
-								<textarea name="feed-reply" id="feed-reply" placeholder="Write comment..."></textarea>
-							</div>
-						</div>
-					</section>
-
-					<section class="feed">
-						<div class="feed-header">
-							<div class="feed-avatar">
-								<a href="profile-view.html">
-									<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">	
-								</a>
-							</div>
-							<div class="feed-header-col">
-								<div class="feed-user"><a href="profile-view.html">Daisi Daisi</a></div>
-								<div class="feed-time">2 minutes ago</div>
-								<!-- option -->
-								<div class="option">
-									<div class="dropdown">
-										<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<span class="icon-option"><i></i></span>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
-											<a class="dropdown-item" href="#">Hide Post</a>
-											<a class="dropdown-item" href="#">Unfollow</a>
-											<button type="button" class="dropdown-item" role="link">Edit Post</button>
-										</div>
-									</div>
-								</div>
-								<!-- option -->
-							</div>
-						</div>
-						<div class="feed-content">
-							<!-- image -->
-							<div class="feed-img">
-								<div class="feed-img-block" data-slider="false">
-									<div class="feed-img-item">
-										<div class="feed-img-object">
+									<div class="feed-place-info">
+										<div class="feed-place-thumb">
 											<span>
-												<img src="https://source.unsplash.com/X1WgDUvRcA8/750x500" alt="">
+												<img src="https://source.unsplash.com/_oeQmY1zcBE/500x333" alt="">
 											</span>
 										</div>
+										<div class="feed-place-col">
+											<div class="feed-place-cat">Monument</div>
+											<div class="feed-place-name"><a href="map-place-detail.html">National Monument</a></div>
+											<div class="feed-place-checkin">You and 19 others have been here</div>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="feed-stat">
-							<div class="feed-stat-item">8K Likes</div>
-							<div class="feed-stat-item">698 Comments</div>
-						</div>
-						<div class="feed-action">
-							<!-- like button -->
-							<div class="feed-action-item">
-								<button type="button" class="button btn -action" data-toggle="button" aria-pressed="false">
-									<svg class="icon-post icon-comment" title="icon-like">
-										<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
-									</svg>
-									Like
-								</button>
+							<div class="feed-stat">
+								<div class="feed-stat-item"><a href="#" role="button" data-toggle="modal" data-target="#modalLikedBy">8K Likes</a></div>
+								<div class="feed-stat-item"><a href="post-detail.html">698 Comments</a></div>
 							</div>
-							
-							<!-- comment button -->
-							<div class="feed-action-item">
-								<button type="button" class="button -action">
-									<svg class="icon-post icon-comment" title="icon-comment">
-										<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
-									</svg>
-									Comment
-								</button>
-							</div>
-							
-							<!-- share button -->
-							<div class="feed-action-item">
-								<div class="dropup">
-									<button type="button" class="button -action dropdown-toggle" role="button" id="menuShare" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<svg class="icon-post icon-share" title="icon-share">
-											<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
+							<div class="feed-action">
+								<!-- like button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-like" name="btn-feed-like" class="button btn -action" data-toggle="button" aria-pressed="false">
+										<svg class="icon-post icon-comment" title="icon-like">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
 										</svg>
-										Share
+										Like
 									</button>
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuShare">
-										<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
-										<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
+								</div>
+								
+								<!-- comment button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-comment" name="btn-feed-comment" class="button -action">
+										<svg class="icon-post icon-comment" title="icon-comment">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
+										</svg>
+										Comment
+									</button>
+								</div>
+								
+								<!-- share button -->
+								<div class="feed-action-item">
+									<div class="dropup">
+										<button type="button" id="btn-feed-share" name="btn-feed-share" class="button -action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<svg class="icon-post icon-share" title="icon-share">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
+											</svg>
+											Share
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btn-feed-share">
+											<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="feed-footer">
+								<div class="feed-avatar">
+									<img src="../asset/images/dummy/avatar.jpg" alt="">	
+								</div>
+								<div class="feed-reply">
+									<input type="text" class="feed-reply-input" placeholder="Write comment...">
+									<button type="button" data-toggle="emoji" data-container="feed-reply" data-target="feed-reply-input" class="button feed-reply-emoji">
+										<svg class="icon-post icon-emoji" title="icon-emoji">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+										</svg>				
+									</button>
+								</div>
+							</div>
+						</div>
+					
+						<!-- feed like modal -->
+						<div id="modalLikedBy" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLikedBy" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+									<div class="modal-header">
+										<h5 class="modal-title">Liked by</h5>
+									</div>
+									<div class="modal-body">
+										<div class="people-block -modal">
+											<div class="people-list">
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
+															<div class="people-bio">Run Enthusiast</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Following"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
+															<div class="people-bio">Bike Addict</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
+															<div class="people-bio">Full-time Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
+															<div class="people-bio">Love Swimming</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Constantin Hoeffliger</a></h4>
+															<div class="people-bio">Urban Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Brody Wilch</a></h4>
+															<div class="people-bio">Run! Run! Run!</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Olaf Dobos</a></h4>
+															<div class="people-bio">Biker</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Clinten Donohoe</a></h4>
+															<div class="people-bio">Sport Lover</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Averill Vonner</a></h4>
+															<div class="people-bio">Runner</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Geof Vaughner</a></h4>
+															<div class="people-bio">Swimmer</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="feed-comment">
-							<!-- comment -->
-							<div class="comment">
-								<div class="comment-feed">
+					</section>
+
+					<section class="feed box">
+						<div class="feed-block">
+							<div class="feed-header">
+								<div class="feed-avatar">
+									<a href="profile-view.html">
+										<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">	
+									</a>
+								</div>
+								<div class="feed-header-col">
+									<div class="feed-user"><a href="profile-view.html">Daisi Daisi</a></div>
+									<div class="feed-time">2 minutes ago</div>
+									<!-- option -->
+									<div class="option">
+										<div class="dropdown">
+											<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<span class="icon-option"><i></i></span>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
+												<a class="dropdown-item" href="#">Hide Post</a>
+												<a class="dropdown-item" href="#">Unfollow</a>
+											</div>
+										</div>
+									</div>
+									<!-- option -->
+								</div>
+							</div>
+							<div class="feed-content">
+								<!-- image -->
+								<div class="feed-img">
+									<div class="feed-img-block">
+										<div class="feed-img-item">
+											<div class="feed-img-object">
+												<span>
+													<img src="https://source.unsplash.com/X1WgDUvRcA8/750x500" alt="">
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="feed-stat">
+								<div class="feed-stat-item"><a href="#" role="button" data-toggle="modal" data-target="#modalLikedBy">8K Likes</a></div>
+								<div class="feed-stat-item"><a href="post-detail.html">698 Comments</a></div>
+							</div>
+							<div class="feed-action">
+								<!-- like button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-like" name="btn-feed-like" class="button btn -action" data-toggle="button" aria-pressed="false">
+										<svg class="icon-post icon-comment" title="icon-like">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
+										</svg>
+										Like
+									</button>
+								</div>
+								
+								<!-- comment button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-comment" name="btn-feed-comment" class="button -action">
+										<svg class="icon-post icon-comment" title="icon-comment">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
+										</svg>
+										Comment
+									</button>
+								</div>
+								
+								<!-- share button -->
+								<div class="feed-action-item">
+									<div class="dropup">
+										<button type="button" id="btn-feed-share" name="btn-feed-share" class="button -action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<svg class="icon-post icon-share" title="icon-share">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
+											</svg>
+											Share
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btn-feed-share">
+											<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="feed-footer">
+								<div class="feed-avatar">
+									<img src="../asset/images/dummy/avatar.jpg" alt="">	
+								</div>
+								<div class="feed-reply">
+									<input type="text" class="feed-reply-input" placeholder="Write comment...">
+									<button type="button" data-toggle="emoji" data-container="feed-reply" data-target="feed-reply-input" class="button feed-reply-emoji">
+										<svg class="icon-post icon-emoji" title="icon-emoji">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+										</svg>				
+									</button>
 								</div>
 							</div>
 						</div>
-						<div class="feed-footer">
-							<div class="feed-avatar">
-								<img src="../asset/images/dummy/avatar.jpg" alt="">	
+					
+						<!-- feed like modal -->
+						<div id="modalLikedBy" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLikedBy" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+									<div class="modal-header">
+										<h5 class="modal-title">Liked by</h5>
+									</div>
+									<div class="modal-body">
+										<div class="people-block -modal">
+											<div class="people-list">
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
+															<div class="people-bio">Run Enthusiast</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Following"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
+															<div class="people-bio">Bike Addict</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
+															<div class="people-bio">Full-time Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
+															<div class="people-bio">Love Swimming</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Constantin Hoeffliger</a></h4>
+															<div class="people-bio">Urban Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Brody Wilch</a></h4>
+															<div class="people-bio">Run! Run! Run!</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Olaf Dobos</a></h4>
+															<div class="people-bio">Biker</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Clinten Donohoe</a></h4>
+															<div class="people-bio">Sport Lover</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Averill Vonner</a></h4>
+															<div class="people-bio">Runner</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Geof Vaughner</a></h4>
+															<div class="people-bio">Swimmer</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="feed-reply">
-								<textarea name="feed-reply" id="feed-reply" placeholder="Write comment..."></textarea>
+						</div>
+					</section>
+
+					<section class="feed box">
+						<div class="feed-block">
+							<div class="feed-header">
+								<div class="feed-avatar">
+									<a href="profile-view.html">
+										<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">	
+									</a>
+								</div>
+								<div class="feed-header-col">
+									<div class="feed-user"><a href="profile-view.html">Constantin Constantin</a></div>
+									<div class="feed-time">2 minutes ago</div>
+									<!-- option -->
+									<div class="option">
+										<div class="dropdown">
+											<button type="button" class="button -transparent dropdown-toggle" role="button" id="menuOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<span class="icon-option"><i></i></span>
+											</button>
+											<div class="dropdown-menu dropdown-menu-right" aria-labelledby="menuOption">
+												<a class="dropdown-item" href="#">Hide Post</a>
+												<a class="dropdown-item" href="#">Unfollow</a>
+											</div>
+										</div>
+									</div>
+									<!-- option -->
+								</div>
+							</div>
+							<div class="feed-content">
+								<!-- image -->
+								<div class="feed-img">
+									<div class="feed-img-block" data-slider="true">
+										<div class="feed-img-item">
+											<div class="feed-img-object">
+												<span>
+													<img data-src="https://source.unsplash.com/CYOFvtpOIpU/750x500" alt="" class="tns-lazy-img">
+												</span>
+											</div>
+										</div>
+										<div class="feed-img-item">
+											<div class="feed-img-object">
+												<span>
+													<img data-src="https://source.unsplash.com/3NhTyPZ8CO8/750x500" alt="" class="tns-lazy-img">
+												</span>
+											</div>
+										</div>
+										<div class="feed-img-item">
+											<div class="feed-img-object">
+												<span>
+													<img data-src="https://source.unsplash.com/mQVWb7kUoOE/750x500" alt="" class="tns-lazy-img">
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="feed-stat">
+								<div class="feed-stat-item"><a href="#" role="button" data-toggle="modal" data-target="#modalLikedBy">8K Likes</a></div>
+								<div class="feed-stat-item"><a href="post-detail.html">698 Comments</a></div>
+							</div>
+							<div class="feed-action">
+								<!-- like button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-like" name="btn-feed-like" class="button btn -action" data-toggle="button" aria-pressed="false">
+										<svg class="icon-post icon-comment" title="icon-like">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-like" />
+										</svg>
+										Like
+									</button>
+								</div>
+								
+								<!-- comment button -->
+								<div class="feed-action-item">
+									<button type="button" id="btn-feed-comment" name="btn-feed-comment" class="button -action">
+										<svg class="icon-post icon-comment" title="icon-comment">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-comment" />
+										</svg>
+										Comment
+									</button>
+								</div>
+								
+								<!-- share button -->
+								<div class="feed-action-item">
+									<div class="dropup">
+										<button type="button" id="btn-feed-share" name="btn-feed-share" class="button -action dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<svg class="icon-post icon-share" title="icon-share">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-share" />
+											</svg>
+											Share
+										</button>
+										<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btn-feed-share">
+											<a class="dropdown-item" href="#"><div class="icon-social -facebook"><span class="icon-general icon-facebook"></span></div> Facebook</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -twitter"><span class="icon-general icon-twitter"></span></div> Twitter</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -whatsapp"><span class="icon-general icon-whatsapp"></span></div> Whatsapp</a>
+											<a class="dropdown-item" href="#"><div class="icon-social -line"><span class="icon-general icon-line"></span></div> Line</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="feed-footer">
+								<div class="feed-avatar">
+									<img src="../asset/images/dummy/avatar.jpg" alt="">	
+								</div>
+								<div class="feed-reply">
+									<input type="text" class="feed-reply-input" placeholder="Write comment...">
+									<button type="button" data-toggle="emoji" data-container="feed-reply" data-target="feed-reply-input" class="button feed-reply-emoji">
+										<svg class="icon-post icon-emoji" title="icon-emoji">
+											<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+										</svg>				
+									</button>
+								</div>
+							</div>
+						</div>
+					
+						<!-- feed like modal -->
+						<div id="modalLikedBy" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLikedBy" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+									<div class="modal-header">
+										<h5 class="modal-title">Liked by</h5>
+									</div>
+									<div class="modal-body">
+										<div class="people-block -modal">
+											<div class="people-list">
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
+															<div class="people-bio">Run Enthusiast</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Following"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
+															<div class="people-bio">Bike Addict</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
+															<div class="people-bio">Full-time Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
+															<div class="people-bio">Love Swimming</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Constantin Hoeffliger</a></h4>
+															<div class="people-bio">Urban Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Brody Wilch</a></h4>
+															<div class="people-bio">Run! Run! Run!</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Olaf Dobos</a></h4>
+															<div class="people-bio">Biker</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Clinten Donohoe</a></h4>
+															<div class="people-bio">Sport Lover</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Averill Vonner</a></h4>
+															<div class="people-bio">Runner</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Geof Vaughner</a></h4>
+															<div class="people-bio">Swimmer</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -752,12 +1906,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Stevy Michienzi</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
 												<div class="people-bio">Run Enthusiast</div>
 											</div>
 										</div>
@@ -770,12 +1924,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Abagael Tanguma</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
 												<div class="people-bio">Bike Addict</div>
 											</div>
 										</div>
@@ -788,12 +1942,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Cobbie Javarone</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
 												<div class="people-bio">Full-time Traveler</div>
 											</div>
 										</div>
@@ -806,12 +1960,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Daisi Widdows</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
 												<div class="people-bio">Love Swimming</div>
 											</div>
 										</div>
@@ -823,7 +1977,7 @@
 									</div>
 								</div>
 								<div class="people-aside-footer">
-									<a href="follow.html" role="link">See All</a>
+									<a href="people.html" role="link">See All</a>
 								</div>
 							</div>
 						</aside>
@@ -858,14 +2012,930 @@
 	</div>
 	<!-- e: root -->
 
+	<!-- emoji source -->
+	<div id="emoji">
+		<div class="emoji" data-emoji="emoji">
+			<div class="emoji-header" role="tablist">
+				<button type="button" class="button emoji-tab active" aria-controls="Smileys &amp; People" role="tab" data-toggle="emojiTab" data-target="emoji1">😃</button>
+				<button type="button" class="button emoji-tab" aria-controls="Animals &amp; Nature" role="tab" data-toggle="emojiTab" data-target="emoji2">🐻</button>
+				<button type="button" class="button emoji-tab" aria-controls="Food &amp; Drink" role="tab" data-toggle="emojiTab" data-target="emoji3">🍔</button>
+				<button type="button" class="button emoji-tab" aria-controls="Activity" role="tab" data-toggle="emojiTab" data-target="emoji4">⚽</button>
+				<button type="button" class="button emoji-tab" aria-controls="Travel &amp; Places" role="tab" data-toggle="emojiTab" data-target="emoji5">🌇</button>
+				<button type="button" class="button emoji-tab" aria-controls="Flags" role="tab" data-toggle="emojiTab" data-target="emoji6">🏳</button>
+			</div>
+			<div class="emoji-content">
+				<div data-emoji-id="emoji1" class="emoji-panel active" role="tabpanel">
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😆</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🙂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🙃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😍</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😚</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😙</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😛</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😜</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😝</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😏</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🙄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤢</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😎</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😟</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🙁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😢</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😞</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">👿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">☠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">👹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">👺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">👻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">👽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">👾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🙀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">😾</button>
+				</div>
+				<div data-emoji-id="emoji2" class="emoji-panel" role="tabpanel">
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🙈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🙉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🙊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦍</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦝</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐆</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐎</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐏</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦙</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦏</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦛</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🕊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦆</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦢</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦚</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦜</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐢</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦎</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐍</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐟</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐙</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐚</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐛</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐜</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐝</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🐞</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🕷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🕸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦟</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">☘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦞</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌍</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌎</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌏</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌙</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌚</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌛</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌜</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">☀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌝</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌞</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⭐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌟</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">☁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">☂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">☔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⚡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">❄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">☃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">☄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🔥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">✨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎍</button>
+				</div>
+				<div data-emoji-id="emoji3" class="emoji-panel" role="tabpanel">
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍍</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍎</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍏</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥝</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍆</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥜</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍞</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥞</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍟</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥙</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧆</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥚</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍙</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍚</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍛</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍜</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍝</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍢</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥟</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🦪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥛</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">☕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥢</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🍴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥄</button>
+				</div>
+				<div data-emoji-id="emoji4" class="emoji-panel" role="tabpanel">
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🕴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🤹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎟</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏆</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⚽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⚾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥎</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥏</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏏</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥍</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🧶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🥁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏹</button>
+				</div>
+				<div data-emoji-id="emoji5" class="emoji-panel" role="tabpanel">
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🗾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🗻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏜</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏝</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏞</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏟</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏛</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏚</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏢</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🗼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🗽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🕌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🕍</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🕋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏙</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌆</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎢</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚅</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚆</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚉</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚊</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚝</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚞</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚋</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚍</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚎</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚒</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚔</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚕</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚖</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚗</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚘</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚙</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚚</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚛</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚜</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏎</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏍</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚏</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛣</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⚓</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚤</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛥</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚢</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">✈</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🪂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚟</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚡</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚀</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🪐</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌠</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🌌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">⛱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎆</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎇</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎑</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">💷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🗿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛂</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛃</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛄</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🛅</button>
+				</div>
+				<div data-emoji-id="emoji6" class="emoji-panel" role="tabpanel">
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏁</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🚩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🎌</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇦🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇧🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇨🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇩🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇩🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇩🇯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇩🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇩🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇩🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇩🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇪🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇪🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇪🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇪🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇪🇭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇪🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇪🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇪🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇪🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇫🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇫🇯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇫🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇫🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇫🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇫🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇬🇾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇭🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇭🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇭🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇭🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇭🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇭🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇮🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇯🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇯🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇯🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇯🇵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇰🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇱🇾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇶</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇲🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇵</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇳🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇴🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇵🇾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇶🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇷🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇷🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇷🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇷🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇷🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇧</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇽</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇸🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇩</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇭</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇯</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇱</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇴</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇷</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇻</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇹🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇺🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇺🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇺🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇺🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇺🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇺🇾</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇺🇿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇻🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇻🇨</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇻🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇻🇬</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇻🇮</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇻🇳</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇻🇺</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇼🇫</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇼🇸</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇽🇰</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇾🇪</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇾🇹</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇿🇦</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇿🇲</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🇿🇼</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏴󠁧󠁢󠁥󠁮󠁧󠁿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏴󠁧󠁢󠁳󠁣󠁴󠁿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏴󠁧󠁢󠁷󠁬󠁳󠁿</button>
+					<button type="button" class="button emoji-icon" data-toggle="emojiIcon">🏴󠁵󠁳󠁴󠁸󠁿</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <script type="text/javascript" src="../asset/js/jquery.min.js"></script>
 <script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugin-pack.min.js"></script>
 <script type="text/javascript" src="../asset/js/main.js"></script>
-<script type="text/javascript" src="../asset/js/svgxuse.js" defer></script>
-<script type="text/javascript">
-//  $(document).ready(function() {
-//    $("#post-content").emojioneArea();
-//  });
-</script>
+<script type="text/javascript" src="../asset/js/svgxuse.min.js" defer></script>
 </body>
 </html>

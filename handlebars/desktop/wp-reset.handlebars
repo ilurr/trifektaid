@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+		<span class="root-bg" style="background-image: url('../asset/images/hero-bg.jpg');"></span>
+
+		{{>header}}
+
+		<!-- grid -->
+		<div class="grid grid-full">
+
+			<div class="grid-flex sign">
+
+				<div class="sign-wrap">
+
+					<!-- s: reset -->
+					<div class="panel">
+						{{>title title="Reset Your Password"}}
+						<div class="panel-body">
+							<form action="wp-reset-result.html">
+								<div class="sign-text">
+									Enter your email address below and we'll send you a link with instructions.
+								</div>
+
+								{{>input type="text" label="Email Address" name="name"}}
+
+								{{>button type="submit" label="Send" name="reset" class="-primary"}}
+
+								<div class="sign-text">
+									<div class="text-center"><a href="wp-signup.html">Create new account</a></div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- e: reset -->
+					
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+</body>
+</html>

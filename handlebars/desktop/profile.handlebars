@@ -21,8 +21,17 @@
 				<div class="grid-col -wide">
 
 					<!-- pofile header -->
-					{{>profile_header}}
+					{{>profile_header edit="true"}}
 
+					<!-- feeds -->
+					{{>feeds channel=people.[0]}}
+
+					{{>feeds channel=people.[1] comment="true"}}
+
+					{{>feeds channel=people.[2] comment="true"}}
+
+					{{>feeds channel=people.[3] comment="true"}}
+					
 				</div>
 
 				<div class="grid-col -aside">
@@ -35,6 +44,11 @@
 
 	</div>
 	<!-- e: root -->
+
+	<!-- emoji source -->
+	<div id="emoji">
+		{{>emoji}}
+	</div>
 
 {{>js}}
 </body>

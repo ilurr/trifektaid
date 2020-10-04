@@ -9,6 +9,7 @@
 		@include transition(all .2s ease);
 		&.unread {
 			background: rgba($color-theme, .05);
+			border-bottom: 1px solid #ffdddc;
 			&:after {
 				content: '';
 				position: absolute;
@@ -20,6 +21,7 @@
 		}
 		&:hover {
 			background: #f7f7f7;
+			border-bottom: 1px solid #f0f0f0;
 		}
 		&:first-child {
 			margin-top: -10px;
@@ -44,7 +46,6 @@
 		overflow: hidden;
 		border-radius: 60px;
 		img {
-			max-width: none;
 			@include ratio-flexible(auto, 100%);
 		}
 	}

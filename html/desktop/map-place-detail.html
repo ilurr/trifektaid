@@ -42,7 +42,7 @@
 			<div class="header-col">
 				<!-- search -->
 				<div class="search-header">
-					<form action="#">
+					<form action="search.html">
 						<input type="text" class="input" name="search" placeholder="Search">
 						<input type="submit" class="button" name="search-btn" value="Search">
 						<span class="icon-general icon-search"></span>
@@ -161,19 +161,6 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link" role="link" aria-label="Messages">
-									<div class="nav-flex">
-										<div class="nav-icon">
-											<span class="nav-badge"></span>
-											<svg class="icon-nav icon-message" title="icon-message">
-												<use xlink:href="../asset/images/icon/icon.svg#icon-message" />
-											</svg>
-										</div>
-										<div class="nav-text">Messages</div>
-									</div>
-								</a>
-							</li>
-							<li class="nav-item">
 								<a href="setting.html" class="nav-link" role="link" aria-label="Setting">
 									<div class="nav-flex">
 										<div class="nav-icon">
@@ -190,6 +177,8 @@
 				</div>
 
 				<div class="grid-col -wide">
+
+					<!-- map detail page version-->
 					<div class="map box">
 						<div class="map-box-detail">
 							<div class="map-img">
@@ -234,15 +223,218 @@
 							<div class="map-checkin">
 								<div class="map-checkin-user">
 									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="Stevy"></div>
-									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="Abagael"></div>
-									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="Cobbie"></div>
-									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="Daisi"></div>
-									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="Constantin"></div>
+									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="Stevy"></div>
+									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="Stevy"></div>
+									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="Stevy"></div>
+									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="Stevy"></div>
 								</div>
-								<div class="map-checkin-text">+82 More have been here</div>
+								<div class="map-checkin-text"><a href="#" role="button" data-toggle="modal" data-target="#modalPeopleCheckin">+82 More have been here</a></div>
 							</div>
 						</div>
 					</div>
+					
+					<!-- place whos been here modal -->
+					<!-- modal above modal -front -->
+					<div id="modalPeopleCheckin" class="modal -front fade" tabindex="-1" role="dialog" aria-labelledby="modalPeopleHere" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+								<div class="modal-header">
+									<h5 class="modal-title">National Monument</h5>
+								</div>
+								<div class="modal-body">
+									<!-- people here -->
+									<div class="people-block -modal">
+										<div class="people-block">
+											<div class="people-list">
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
+															<div class="people-bio">Run Enthusiast</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Following"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
+															<div class="people-bio">Bike Addict</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
+															<div class="people-bio">Full-time Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
+															<div class="people-bio">Love Swimming</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Constantin Hoeffliger</a></h4>
+															<div class="people-bio">Urban Traveler</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Brody Wilch</a></h4>
+															<div class="people-bio">Run! Run! Run!</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Olaf Dobos</a></h4>
+															<div class="people-bio">Biker</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Clinten Donohoe</a></h4>
+															<div class="people-bio">Sport Lover</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Averill Vonner</a></h4>
+															<div class="people-bio">Runner</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+												<div class="people-item">
+													<div class="people-row">
+														<div class="people-img">
+															<a href="profile-view.html">
+																<img src="https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-200w.jpeg" alt="">
+															</a>
+														</div>
+														<div class="people-info">
+															<h4 class="people-name"><a href="profile-view.html">Geof Vaughner</a></h4>
+															<div class="people-bio">Swimmer</div>
+														</div>
+													</div>
+													<div class="people-action">
+														<div class="form-row">
+															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 
 				<div class="grid-col -aside">
@@ -255,12 +447,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Stevy Michienzi</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
 												<div class="people-bio">Run Enthusiast</div>
 											</div>
 										</div>
@@ -273,12 +465,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Abagael Tanguma</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
 												<div class="people-bio">Bike Addict</div>
 											</div>
 										</div>
@@ -291,12 +483,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Cobbie Javarone</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
 												<div class="people-bio">Full-time Traveler</div>
 											</div>
 										</div>
@@ -309,12 +501,12 @@
 									<div class="people-item">
 										<div class="people-row">
 											<div class="people-img">
-												<a href="profile.html">
+												<a href="profile-view.html">
 													<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
 												</a>
 											</div>
 											<div class="people-info">
-												<a href="profile.html"><h4 class="people-name">Daisi Widdows</h4></a>
+												<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
 												<div class="people-bio">Love Swimming</div>
 											</div>
 										</div>
@@ -326,7 +518,7 @@
 									</div>
 								</div>
 								<div class="people-aside-footer">
-									<a href="follow.html" role="link">See All</a>
+									<a href="people.html" role="link">See All</a>
 								</div>
 							</div>
 						</aside>
@@ -363,117 +555,8 @@
 
 <script type="text/javascript" src="../asset/js/jquery.min.js"></script>
 <script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugin-pack.min.js"></script>
 <script type="text/javascript" src="../asset/js/main.js"></script>
-<script type="text/javascript" src="../asset/js/svgxuse.js" defer></script>
-<script type="text/javascript">
-//  $(document).ready(function() {
-//    $("#post-content").emojioneArea();
-//  });
-</script>
-<script>
-// Create the script tag, set the appropriate attributes
-var script = document.createElement('script');
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDLHHNn69HegtzbO5SwYhvOluzTlv_mMpA&callback=initMap';
-script.defer = true;
-
-
-
-// Attach your callback function to the `window` object
-window.initMap = function() {
-  // JS API is loaded and available
-        // Create a <script> tag and set the USGS URL as the source.
-        var script = document.createElement('script');
-        // This example uses a local copy of the GeoJSON stored at
-        script.src = '../asset/js/dummy-place.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-
-	var pos = {lat: -6.176523, lng: 106.825093};
-  var bounds = new google.maps.LatLngBounds();
-
-	map = new google.maps.Map(document.getElementById('jsMaps'), {
-		center: {lat: -6.1760114, lng: 106.8260832},
-		zoom: 16
-	});
-
-      let infowindow = new google.maps.InfoWindow();
-
-function HTMLMarker(place) {
-    var lat = place.lat;
-    var lng = place.lng;
-    this.id = place.id;
-    this.title = place.title;
-    this.img = place.img;
-    this.lead = place.lead;
-    this.pos = new google.maps.LatLng( lat, lng );
-			//console.log(this.pos)
-}
-
-HTMLMarker.prototype = new google.maps.OverlayView();
-
-HTMLMarker.prototype.onRemove = function () {};
-
-HTMLMarker.prototype.onAdd = function () {
-    var div = this.div = document.createElement('DIV');
-    div.className = "map-marker";
-    div.id = this.id;
-    div.innerHTML = '<a href="#" class="map-link" data-name="' + this.title + '"><div class="map-thumb"><img src="' + this.img + '"></div></a>';
-	div.innerHTML += '<div class="map-box-google -popup"><div class="map-title">' + this.title + '</div><div class="map-rating"><div class="icon-rating"><div class="icon-general icon-star" data-rating="4.5"></div><div class="icon-general icon-star-bg"></div></div></div><div class="map-nearby">1.3 Km nearby</div><div class="map-row"><div class="map-img"><span><img src="' + this.img + '"></span></div><div class="map-col"><div class="map-lead">' + this.lead + '</div><a href="#" class="button -map">Explore</a></div></div></div>';
-
-    var panes = this.getPanes();
-    panes.overlayMouseTarget.appendChild(div);
-
-	var me = this;
-	google.maps.event.addDomListener(me, 'click', function() {
-		//infowindow.open(map, me);
-		//infowindow.setContent('klok')
-		console.log(this);
-	});
-	google.maps.event.addDomListener(div, 'click', function() {
-		google.maps.event.trigger(me, 'click');
-	});
-
-};
-
-HTMLMarker.prototype.draw = function () {
-    var overlayProjection = this.getProjection();
-    var position = overlayProjection.fromLatLngToDivPixel(this.pos);
-    var panes = this.getPanes();
-    this.div.style.left = position.x + 'px';
-    this.div.style.top = position.y + 'px';
-};
-
-      window.eqfeed_callback = function(results) {
-        for (var i = 0; i < results.place.length; i++) {
-          var latLng = new google.maps.LatLng(results.place[i].lat,results.place[i].lng);
-          //var marker = new google.maps.Marker({
-          //  position: latLng,
-          //  map: map
-          //});
-			addMarker(results.place[i]);
-				//console.log(results.place[i])
-
-		  bounds.extend(latLng);
-        }
-		    function addMarker(place) {
-				var htmlMarker = new HTMLMarker(place);
-				htmlMarker.setMap(map);
-				//console.log(htmlMarker.setMap(map))
-			}
-
-		  map.fitBounds(bounds);
-      }
-
-  
-    
-    //to use it
-
-};
-
-// Append the 'script' element to 'head'
-document.head.appendChild(script);
-
-
-
-</script>
+<script type="text/javascript" src="../asset/js/svgxuse.min.js" defer></script>
 </body>
 </html>

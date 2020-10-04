@@ -19,8 +19,52 @@
 				</div>
 
 				<div class="grid-col -wide">
-					{{!-- <h2 class="title">Map</h2> --}}
-					{{>map_page}}
+
+					<!-- map -->
+					<div class="map box">
+						<div class="map-block" id="jsMaps"></div>
+					</div>
+
+					<!-- map box hover -->
+					<div class="map-box-google">
+						<div class="map-title">Istiqlal Mosque</div>
+						<div class="map-rating">
+							<div class="icon-rating">
+								<div class="icon-general icon-star" data-rating="3.7"></div>
+								<div class="icon-general icon-star-bg"></div>
+							</div>
+						</div>
+						<div class="map-nearby">1.3 Km nearby</div>
+						<div class="map-row">
+							<div class="map-img">
+								<span><img src="https://source.unsplash.com/3qPQtPoyqUg/500x333"></span>
+							</div>
+							<div class="map-col">
+								<div class="map-lead">This mosque features a contemporary design & is the largest in Southeast Asia.</div>
+								{{!-- <a href="#modalMap" class="button -primary -mapGl" data-toggle="modal">Explore</a> --}}
+								<button id="modalMap1" type="button" data-toggle="modal" data-target="#modalMap" class="button -map">Explore</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- map detail modal -->
+					<div id="modalMap" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalMapExplore" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+								<div class="modal-body">
+									<!-- modal content -->
+									<div class="map-box-modal">
+										{{>map_place_detail}}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- place whos been here modal -->
+					{{>place_whoshere}}
+
 				</div>
 
 			</div>

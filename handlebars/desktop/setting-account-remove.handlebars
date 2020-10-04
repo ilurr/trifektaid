@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header login=true}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav active="Setting"}}
+				</div>
+
+				<div class="grid-col -wide">
+
+					<!-- setting -->
+					<div class="setting box">
+						<h2 class="title">Delete Account</h2>
+						<form action="setting.html">
+							<div class="user-form">
+								<div class="user-form-row">
+									{{>input type="text" label="Your Email Account" name="remove-email"}}
+									{{>input type="password" label="Password" name="remove-password"}}
+								</div>
+								<div class="user-form-action">
+									{{>button type="modal" name="btn-remove-user" class="-primary" label="Delete Account" dataAttrTarget="#modalDeleteAccount"}}
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<!-- modal confirm remove account -->
+					<form action="wp-bye.html">
+						<div id="modalDeleteAccount" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="deleteAccount" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+									<div class="modal-header">
+										<h5 class="modal-title" id="deleteAccount">Delete Account</h5>
+									</div>
+									<div class="modal-body">
+										<div class="modal-text">Are you sure about deleting your account permanently?</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="button" data-dismiss="modal">Cancel</button>
+										<button class="button -primary">Delete Account</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+
+				</div>
+
+				<div class="grid-col -aside">
+					{{>sidebar}}
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+</body>
+</html>

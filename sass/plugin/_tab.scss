@@ -1,0 +1,43 @@
+.tab {
+	position: relative;
+	&-block {
+		position: relative;
+	}
+	&-header {
+		position: relative;
+		padding: 1rem 0 0;
+		margin-bottom: 1rem;
+		@include display-flex();
+		justify-content: flex-start;
+		align-items: center;
+		border-bottom: 2px solid #EDEEEE;
+	}
+	&-item {
+		position: relative;
+		padding: .75rem .25rem;
+		border-bottom: 2px solid transparent;
+		margin-bottom: -2px;
+		margin-right: 1rem;
+		a {
+			@include font-pack(false, 1rem, 700, false, #B8B8B8);
+			&:hover {
+				color: $color-theme;
+			}
+		}
+		&.active {
+			border-bottom: 2px solid $color-theme;
+			a {
+				color: #000;
+			}
+		}
+	}
+	&-content {
+		position: relative;
+		& > .tab-panel {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+	}
+}

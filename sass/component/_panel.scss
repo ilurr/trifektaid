@@ -6,6 +6,24 @@
 	padding: 2rem 2.5rem;
 	// @include min-responsive($screen-tablet) {
 	// }
+	&-alert {
+		padding: .75rem .5rem;
+		margin-bottom: 1rem;
+		text-align: center;
+		@include font-pack(false, .75rem, 500, false, #fff);
+		p {
+			margin: .25rem 0;
+			font-size: inherit;
+			font-weight: 500;
+			color: #fff;
+		}
+		&.-success {
+			background: $color-success;
+		}
+		&.-error {
+			background: $color-error;
+		}
+	}
 	&-body {
 		@include font-pack(false, .75rem, false, false, false);
 		p {

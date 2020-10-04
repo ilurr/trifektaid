@@ -29,11 +29,13 @@
 					<!-- feeds -->
 					{{>feeds channel=people.[0]}}
 
-					{{>feeds channel=people.[1] comment="true"}}
+					{{>feeds channel=people.[1] comment="true" commentall="true"}}
 
-					{{>feeds channel=people.[2] comment="true"}}
+					{{>feeds channel=people.[2]}}
 
-					{{>feeds channel=people.[3] comment="true"}}
+					{{>feeds channel=people.[3]}}
+
+					{{>feeds channel=people.[4]}}
 
 					{{>more label="Load more"}}
 
@@ -49,6 +51,11 @@
 
 	</div>
 	<!-- e: root -->
+
+	<!-- emoji source -->
+	<div id="emoji">
+		{{>emoji}}
+	</div>
 
 {{>js}}
 </body>

@@ -30,7 +30,7 @@ $dp-cell-size-base: 2.5rem !default;
 $dp-cell-focus-background-color: darken($light, 5%) !default;
 $dp-cell-prevnext-color: hsl(0, 0%, 48%) !default; // grey
 $dp-cell-disabled-color: darken(hsl(0, 0%, 96%),10%) !default;
-$dp-cell-selected-background-color: $link !default;
+$dp-cell-selected-background-color: $light !default;
 $dp-cell-selected-color: #fff !default; // link(blue)-invert
 $dp-cell-selected-font-weight: 600 !default;
 $dp-cell-today-background-color: hsl(171, 100%, 41%) !default;  // turquoise (primary)
@@ -69,7 +69,15 @@ $dp-cell-shrinked-width: $dp-cell-size-base * 7 / 8;
   top: 0;
   left: 0;
   z-index: $dp-dropdown-z;
-  padding-top: $dp-dropdown-offset;
+ // padding-top: $dp-dropdown-offset;
+
+//tam
+@include min-responsive($screen-tablet) {
+  width: 75%;
+}
+@include min-responsive($screen-large-desktop) {
+  width: 65%;
+}
 
   &.datepicker-orient-top {
     padding-top: 0;
@@ -127,6 +135,8 @@ $dp-cell-shrinked-width: $dp-cell-size-base * 7 / 8;
 %datepicker-cell-height {
   height: $dp-cell-size-base;
   line-height: $dp-cell-size-base;
+   font-weight: 500;
+   font-size: .875rem;
 }
 
 .datepicker-title {
