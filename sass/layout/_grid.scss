@@ -1,8 +1,11 @@
 .root {
 	position: relative;
-	padding-top: 4.375rem;
+	padding-top: 3.438rem;
 	// padding-top: 5rem;
 	min-height: 100vh;
+	@include min-responsive($screen-tablet) {
+		padding-top: 4.375rem;
+	}
 	&-bg {
 		position: absolute;
 		top: 0;
@@ -11,10 +14,10 @@
 		bottom: 0;
 		background-size: cover;
 		background-position: center center;
-		width: $screen-tablet;
-		@include min-responsive($screen-desktop) {
-			width: 100%;
-		}
+		width: 100%;
+		// @include min-responsive($screen-desktop) {
+		// 	width: $screen-tablet;
+		// }
 	}
 }
 
@@ -22,10 +25,12 @@
 	position: relative;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 0.938rem;
-	padding-right: 0.938rem;
 	// width: $screen-tablet;
 	width: 100%;
+	@include min-responsive($screen-tablet) {
+		padding-left: 0.938rem;
+		padding-right: 0.938rem;
+	}
 	@include min-responsive($screen-desktop) {
 		width: $screen-desktop;
 	}
@@ -38,7 +43,6 @@
 		// min-height: 70vh;
 		padding-left: 0;
 		padding-right: 0;
-		width: $screen-tablet;
 		// width: $screen-tablet;
 		width: 100%;
 		// @include min-responsive($screen-desktop) {
@@ -55,6 +59,9 @@
 	&-flex {
 		position: relative;
 		@include display-flex();
+		@include max-responsive($screen-mobile-max) {
+			flex-wrap: wrap;
+		}
 	}
 	&-col {
 		position: relative;
@@ -80,7 +87,10 @@
 }
 
 .-nav {
-	width: 85px;
+	width: 100%;
+	@include min-responsive($screen-tablet) {
+		width: 85px;
+	}
 	@include min-responsive($screen-desktop) {
 		width: 210px;
 	}

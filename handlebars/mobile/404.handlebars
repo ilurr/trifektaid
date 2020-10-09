@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		<!-- grid -->
+		<div class="grid grid-full">
+
+			<div class="grid-flex sign">
+
+				<div class="wp-hero">
+					<span class="wp-img" style="background-image: url('../asset/images/hero-bg.jpg');"></span>
+					<div class="wp-logo">
+						<a href="index-wp.html">
+							<img src="../asset/images/logo-trifekta-splash.svg" alt="Trifekta">
+						</a>
+					</div>
+				</div>
+				<div class="sign-wrap">
+
+					<!-- s: sign in -->
+					<div class="panel -signin">
+						<div class="panel-body">
+							<div class="notes-block page-404">
+								{{>title title="404"}}
+								<p>Error, page not found.</p>
+								<p>Uuhh, we're so sorry, we seem can't find the page you're lookin for. Try to go back to previous page, or </p>
+								<p><a href="index-wp.html">Back to home</a></p>
+							</div>
+						</div>
+					</div>
+					<!-- e: sign in -->
+					
+				</div>
+
+			</div>
+
+		</div>
+
+		{{>footer}}
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+</body>
+</html>

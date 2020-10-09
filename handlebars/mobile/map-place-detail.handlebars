@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header_mobile login=true}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav_mobile active="Map"}}
+				</div>
+
+				<div class="grid-col -wide">
+
+					{{>title section="true" title="Istiqlal Mosque"}}
+
+					<!-- map detail page version-->
+					<div class="map box">
+						<div class="map-box-detail">
+							{{>map_place_detail}}
+						</div>
+					</div>
+					
+					<!-- place whos been here modal -->
+					{{>place_whoshere}}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header_mobile login=true}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav_mobile active="Profile"}}
+				</div>
+
+				<div class="grid-col -wide">
+
+					{{!>title section="true" title="Chelsea Islan"}}
+
+					<!-- people -->
+					<div class="people box">
+						<!-- tab -->
+						<div class="tab-block">
+							<ul class="tab-header" role="tablist">
+								<li role="presentation" class="tab-item active">
+									<a href="#user-following" aria-controls="following tab list" role="tab" data-toggle="tab">Following</a>
+								</li>
+								<li role="presentation" class="tab-item">
+									<a href="#user-followers" aria-controls="followers tab list" role="tab" data-toggle="tab">Followers</a>
+								</li>
+							</ul>
+						</div>
+						<!-- tab content -->
+						<div class="tab-content">
+							<div id="user-following" class="tab-panel active" role="tabpanel">
+								<!-- following -->
+								<div class="people-block">
+									<div class="people-list">
+										{{>people_list channel=people index_start=0 index_end=10}}
+									</div>
+								</div>
+								{{>more label="Load more"}}
+							</div>
+							<div id="user-followers" class="tab-panel" role="tabpanel">
+								<!-- followers -->
+								<div class="people-block">
+									{{>notes content="You have no follower yet."}}
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+</body>
+</html>

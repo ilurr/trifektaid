@@ -120,6 +120,9 @@
 			padding: 0 20px;
 			text-transform: uppercase;
 			@include font-pack(false, 0.688rem, 500, false, #5f5d70);
+			& > a {
+				color: inherit;
+			}
 		}
 		&-avatar {
 			position: relative;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		<!-- grid -->
+		<div class="grid grid-full">
+
+			<div class="grid-flex sign">
+
+				<div class="wp-hero">
+					<span class="wp-img" style="background-image: url('../asset/images/hero-bg.jpg');"></span>
+					<div class="wp-logo">
+						<a href="index-wp.html">
+							<img src="../asset/images/logo-trifekta-splash.svg" alt="Trifekta">
+						</a>
+					</div>
+				</div>
+				<div class="sign-wrap">
+
+					<!-- s: signup -->
+					<div class="panel">
+						<div class="panel-alert -success">
+							<p>Your account has been created, now you can continue login below.</p>
+						</div>
+						<!--<div class="panel-alert -error">
+							<p>Failed. We are so sorry, you can try again later.</p>
+						</div>-->
+						{{>title title="Login"}}
+						<div class="panel-body">
+							<form action="index.html">
+								{{>input type="text" label="Email Address" name="name"}}
+								{{>input type="password" label="Password" name="password"}}
+
+								{{>checkbox type="checkbox" label="Remember Me" name="remember"}}
+
+								{{>button type="submit" label="Login" name="signup" class="-primary"}}
+							</form>
+						</div>
+					</div>
+					<!-- e: signup -->
+					
+				</div>
+
+			</div>
+
+		</div>
+
+		{{>footer}}
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+</body>
+</html>

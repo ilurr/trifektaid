@@ -4,6 +4,10 @@
 		padding-left: 0.938rem;
 		padding-right: 0.938rem;
 		width: 100%;
+		display: none;
+		@include min-responsive($screen-tablet) {
+			display: block;
+		}
 		@include min-responsive($screen-desktop) {
 			width: 260px;
 		}

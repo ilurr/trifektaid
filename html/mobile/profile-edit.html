@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- url bar color theme -->
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
+	<!-- icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../asset/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../asset/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../asset/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../asset/images/favicon/site.webmanifest">
+
+    <title>Trifekta</title>
+    
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+	
+
+    <link href="../asset/css/style-m.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		<!-- header -->
+		<header class="header -mobile -fixed">
+			<div class="header-col">
+				<div class="logo">
+					<a href="index.html">
+						<img src="../asset/images/logo-trifekta-mobile.svg" alt="Trifekta">
+					</a>
+				</div>
+			</div>
+			<div class="header-col -right">
+				<!-- menu -->
+				<div class="menu-header">
+					<div class="menu-header-col">
+						<a class="button menu-icon-search" href="javascript:void(0)" role="button" data-toggle="search">
+							<span class="icon-general icon-search"></span>
+						</a>
+						<a class="button menu-icon-notify" href="notification.html" role="link">
+							<span class="nav-badge">5</span>
+							<svg class="icon-nav icon-bell" title="icon-bell">
+								<use xlink:href="../asset/images/icon/icon.svg#icon-bell" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		
+			<!-- search -->
+			<div id="searchBar" class="search-header">
+				<div class="search-bg"></div>
+				<form action="search.html">
+					<input type="text" class="input" name="search" placeholder="Search">
+					<input type="submit" class="button" name="search-btn" value="Search">
+					<span class="icon-general icon-search"></span>
+				</form>
+			</div>
+		</header>
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					<!-- nav main -->
+					<nav class="nav -fixed" aria-label="Main Navigation">
+						<ol class="nav-wrap">
+							<li class="nav-item">
+								<a href="index.html" class="nav-link" role="link" aria-label="Home">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-home" title="icon-home">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-home" />
+											</svg>
+										</div>
+										<div class="nav-text">Home</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="map.html" class="nav-link" role="link" aria-label="Map">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-map" title="icon-map">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-map" />
+											</svg>
+										</div>
+										<div class="nav-text">Map</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="discover.html" class="nav-link" role="link" aria-label="Discover">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-trifekta" title="icon-trifekta">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-trifekta" />
+											</svg>
+										</div>
+										<div class="nav-text">Discover</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="challenges.html" class="nav-link" role="link" aria-label="Challenges">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<span class="nav-badge"></span>
+											<svg class="icon-nav icon-trophy" title="icon-trophy">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-trophy" />
+											</svg>
+										</div>
+										<div class="nav-text">Challenges</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="profile.html" class="nav-link -active" role="link" aria-label="Profile">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<span class="nav-badge"></span>
+											<svg class="icon-nav icon-user" title="icon-user">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-user" />
+											</svg>
+										</div>
+										<div class="nav-text">Profile</div>
+									</div>
+								</a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+
+				<div class="grid-col -wide">
+
+					<h1 class="title-section">
+						Edit Profile
+					</h1>
+
+					<!-- pofile edit -->
+					<div class="user-profile box">
+						<form action="profile.html">
+							<div class="user-form">
+								<div class="user-form-avatar">
+									<div class="user-avatar">
+										<img src="../asset/images/dummy/avatar.jpg" alt="">
+									</div>
+									<a href="#modalAvatar" data-toggle="modal" class="user-avatar-button">
+										<span class="icon-general icon-photo"></span>
+									</a>
+								</div>
+								<div class="user-form-row">
+									<div class="form-row">
+										<label for="name">Name</label>
+										<div class="form-input">
+											<input type="text" id="name" name="name" class="input" placeholder="" value="Chelsea Islan">
+										</div>
+										<div class="form-hint"></div>
+									</div>
+									<div class="form-row" id="js-datepicker-container">
+										<label for="birthday">Birthday</label>
+										<div class="form-input">
+											<input type="text" id="birthday" name="birthday" class="input js-datepicker" placeholder="" readonly="readonly" value="19 Jan 1990">
+										</div>
+										<div class="form-hint"></div>
+									</div>
+									<div class="form-row">
+										<label for="gender">Gender</label>
+										<div class="form-select" data-placeholder="-">
+											<select id="gender" name="gender" class="select ">
+												<option value="0" selected="selected" disabled="disabled">-</option>
+												<option value="Male">Male</option>
+												<option value="Female">Female</option>
+												<option value="Other">Other</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-row">
+										<label for="phone">Phone</label>
+										<div class="form-input">
+											<input type="text" id="phone" name="phone" class="input" placeholder="" value="0987654321">
+										</div>
+										<div class="form-hint"></div>
+									</div>
+									<div class="form-row">
+										<label for="location">Location</label>
+										<div class="form-input">
+											<input type="text" id="location" name="location" class="input" placeholder="" value="South Jakarta, Indonesia">
+										</div>
+										<div class="form-hint"></div>
+									</div>
+									<div class="form-row">
+										<label for="short-bio">Short Bio</label>
+										<div class="form-input">
+											<input type="text" id="short-bio" name="short-bio" class="input" placeholder="" value="Run Enthusiast">
+										</div>
+										<div class="form-hint"></div>
+									</div>
+								</div>
+								<div class="user-form-action">
+									<div class="form-row">
+										<input type="submit" name="btn-save-user" id="btn-save-user" value="Save" class="button -primary">
+									</div>
+								</div>
+							</div>		
+						</form>
+					</div>
+
+					<!-- modal change avatar -->
+					<div id="modalAvatar" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="changeAvatar" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+								<div class="modal-header">
+									<h5 class="modal-title" id="changeAvatar">Preview Avatar</h5>
+								</div>
+								<div class="modal-body">
+									<div class="user-modal-body">
+										<p>Your profile avatar will look like this. Best image ratio should be 1:1 (square)</p>
+										<p>* Maximum size 2Mb. File type should be .jpg, .jpeg or .png format</p>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="button" data-dismiss="modal">Cancel</button>
+									<button type="button" class="button -primary">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugin-pack.min.js"></script>
+<script type="text/javascript" src="../asset/js/main-m.js"></script>
+<script type="text/javascript" src="../asset/js/svgxuse.min.js" defer></script>
+</body>
+</html>

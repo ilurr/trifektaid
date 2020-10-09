@@ -23,9 +23,13 @@ if(!!slider) {
 
 // swipe discover
 //=include '../partials/swipe-discover.js'
+//=include '../partials/cookies.js'
 
 // rating
 //=include '../partials/rating.js'
+
+// overlay
+//=include '../partials/overlay.js'
 
 // form
 //=include '../partials/form-manipulate.js'

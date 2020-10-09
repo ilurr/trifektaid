@@ -89,12 +89,15 @@
 								</svg>
 								Tag Place
 							</button>
+							{{#if mobile}}
+							{{else}}
 							<button type="button" data-toggle="emoji" data-container="post-modal" data-target="post-input" class="button">
 								<svg class="icon-post icon-emoji" title="icon-emoji">
 									<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
 								</svg>
 								Add Emoji
 							</button>
+							{{/if}}
 						</div>
 						<div class="post-modal-action">
 							{{>button type="submit" name="btn-post" class="-primary" label="Post"}}

@@ -1,0 +1,24 @@
+<!-- nav main -->
+<nav class="nav -fixed" aria-label="Main Navigation">
+	<ol class="nav-wrap">
+		{{#each navigation}}
+		{{#if mobile}}
+		<li class="nav-item">
+			<a href="{{link}}" class="nav-link{{#eq ../active compare=title}} -active{{/eq}}" role="link" aria-label="{{title}}">
+				<div class="nav-flex">
+					<div class="nav-icon">
+						{{#eq mobile compare="2"}}
+						<span class="nav-badge"></span>
+						{{/eq}}
+						<svg class="icon-nav icon-{{icon}}" title="icon-{{icon}}">
+							<use xlink:href="../asset/images/icon/icon.svg#icon-{{icon}}" />
+						</svg>
+					</div>
+					<div class="nav-text">{{title}}</div>
+				</div>
+			</a>
+		</li>
+		{{/if}}
+		{{/each}}
+	</ol>
+</nav>

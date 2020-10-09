@@ -16,6 +16,10 @@
 	{{!-- custom --}}
 	<button type="button" name="{{name}}" class="button{{#if class}} {{class}}{{/if}}"{{#eq disabled compare="true"}} disabled="disabled"{{/eq}} data-toggle="modal" data-target="{{dataAttrTarget}}">{{label}}</button>
 	{{/eq}}
+	{{#eq type compare="hrefmodal"}}
+	{{!-- custom --}}
+	<a class="button{{#if class}} {{class}}{{/if}}"{{#eq disabled compare="true"}} disabled="disabled"{{/eq}} role="button" data-toggle="modal" data-target="{{dataAttrTarget}}">{{#if icon}}<span class="icon icon-general icon-{{icon}}"></span> {{/if}}{{label}}</a>
+	{{/eq}}
 	{{#eq type compare="data-attribute"}}
 	<button type="button" name="{{name}}" class="button{{#if class}} {{class}}{{/if}}"{{#if dataAttr}} {{{dataAttr}}}{{/if}}>{{label}}</button>
 	{{/eq}}

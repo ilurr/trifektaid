@@ -9,10 +9,15 @@
 		@include font-pack(false, 1.250rem, 700, false, false);
 	}
 	&-big {
-		font-size: 2.813rem;
+		font-size: 1.5rem;
+		font-weight: 500;
 		line-height: normal;
 		color: #717171;
 		margin: 1rem 0;
+		@include min-responsive($screen-tablet) {
+			font-size: 2.813rem;
+			font-weight: 700;
+		}
 	}
 	&-aside {
 		position: relative;
@@ -21,6 +26,27 @@
 		text-transform: uppercase;
 		border-bottom: 1px solid #EDEEEE;
 		@include font-pack(false, .688rem, 500, false, #9d9fa3);
+	}
+	&-section {
+		position: relative;
+		margin: 0;
+		padding: .875rem 1rem;
+		background: #fff;
+		@include font-pack(false, 1.188rem, 700, false, $color-theme);
+		.button {
+			width: auto;
+			height: auto;
+			display: inline-block;
+			position: absolute;
+			top: calc(50% - (22px / 2));
+			right: 1rem;
+			border: transparent;
+			background: transparent;
+			.icon-nav {
+				font-size: 22px;
+				vertical-align: top;
+			}
+		}
 	}
 }
 // h1.title {

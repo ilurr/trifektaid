@@ -2,8 +2,11 @@
 	&-header {
 		position: relative;
 		text-align: right;
-		padding-left: 0.938rem;
-		padding-right: 0.938rem;
+		@include min-responsive($screen-tablet) {
+			padding-left: 0.938rem;
+			padding-right: 0.938rem;
+			display: block;
+		}
 		& > * {
 			display: inline-block;
 		}

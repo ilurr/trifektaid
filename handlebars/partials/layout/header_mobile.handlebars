@@ -1,0 +1,42 @@
+<!-- header -->
+<header class="header -mobile -fixed">
+	<div class="header-col">
+		<div class="logo">
+			{{#if login}}
+			<a href="index.html">
+			{{else}}
+			<a href="index-wp.html">
+			{{/if}}
+				<img src="../asset/images/logo-trifekta-mobile.svg" alt="Trifekta">
+			</a>
+		</div>
+	</div>
+	{{#if login}}
+	<div class="header-col -right">
+		<!-- menu -->
+		<div class="menu-header">
+			<div class="menu-header-col">
+				<a class="button menu-icon-search" href="javascript:void(0)" role="button" data-toggle="search">
+					<span class="icon-general icon-search"></span>
+				</a>
+				<a class="button menu-icon-notify{{#if active}} -active{{/if}}" href="notification.html" role="link">
+					<span class="nav-badge">5</span>
+					<svg class="icon-nav icon-bell" title="icon-bell">
+						<use xlink:href="../asset/images/icon/icon.svg#icon-bell" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- search -->
+	<div id="searchBar" class="search-header">
+		<div class="search-bg"></div>
+		<form action="search.html">
+			<input type="text" class="input" name="search" placeholder="Search">
+			<input type="submit" class="button" name="search-btn" value="Search">
+			<span class="icon-general icon-search"></span>
+		</form>
+	</div>
+	{{/if}}
+</header>

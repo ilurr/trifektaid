@@ -5,9 +5,12 @@
 	}
 	&-form {
 		background: #fff;
-		width: 450px;
+		width: 100%;
 		margin: -10vh auto 0;
 		padding: 10px 25px;
+		@include min-responsive($screen-tablet) {
+			width: 450px;
+		}
 		@include min-responsive($screen-desktop) {
 			width: 100%;
 			margin: 0;

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header_mobile login=true}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav_mobile active="Profile"}}
+				</div>
+
+				<div class="grid-col -wide">
+
+					<!-- pofile header -->
+					{{>profile_header view="true"}}
+
+					<!-- feeds -->
+					{{>feeds mobile="true" channel=people.[0]}}
+
+					{{>feeds mobile="true" channel=people.[1] comment="true"}}
+
+					{{>feeds mobile="true" channel=people.[2] comment="true"}}
+
+					{{>feeds mobile="true" channel=people.[3] comment="true"}}
+					
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+<script>
+	// cobain button follow
+	let btn = document.querySelectorAll('[data-follow]');
+	if(!!btn) {
+		btn.forEach(function(item, index){
+			item.addEventListener('click', function(e){
+				let df = item.getAttribute('data-follow');
+				if(df=="Follow") {
+					item.setAttribute('data-follow','Following');
+				} 
+				if(df=="Following") {
+					item.setAttribute('data-follow','Follow');
+				} 
+			});
+		});
+	}
+</script>
+</body>
+</html>

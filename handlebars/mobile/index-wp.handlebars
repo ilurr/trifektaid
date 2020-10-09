@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+		
+		<!-- grid -->
+		<div class="grid grid-full">
+
+			<div class="grid-flex wp">
+				<div class="wp-hero">
+					<span class="wp-img" style="background-image: url('../asset/images/hero-bg.jpg');"></span>
+					<div class="wp-logo">
+						<a href="index-wp.html">
+							<img src="../asset/images/logo-trifekta-splash.svg" alt="Trifekta">
+						</a>
+					</div>
+					<h1 class="title-big">Hello Again<br>Welcome Back</h1>
+				</div>
+				<div class="wp-intro">
+					<div class="wp-form">
+
+						{{>button type="link" label="Continue with Facebook" class="-facebook" icon="facebook" href="wp-signup.html"}}
+						{{>button type="link" label="Continue with Google" class="-google" icon="google-color" href="wp-signup.html"}}
+						{{>button type="hrefmodal" label="Continue with Email" class="-email" icon="mail" dataAttrTarget="#modalTerm"}}
+
+						<div class="wp-line"><span>Already a Member?</span></div>
+
+						{{>button type="link" label="Login" class="-primary" href="wp-signin.html"}}
+
+						{{>app_widget}}
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<!-- term & policy modal -->
+		<div id="modalTerm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalTerm" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="wp-modal">
+							<div class="form-row">
+								<h3 class="title">Please agree to our terms</h3>
+								<p>By signing up you are agreeing to our <a href="static-policy.html">Terms of Services</a>.</p>
+								<p>View our <a href="static-policy.html">Privacy Policy</a>.</p>
+							</div>
+							{{>button type="link" label="Agree and Sign up" href="wp-signup.html" class="-primary"}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{>footer}}
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+</body>
+</html>

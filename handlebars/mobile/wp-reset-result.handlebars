@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		<!-- grid -->
+		<div class="grid grid-full">
+
+			<div class="grid-flex sign">
+
+				<div class="wp-hero">
+					<span class="wp-img" style="background-image: url('../asset/images/hero-bg.jpg');"></span>
+					<div class="wp-logo">
+						<a href="index-wp.html">
+							<img src="../asset/images/logo-trifekta-splash.svg" alt="Trifekta">
+						</a>
+					</div>
+				</div>
+				<div class="sign-wrap">
+
+					<!-- s: reset -->
+					<div class="panel">
+						<div class="panel-body">
+							<div class="notes-block">
+								{{>title title="Reset password"}}
+								<p>We have sent you an email. Check your inbox and follow a link with instructions over there.</p>
+								<p><a href="index-wp.html">Login</a></p>
+							</div>
+						</div>
+					</div>
+					<!-- e: reset -->
+					
+				</div>
+
+			</div>
+
+		</div>
+
+		{{>footer}}
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+</body>
+</html>

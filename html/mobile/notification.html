@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- url bar color theme -->
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
+	<!-- icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../asset/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../asset/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../asset/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../asset/images/favicon/site.webmanifest">
+
+    <title>Trifekta</title>
+    
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+	
+
+    <link href="../asset/css/style-m.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		<!-- header -->
+		<header class="header -mobile -fixed">
+			<div class="header-col">
+				<div class="logo">
+					<a href="index.html">
+						<img src="../asset/images/logo-trifekta-mobile.svg" alt="Trifekta">
+					</a>
+				</div>
+			</div>
+			<div class="header-col -right">
+				<!-- menu -->
+				<div class="menu-header">
+					<div class="menu-header-col">
+						<a class="button menu-icon-search" href="javascript:void(0)" role="button" data-toggle="search">
+							<span class="icon-general icon-search"></span>
+						</a>
+						<a class="button menu-icon-notify -active" href="notification.html" role="link">
+							<span class="nav-badge">5</span>
+							<svg class="icon-nav icon-bell" title="icon-bell">
+								<use xlink:href="../asset/images/icon/icon.svg#icon-bell" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		
+			<!-- search -->
+			<div id="searchBar" class="search-header">
+				<div class="search-bg"></div>
+				<form action="search.html">
+					<input type="text" class="input" name="search" placeholder="Search">
+					<input type="submit" class="button" name="search-btn" value="Search">
+					<span class="icon-general icon-search"></span>
+				</form>
+			</div>
+		</header>
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					<!-- nav main -->
+					<nav class="nav -fixed" aria-label="Main Navigation">
+						<ol class="nav-wrap">
+							<li class="nav-item">
+								<a href="index.html" class="nav-link" role="link" aria-label="Home">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-home" title="icon-home">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-home" />
+											</svg>
+										</div>
+										<div class="nav-text">Home</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="map.html" class="nav-link" role="link" aria-label="Map">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-map" title="icon-map">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-map" />
+											</svg>
+										</div>
+										<div class="nav-text">Map</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="discover.html" class="nav-link" role="link" aria-label="Discover">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-trifekta" title="icon-trifekta">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-trifekta" />
+											</svg>
+										</div>
+										<div class="nav-text">Discover</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="challenges.html" class="nav-link" role="link" aria-label="Challenges">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<span class="nav-badge"></span>
+											<svg class="icon-nav icon-trophy" title="icon-trophy">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-trophy" />
+											</svg>
+										</div>
+										<div class="nav-text">Challenges</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="profile.html" class="nav-link" role="link" aria-label="Profile">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<span class="nav-badge"></span>
+											<svg class="icon-nav icon-user" title="icon-user">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-user" />
+											</svg>
+										</div>
+										<div class="nav-text">Profile</div>
+									</div>
+								</a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+
+				<div class="grid-col -wide">
+
+					<h1 class="title-section">
+						Notification
+					</h1>
+
+					<!-- notification -->
+					<div class="notify box">
+						<div class="notify-block">
+							<div class="notify-item unread">
+								<a href="post-detail.html">
+									<div class="notify-row">
+										<div class="notify-img">
+											<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
+										</div>
+										<div class="notify-col">
+											<div class="notify-content">
+												<span>Stevy Michienzi</span> comment on your  post "Last long run before the actual marathon..." 
+											</div>
+											<div class="notify-time">20 minutes ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="notify-item">
+								<a href="post-detail.html">
+									<div class="notify-row">
+										<div class="notify-img">
+											<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
+										</div>
+										<div class="notify-col">
+											<div class="notify-content">
+												<span>Abagael Tanguma</span> comment on your  post "The Autumn wind returned this evening an..." 
+											</div>
+											<div class="notify-time">20 minutes ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="notify-item">
+								<a href="post-detail.html">
+									<div class="notify-row">
+										<div class="notify-img">
+											<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
+										</div>
+										<div class="notify-col">
+											<div class="notify-content">
+												<span>Cobbie Javarone</span> comment on your photos
+											</div>
+											<div class="notify-time">20 minutes ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="notify-item">
+								<a href="post-detail.html">
+									<div class="notify-row">
+										<div class="notify-img">
+											<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
+										</div>
+										<div class="notify-col">
+											<div class="notify-content">
+												<span>Daisi Widdows</span> comment on your photos
+											</div>
+											<div class="notify-time">20 minutes ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="notify-item">
+								<a href="post-detail.html">
+									<div class="notify-row">
+										<div class="notify-img">
+											<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">
+										</div>
+										<div class="notify-col">
+											<div class="notify-content">
+												<span>Constantin Hoeffliger</span> comment on your photos
+											</div>
+											<div class="notify-time">20 minutes ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="notify-item">
+								<a href="post-detail.html">
+									<div class="notify-row">
+										<div class="notify-img">
+											<img src="https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg" alt="">
+										</div>
+										<div class="notify-col">
+											<div class="notify-content">
+												<span>Brody Wilch</span> comment on your photos
+											</div>
+											<div class="notify-time">20 minutes ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="notify-item">
+								<a href="post-detail.html">
+									<div class="notify-row">
+										<div class="notify-img">
+											<img src="https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg" alt="">
+										</div>
+										<div class="notify-col">
+											<div class="notify-content">
+												<span>Olaf Dobos</span> comment on your photos
+											</div>
+											<div class="notify-time">20 minutes ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="notify-item">
+								<a href="post-detail.html">
+									<div class="notify-row">
+										<div class="notify-img">
+											<img src="https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg" alt="">
+										</div>
+										<div class="notify-col">
+											<div class="notify-content">
+												<span>Clinten Donohoe</span> comment on your photos
+											</div>
+											<div class="notify-time">20 minutes ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="notify-item">
+								<a href="post-detail.html">
+									<div class="notify-row">
+										<div class="notify-img">
+											<img src="https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg" alt="">
+										</div>
+										<div class="notify-col">
+											<div class="notify-content">
+												<span>Averill Vonner</span> comment on your photos
+											</div>
+											<div class="notify-time">20 minutes ago</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- more -->
+						<div class="more-block">
+							<div class="form-row">
+								<button name="btn-more" id="btn-more" class="button -tertiary">Load more</button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugin-pack.min.js"></script>
+<script type="text/javascript" src="../asset/js/main-m.js"></script>
+<script type="text/javascript" src="../asset/js/svgxuse.min.js" defer></script>
+</body>
+</html>

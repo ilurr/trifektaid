@@ -1,1 +1,14 @@
+{{#if section}}
+<h1 class="title-section">
+	{{title}}
+	{{#if button}}
+	<a class="button" href="{{button}}.html" role="link">
+		<svg class="icon-nav icon-{{button}}" title="icon-{{button}}">
+			<use xlink:href="../asset/images/icon/icon.svg#icon-{{button}}" />
+		</svg>
+	</a>
+	{{/if}}
+</h1>
+{{else}}
 <h1 class="title">{{title}}</h1>
+{{/if}}

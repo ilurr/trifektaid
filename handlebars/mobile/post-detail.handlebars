@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header_mobile login=true}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav_mobile active="Profile"}}
+				</div>
+
+				<div class="grid-col -wide">
+
+					<!-- feeds -->
+					{{>feeds mobile="true" channel=people.[1] comment="true"}}
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+</body>
+</html>

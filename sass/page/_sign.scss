@@ -3,6 +3,10 @@
 	justify-content: center;
 	min-height: calc(100vh - 70px);
 	padding: 20px 0;
+	&-wrap {
+		position: relative;
+		width: 100%;
+	}
 	&-text {
 		position: relative;
 		padding: .5rem 0;
@@ -18,8 +22,9 @@
 
 	// override
 	.panel {
-		width: 80%;
-		@include min-responsive($screen-desktop) {
+		width: 100%;
+		margin: 0 auto;
+		@include min-responsive($screen-tablet) {
 			width: 450px;
 		}
 	}

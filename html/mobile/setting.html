@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- url bar color theme -->
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
+	<!-- icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../asset/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../asset/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../asset/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../asset/images/favicon/site.webmanifest">
+
+    <title>Trifekta</title>
+    
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+	
+
+    <link href="../asset/css/style-m.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		<!-- header -->
+		<header class="header -mobile -fixed">
+			<div class="header-col">
+				<div class="logo">
+					<a href="index.html">
+						<img src="../asset/images/logo-trifekta-mobile.svg" alt="Trifekta">
+					</a>
+				</div>
+			</div>
+			<div class="header-col -right">
+				<!-- menu -->
+				<div class="menu-header">
+					<div class="menu-header-col">
+						<a class="button menu-icon-search" href="javascript:void(0)" role="button" data-toggle="search">
+							<span class="icon-general icon-search"></span>
+						</a>
+						<a class="button menu-icon-notify" href="notification.html" role="link">
+							<span class="nav-badge">5</span>
+							<svg class="icon-nav icon-bell" title="icon-bell">
+								<use xlink:href="../asset/images/icon/icon.svg#icon-bell" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		
+			<!-- search -->
+			<div id="searchBar" class="search-header">
+				<div class="search-bg"></div>
+				<form action="search.html">
+					<input type="text" class="input" name="search" placeholder="Search">
+					<input type="submit" class="button" name="search-btn" value="Search">
+					<span class="icon-general icon-search"></span>
+				</form>
+			</div>
+		</header>
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					<!-- nav main -->
+					<nav class="nav -fixed" aria-label="Main Navigation">
+						<ol class="nav-wrap">
+							<li class="nav-item">
+								<a href="index.html" class="nav-link" role="link" aria-label="Home">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-home" title="icon-home">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-home" />
+											</svg>
+										</div>
+										<div class="nav-text">Home</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="map.html" class="nav-link" role="link" aria-label="Map">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-map" title="icon-map">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-map" />
+											</svg>
+										</div>
+										<div class="nav-text">Map</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="discover.html" class="nav-link" role="link" aria-label="Discover">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-trifekta" title="icon-trifekta">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-trifekta" />
+											</svg>
+										</div>
+										<div class="nav-text">Discover</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="challenges.html" class="nav-link" role="link" aria-label="Challenges">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<span class="nav-badge"></span>
+											<svg class="icon-nav icon-trophy" title="icon-trophy">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-trophy" />
+											</svg>
+										</div>
+										<div class="nav-text">Challenges</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="profile.html" class="nav-link -active" role="link" aria-label="Profile">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<span class="nav-badge"></span>
+											<svg class="icon-nav icon-user" title="icon-user">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-user" />
+											</svg>
+										</div>
+										<div class="nav-text">Profile</div>
+									</div>
+								</a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+
+				<div class="grid-col -wide">
+
+					<h1 class="title-section">
+						Setting
+					</h1>
+
+					<!-- setting list -->
+					<div class="setting box">
+						<div class="setting-block">
+							<div class="setting-item">
+								<a class="setting-link" href="setting-email.html">
+									<div class="setting-row">
+										<div class="setting-text">Change Email</div>
+									</div>
+								</a>
+							</div>
+							<div class="setting-item">
+								<a class="setting-link" href="setting-password.html">
+									<div class="setting-row">
+										<div class="setting-text">Change Password</div>
+									</div>
+								</a>
+							</div>
+							<div class="setting-item">
+								<label for="setting-push-notification">
+									<div class="setting-row">
+										<div class="setting-text">Push Notification</div>
+										<div class="setting-toggle form-toggle">
+											<input name="setting-push-notification" id="setting-push-notification" type="checkbox" autocomplete="off" checked="checked">
+											<span></span>
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="setting-item">
+								<label for="setting-email-notification">
+									<div class="setting-row">
+										<div class="setting-text">Email Notification</div>
+										<div class="setting-toggle form-toggle">
+											<input name="setting-email-notification" id="setting-email-notification" type="checkbox" autocomplete="off" checked="checked">
+											<span></span>
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="setting-item">
+								<label for="setting-discover-by-other">
+									<div class="setting-row">
+										<div class="setting-text">Discover by Other</div>
+										<div class="setting-toggle form-toggle">
+											<input name="setting-discover-by-other" id="setting-discover-by-other" type="checkbox" autocomplete="off">
+											<span></span>
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="setting-item">
+								<a class="setting-link" href="static-term.html">
+									<div class="setting-row">
+										<div class="setting-text">Terms &amp; Conditions</div>
+									</div>
+								</a>
+							</div>
+							<div class="setting-item">
+								<a class="setting-link" href="static-policy.html">
+									<div class="setting-row">
+										<div class="setting-text">Policy Privacy</div>
+									</div>
+								</a>
+							</div>
+							<div class="setting-item">
+								<a class="setting-link" href="static-about.html">
+									<div class="setting-row">
+										<div class="setting-text">About</div>
+									</div>
+								</a>
+							</div>
+							<div class="setting-item">
+								<a class="setting-link" href="static-faq.html">
+									<div class="setting-row">
+										<div class="setting-text">FAQ</div>
+									</div>
+								</a>
+							</div>
+							<div class="setting-item">
+								<a class="setting-link" href="static-about.html">
+									<div class="setting-row">
+										<div class="setting-text">Version</div>
+									</div>
+								</a>
+							</div>
+							<div class="setting-item">
+								<a class="setting-link" href="index-wp.html">
+									<div class="setting-row">
+										<div class="setting-text">Logout</div>
+									</div>
+								</a>
+							</div>
+							<div class="setting-item">
+								<a class="setting-link" href="setting-account-remove.html">
+									<div class="setting-row">
+										<div class="setting-text">Delete Account</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugin-pack.min.js"></script>
+<script type="text/javascript" src="../asset/js/main-m.js"></script>
+<script type="text/javascript" src="../asset/js/svgxuse.min.js" defer></script>
+</body>
+</html>

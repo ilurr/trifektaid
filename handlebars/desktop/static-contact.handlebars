@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" page="static"}}
+
+<body class="-static">
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav_static active="Contact Us"}}
+				</div>
+
+				<div class="grid-col -wide">
+
+					<!-- static -->
+					<div class="static box">
+						<div class="static-block">
+							<h1 class="static-title">Contact Us</h1>
+							<article class="static-content">
+								<p>We believe you should always know what data we collect from you and how we use it, and that you should have meaningful control over both. <a href="#">We want to empower you</a> to make the best decisions about the information that you share with us.</p>
+							</article>
+							<section class="static-form">
+								{{>input type="text" label="Name" name="name"}}
+								{{>input type="text" label="Email Address" name="email"}}
+								<div class="form-row">
+									<label for="comment">Your Messages</label>
+									<div class="form-textarea">
+										<textarea name="comment" id="comment" class="textarea" cols="30" rows="5"></textarea>
+									</div>
+								</div>
+								{{>button type="submit" label="Send" name="btn-contact" class="-primary"}}
+							</section>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		{{>footer}}
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+</body>
+</html>

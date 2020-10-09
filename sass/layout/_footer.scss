@@ -2,20 +2,23 @@
 	position: relative;
 	background: #585858;
 	padding: 0 0 3rem;
-	width: $screen-tablet;
-	@include min-responsive($screen-tablet) {
-		width: 100%;
-	}
+	width: 100%;
+	// @include min-responsive($screen-tablet) {
+	// 	width: $screen-tablet;
+	// }
 	.grid-flex {
 		flex-wrap: wrap;
 	}
 	&-col {
-		width: calc(100% / 2);
+		width: 100%;
 		padding-top: 3rem;
 		padding-left: 0.938rem;
 		padding-right: 0.938rem;
-		&:first-child {
-			width: 100%;
+		@include min-responsive($screen-tablet) {
+			width: calc(100% / 2);
+			&:first-child {
+				width: 100%;
+			}
 		}
 		@include min-responsive($screen-desktop) {
 			width: calc(100% / 3);

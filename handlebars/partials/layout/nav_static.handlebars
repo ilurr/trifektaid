@@ -1,0 +1,14 @@
+<!-- nav static page -->
+<nav class="nav -fixed -static" aria-label="Main Navigation">
+	<ol class="nav-wrap">
+		{{#each static}}
+		<li class="nav-item">
+			<a href="{{link}}" class="nav-link{{#eq ../active compare=title}} -active{{/eq}}" role="link" aria-label="{{title}}">
+				<div class="nav-flex">
+					<div class="nav-text">{{title}}</div>
+				</div>
+			</a>
+		</li>
+		{{/each}}
+	</ol>
+</nav>

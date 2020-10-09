@@ -21,7 +21,11 @@
 	<!-- font -->
 	{{>font font=font}}
 
+	{{#if mobile}}
+    <link href="../asset/css/style-m.css" rel="stylesheet" type="text/css">
+	{{else}}
     <link href="../asset/css/style.css" rel="stylesheet" type="text/css">
+	{{/if}}
 
 	{{!-- <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false&fiddle=.js"></script> --}}
 

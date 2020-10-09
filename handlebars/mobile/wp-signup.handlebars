@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		<!-- grid -->
+		<div class="grid grid-full">
+
+			<div class="grid-flex sign">
+
+				<div class="wp-hero">
+					<span class="wp-img" style="background-image: url('../asset/images/hero-bg.jpg');"></span>
+					<div class="wp-logo">
+						<a href="index-wp.html">
+							<img src="../asset/images/logo-trifekta-splash.svg" alt="Trifekta">
+						</a>
+					</div>
+				</div>
+				<div class="sign-wrap">
+
+					<!-- s: signup -->
+					<div class="panel">
+						{{>title title="Sign Up"}}
+						<div class="panel-body">
+							<form action="wp-signup-result.html">
+								{{>input type="text" label="Email Address" name="name"}}
+								{{>input type="password" label="Password" name="password" txthint="Password must content at least 8 characters."}}
+								<div class="form-row">
+									<div class="text-center">
+										<p>By signing up you are agreeing to our <a href="static-policy.html">Terms of Services</a>.</p>
+										<p>View our <a href="static-policy.html">Privacy Policy</a>.</p>
+									</div>
+								</div>
+								{{>button type="submit" label="Agree and Sign up" name="signup" class="-primary"}}
+							</form>
+						</div>
+					</div>
+					<!-- e: signup -->
+
+					{{>app_widget}}
+					
+				</div>
+
+			</div>
+
+		</div>
+
+		{{>footer}}
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link" mobile="true"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header_mobile login=true}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav_mobile active="Home"}}
+				</div>
+
+				<div class="grid-col -wide">
+
+					<!-- post -->
+					{{>post}}
+
+					<!-- no activity -->
+					<div class="feed-empty">
+						<div class="feed-empty-img">
+							<img src="../asset/images/no_activity.png" alt="">
+						</div>
+						<div class="feed-empty-text">
+							You Have No Activity Yet
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+{{>js mobile="true"}}
+</body>
+</html>

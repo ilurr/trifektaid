@@ -34,9 +34,14 @@
 
 // dummy 
 let ds = document.getElementById('discoverCard');
+let bg = document.getElementById('discoverBg');
 if(!!ds) {
 	setTimeout(function(){
+		// check guide
+		initGuide();
+
 		ds.classList.remove('-hide');
+		bg.classList.remove('-animate');
 	}, 5000);
 }
 

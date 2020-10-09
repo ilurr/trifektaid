@@ -49,6 +49,14 @@
 		p {
 			@include font-pack(false, 0.875rem, 500, false, #818488);
 		}
+		&.page-404 {
+			.title {
+				margin: 0;
+				font-size: 5rem;
+				line-height: 1;
+				color: $color-theme;
+			}
+		}
 	}
 }
 

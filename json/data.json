@@ -2719,47 +2719,84 @@
 		"icon": "home",
 		"link": "index.html",
 		"notification": "",
-		"badge": false
+		"badge": false,
+		"mobile": "1"
 	  },
 	  {
 		"title": "Map",
 		"icon": "map",
 		"link": "map.html",
 		"notification": "",
-		"badge": false
+		"badge": false,
+		"mobile": "1"
 	  },
 	  {
 		"title": "Discover",
 		"icon": "trifekta",
 		"link": "discover.html",
 		"notification": "",
-		"badge": false
+		"badge": false,
+		"mobile": "1"
 	  },
 	  {
 		"title": "Challenges",
 		"icon": "trophy",
 		"link": "challenges.html",
 		"notification": "",
-		"badge": false
+		"badge": false,
+		"mobile": "2"
 	  },
 	  {
 		"title": "Profile",
 		"icon": "user",
 		"link": "profile.html",
 		"notification": "",
-		"badge": false
+		"badge": false,
+		"mobile": "2"
 	  },
 	  {
 		"title": "Notification",
 		"icon": "bell",
 		"link": "notification.html",
 		"notification": 9,
-		"badge": true
+		"badge": true,
+		"mobile": ""
 	  },
 	  {
 		"title": "Setting",
 		"icon": "setting",
 		"link": "setting.html",
+		"notification": "",
+		"badge": false,
+		"mobile": ""
+	  }
+	],
+	"static": [
+	  {
+		"title": "About",
+		"icon": "",
+		"link": "static-about.html",
+		"notification": "",
+		"badge": false
+	  },
+	  {
+		"title": "Policy Privacy",
+		"icon": "",
+		"link": "static-policy.html",
+		"notification": "",
+		"badge": false
+	  },
+	  {
+		"title": "FAQ",
+		"icon": "",
+		"link": "static-faq.html",
+		"notification": "",
+		"badge": false
+	  },
+	  {
+		"title": "Contact Us",
+		"icon": "",
+		"link": "static-contact.html",
 		"notification": "",
 		"badge": false
 	  }
@@ -2821,7 +2858,7 @@
 	  },
 	  {
 		"title": "Version",
-		"link": "static-version.html",
+		"link": "static-about.html",
 		"toggle": false,
 		"toggle_value": false
 	  },

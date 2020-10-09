@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- url bar color theme -->
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
+	<!-- icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../asset/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../asset/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../asset/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../asset/images/favicon/site.webmanifest">
+
+    <title>Trifekta</title>
+    
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+	
+
+    <link href="../asset/css/style-m.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		<!-- header -->
+		<header class="header -mobile -fixed">
+			<div class="header-col">
+				<div class="logo">
+					<a href="index.html">
+						<img src="../asset/images/logo-trifekta-mobile.svg" alt="Trifekta">
+					</a>
+				</div>
+			</div>
+			<div class="header-col -right">
+				<!-- menu -->
+				<div class="menu-header">
+					<div class="menu-header-col">
+						<a class="button menu-icon-search" href="javascript:void(0)" role="button" data-toggle="search">
+							<span class="icon-general icon-search"></span>
+						</a>
+						<a class="button menu-icon-notify" href="notification.html" role="link">
+							<span class="nav-badge">5</span>
+							<svg class="icon-nav icon-bell" title="icon-bell">
+								<use xlink:href="../asset/images/icon/icon.svg#icon-bell" />
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		
+			<!-- search -->
+			<div id="searchBar" class="search-header">
+				<div class="search-bg"></div>
+				<form action="search.html">
+					<input type="text" class="input" name="search" placeholder="Search">
+					<input type="submit" class="button" name="search-btn" value="Search">
+					<span class="icon-general icon-search"></span>
+				</form>
+			</div>
+		</header>
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					<!-- nav main -->
+					<nav class="nav -fixed" aria-label="Main Navigation">
+						<ol class="nav-wrap">
+							<li class="nav-item">
+								<a href="index.html" class="nav-link -active" role="link" aria-label="Home">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-home" title="icon-home">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-home" />
+											</svg>
+										</div>
+										<div class="nav-text">Home</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="map.html" class="nav-link" role="link" aria-label="Map">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-map" title="icon-map">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-map" />
+											</svg>
+										</div>
+										<div class="nav-text">Map</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="discover.html" class="nav-link" role="link" aria-label="Discover">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<svg class="icon-nav icon-trifekta" title="icon-trifekta">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-trifekta" />
+											</svg>
+										</div>
+										<div class="nav-text">Discover</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="challenges.html" class="nav-link" role="link" aria-label="Challenges">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<span class="nav-badge"></span>
+											<svg class="icon-nav icon-trophy" title="icon-trophy">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-trophy" />
+											</svg>
+										</div>
+										<div class="nav-text">Challenges</div>
+									</div>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="profile.html" class="nav-link" role="link" aria-label="Profile">
+									<div class="nav-flex">
+										<div class="nav-icon">
+											<span class="nav-badge"></span>
+											<svg class="icon-nav icon-user" title="icon-user">
+												<use xlink:href="../asset/images/icon/icon.svg#icon-user" />
+											</svg>
+										</div>
+										<div class="nav-text">Profile</div>
+									</div>
+								</a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+
+				<div class="grid-col -wide">
+
+					<!-- post -->
+					<section class="post box">
+						<div class="post-block">
+							<div class="post-avatar">
+								<img src="../asset/images/dummy/avatar.jpg" alt="">	
+							</div>
+							<div class="post-write">
+								<button type="button" data-toggle="modal" data-target="#modalPost" class="button">Share something...</button>
+							</div>
+						</div>
+						<div class="post-footer">
+							<div class="post-icon">
+								<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+									<svg class="icon-post icon-image" title="icon-image">
+										<use xlink:href="../asset/images/icon/icon.svg#icon-image" />
+									</svg>
+								</button>
+								<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+									<svg class="icon-post icon-place" title="icon-place">
+										<use xlink:href="../asset/images/icon/icon.svg#icon-place" />
+									</svg>
+								</button>
+							</div>
+						</div>
+					</section>
+					
+					<!-- modal post -->
+					<div id="modalPost" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalPost" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+								<div class="modal-header">
+									<h5 class="modal-title" id="modalPostTitle">Create post</h5>
+								</div>
+								<div class="modal-body">
+									<div class="post-modal">
+										<form action="#">
+											<div class="post-modal-top">
+												<div class="post-avatar">
+													<img src="../asset/images/dummy/avatar.jpg" alt="">	
+												</div>
+												<div class="post-user">Chelsea Islan</div>
+											</div>
+											<div class="post-modal-content">
+												<textarea name="post-content" id="post-content" class="post-input" placeholder="Share something..."></textarea>
+											</div>
+											<div class="post-modal-media">
+												<!-- image -->
+												<div class="post-modal-img">
+													<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
+													<span>
+														<img src="https://source.unsplash.com/CYOFvtpOIpU/750x500" alt="">
+													</span>
+												</div>
+												<div class="post-modal-img">
+													<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
+													<span>
+														<img src="https://source.unsplash.com/3NhTyPZ8CO8/750x500" alt="">
+													</span>
+												</div>
+												<!-- place -->
+												<!-- <div class="post-modal-place">
+													<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
+													<div class="post-modal-place-loc">
+														<img src="../asset/images/dummy/feed-place.png" alt="">	
+													</div>
+													<div class="post-modal-place-info">
+														<div class="post-modal-place-icon">
+															<img src="https://source.unsplash.com/3qPQtPoyqUg/50x50">
+														</div>
+														<div class="post-modal-place-title">Istiqlal Mosque <span>Mosquee</span></div>
+													</div>
+												</div> -->
+											</div>
+											<div class="post-modal-icon">
+												<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+													<svg class="icon-post icon-image" title="icon-image">
+														<use xlink:href="../asset/images/icon/icon.svg#icon-image" />
+													</svg>
+													Add Photos
+												</button>
+												<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+													<svg class="icon-post icon-place" title="icon-place">
+														<use xlink:href="../asset/images/icon/icon.svg#icon-place" />
+													</svg>
+													Tag Place
+												</button>
+												<button type="button" data-toggle="emoji" data-container="post-modal" data-target="post-input" class="button">
+													<svg class="icon-post icon-emoji" title="icon-emoji">
+														<use xlink:href="../asset/images/icon/icon.svg#icon-emoji" />
+													</svg>
+													Add Emoji
+												</button>
+											</div>
+											<div class="post-modal-action">
+												<div class="form-row">
+													<input type="submit" name="btn-post" id="btn-post" value="Post" class="button -primary">
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+
+					<!-- no activity -->
+					<div class="feed-empty">
+						<div class="feed-empty-img">
+							<img src="../asset/images/no_activity.png" alt="">
+						</div>
+						<div class="feed-empty-text">
+							You Have No Activity Yet
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- e: root -->
+
+<script type="text/javascript" src="../asset/js/jquery.min.js"></script>
+<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../asset/js/plugin-pack.min.js"></script>
+<script type="text/javascript" src="../asset/js/main-m.js"></script>
+<script type="text/javascript" src="../asset/js/svgxuse.min.js" defer></script>
+</body>
+</html>

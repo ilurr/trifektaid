@@ -3,8 +3,13 @@
 	// padding: 0;
 	padding: 0.625rem 0;
 	&.-fixed {
-		width: 55px;
+		width: 100%;
+		@include max-responsive($screen-mobile-max) {
+			overflow-x: auto;
+			white-space: nowrap;
+		}
 		@include min-responsive($screen-tablet) {
+			width: 55px;
 			position: fixed;
 			top: 70px;
 		}
@@ -19,11 +24,14 @@
 	&-item {
 		padding: 0;
 		margin: 0;
+		@include max-responsive($screen-mobile-max) {
+			display: inline-block;
+		}
 	}
 	&-flex {
 		@include display-inline-flex();
 		align-items: center;	
-		padding: 10px 15px;
+		padding: 0.625rem 0.938rem;
 		border-radius: 25px;
 		@include transition(all .2s ease);
 	}
@@ -69,6 +77,34 @@
 			.nav-icon,
 			.nav-text {
 				color: $color-theme;
+			}
+		}
+	}
+
+	// static
+	&.-static {
+		.nav-wrap {
+			margin: 1.5rem 0;
+		}
+		.nav-text {
+			display: inline-block;
+			margin-left: 0;
+			font-size: .875rem;
+			@include range-responsive($screen-tablet, $screen-desktop) {
+				font-size: .75rem;
+			}
+		}
+		.nav-flex {
+			@include range-responsive($screen-tablet, $screen-desktop) {
+				padding: 0;
+			}
+		}
+		.nav-link.-active {
+			.nav-flex {
+				background: #fff;
+				@include range-responsive($screen-tablet, $screen-desktop) {
+					background: transparent;
+				}
 			}
 		}
 	}
