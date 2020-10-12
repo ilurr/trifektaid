@@ -15,7 +15,7 @@
 		color: #717171;
 		margin: 1rem 0;
 		@include min-responsive($screen-tablet) {
-			font-size: 2.813rem;
+			font-size: 2.75rem;
 			font-weight: 700;
 		}
 	}
@@ -33,19 +33,10 @@
 		padding: .875rem 1rem;
 		background: #fff;
 		@include font-pack(false, 1.188rem, 700, false, $color-theme);
-		.button {
-			width: auto;
-			height: auto;
-			display: inline-block;
-			position: absolute;
-			top: calc(50% - (22px / 2));
-			right: 1rem;
-			border: transparent;
+		@include min-responsive($screen-tablet) {
 			background: transparent;
-			.icon-nav {
-				font-size: 22px;
-				vertical-align: top;
-			}
+			padding: 0;
+			margin: .938rem 0;
 		}
 	}
 }

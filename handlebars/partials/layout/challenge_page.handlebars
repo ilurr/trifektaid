@@ -14,10 +14,13 @@
 					<p>Challanges only available on Mobile Apps</p>
 				</div>
 			</div>
-			{{!-- <div class="challenge-action">
-				{{!>button type="link" name="btn-challenge-join" class="-primary" label="Join"}}
-			</div> --}}
+			{{#if mobile}}
+			<div class="challenge-action">
+				{{>button type="modal" name="btn-challenge-join" class="-primary" label="Join" dataAttrTarget="#modalApps"}}
+			</div>
+			{{else}}
 			{{>app_widget}}
+			{{/if}}
 		</div>
 	</div>
 </div>

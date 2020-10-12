@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head font="link"}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		{{>header login=true}}
+		
+		<!-- grid -->
+		<div class="grid">
+
+			<div class="grid-flex">
+
+				<div class="grid-col -nav">
+					{{>nav active="Discover"}}
+				</div>
+
+				<div class="grid-col -wide">
+
+					<!-- people -->
+					<div class="people box">
+						<div class="people-block">
+							<div class="people-list">
+								{{>people_list channel=people index_start=0 index_end=10}}
+							</div>
+							{{>more label="Load more"}}
+						</div>
+					</div>
+
+				</div>
+
+				<div class="grid-col -aside">
+					{{>sidebar}}
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- notify message -->
+		{{>panel_alert}}
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+</body>
+</html>

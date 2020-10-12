@@ -19,12 +19,30 @@
 				</div>
 
 				<div class="grid-col -wide">
-					{{>discover_page}}
+
+					<div class="discover box">
+
+						{{>discover_page}}
+						
+						{{>discover_guide}}
+
+						<!-- button trigger filter -->
+						<button type="button" class="button discover-filter-trigger" role="button" data-toggle="filter">Filter</button>
+
+						{{>discover_filter}}
+
+					</div>
+
+					{{>discover_loc}}
+
 				</div>
 
 			</div>
 
 		</div>
+
+		<!-- notify message -->
+		{{>panel_alert}}
 
 	</div>
 	<!-- e: root -->
@@ -47,6 +65,43 @@ if(!!ds) {
 
 // swipe
 initSwipe();
+
+// dummy filter
+let boxFilter = document.getElementById('discoverFilter');
+let save = document.getElementById('discoverFilterSave');
+if(!!save) {
+	save.addEventListener('click', function(e){
+
+		// close
+		closeFilter(boxFilter);
+
+		// open
+		//openFilter(boxFilter);
+	});
+}
+
+// dummy auto complete location change
+$(document).ready(function(){
+	var url = '../asset/json/place.json'
+
+	$("#discoverLocationSearch").keyup(function(){
+		var isi = this.value;
+		$.getJSON( url, function (data) {
+			var items = [];
+			$.each(data.place, function (index, item) {
+				if(item.title.substr(0, isi.length).toUpperCase()==isi.toUpperCase()) {
+					items.push('<button type="button" role="button" class="button" value="'+ item.title +'" data-loc="send">'+ item.title +'</button>');
+				}
+			});
+			$("#discoverLocationList").html(items);
+		});
+	});
+
+	$(document).on('click','[data-loc="send"]',function(e){
+		$('#modalLocation').modal('hide')
+	});
+});
+
 
 </script>
 </body>

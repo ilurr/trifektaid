@@ -1,0 +1,99 @@
+<!-- filter -->
+<div class="discover-filter">
+	<div id="discoverFilter" class="discover-filter-box">
+		<form action="#">
+			<div class="discover-filter-form">
+
+				<div class="discover-filter-item">
+					<div class="discover-filter-row">
+						<div class="discover-filter-text">Location</div>
+						<div class="discover-filter-location">
+							<button type="button" class="button -transparent" name="filter-location" id="discoverLocationChange" data-toggle="modal" data-target="#modalLocation">
+								<input type="hidden" id="discoverLocationResultInput" value="Gambir, Central Jakarta">
+								<div class="discover-filter-current">My Current Location <span id="discoverLocationResult">Gambir, Central Jakarta</span></div>
+								<span class="icon-arrow icon-arrow-right"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="discover-filter-item">
+					<div class="discover-filter-row">
+						<div class="discover-filter-text">Distance</div>
+						<div class="discover-filter-subtext"><span id="discoverFilterRangeValue">50</span> km</div>
+					</div>
+					<div class="discover-filter-range">
+						<div class="discover-range form-range">
+							<input type="range" min="1" max="100" value="50" class="range" id="discoverFilterRange" name="filter-range">
+						</div>
+					</div>
+				</div>
+				<div class="discover-filter-item -divider">
+					<div class="discover-filter-text">Result Include</div>
+				</div>
+				<div class="discover-filter-item">
+					<label for="discoverFilterPeople">
+						<div class="discover-filter-row">
+							<div class="discover-filter-text">People</div>
+							<div class="discover-toggle form-toggle">
+								<input name="filter-people" id="discoverFilterPeople" type="checkbox" autocomplete="off" checked="checked">
+								<span></span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div class="discover-filter-item -group" id="discoverFilterPeopleItem">
+					<div class="discover-filter-item">
+						<label for="filter-people-male">
+							<div class="discover-filter-row">
+								<div class="discover-filter-text">Male</div>
+								<div class="discover-radio form-radio">
+									<input name="filter-people-gender" id="filter-people-male" type="radio" autocomplete="off">
+									<span></span>
+								</div>
+							</div>
+						</label>
+					</div>
+					<div class="discover-filter-item">
+						<label for="filter-people-female">
+							<div class="discover-filter-row">
+								<div class="discover-filter-text">Female</div>
+								<div class="discover-radio form-radio">
+									<input name="filter-people-gender" id="filter-people-female" type="radio" autocomplete="off">
+									<span></span>
+								</div>
+							</div>
+						</label>
+					</div>
+					<div class="discover-filter-item">
+						<label for="filter-people-all">
+							<div class="discover-filter-row">
+								<div class="discover-filter-text">Everyone</div>
+								<div class="discover-radio form-radio">
+									<input name="filter-people-gender" id="filter-people-all" type="radio" autocomplete="off" checked="checked">
+									<span></span>
+								</div>
+							</div>
+						</label>
+					</div>
+				</div>
+				<div class="discover-filter-item">
+					<label for="filter-place">
+						<div class="discover-filter-row">
+							<div class="discover-filter-text">Place</div>
+							<div class="discover-toggle form-toggle">
+								<input name="filter-place" id="filter-place" type="checkbox" autocomplete="off" checked="checked">
+								<span></span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div class="discover-filter-item">
+					<div class="discover-filter-action">
+						<button type="button" id="discoverFilterSave" name="btn-filter-save" class="button -primary">Save Changes</button>
+					</div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+@include max-responsive(350px) {
+	.feed-action {
+		flex-wrap: wrap;
+	}
+	.map-box-google {
+		max-width: 100%;
+	}
+	.map-img {
+		width: 145px;
+		flex-basis: 145px;
+	}
+	.discover-card {
+		width: 280px;
+	}
+	.user-header {
+		padding: 1rem;
+	}
+	.user-modal-img {
+		height: 250px;
+	}
+	.user-modal-img:after {
+		width: 250px;
+	}
+}
+

@@ -15,7 +15,7 @@
 			<div class="grid-flex">
 
 				<div class="grid-col -nav">
-					{{>nav_mobile active="Profile"}}
+					{{>nav_mobile active="Profile" showAvatar="showAvatar"}}
 				</div>
 
 				<div class="grid-col -wide">
@@ -40,9 +40,25 @@
 
 		</div>
 
+		<!-- notify message -->
+		{{>panel_alert}}
+
+		<!-- modal apps -->
+		{{>app_modal}}
+
 	</div>
 	<!-- e: root -->
 
 {{>js mobile="true"}}
+
+<script>
+// dummy alert succes / failed message
+let msg = document.getElementById('success-msg');
+if(!!msg) {
+	setTimeout(function(){
+		$('#success-msg').fadeIn(300).delay(3000).fadeOut(1000);
+	}, 2000);
+}
+</script>
 </body>
 </html>

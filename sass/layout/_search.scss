@@ -3,9 +3,10 @@
 		position: relative;
 		padding-left: 0.938rem;
 		padding-right: 0.938rem;
-		width: 100%;
+		// width: 100%;
 		display: none;
 		@include min-responsive($screen-tablet) {
+			width: 200px;
 			display: block;
 		}
 		@include min-responsive($screen-desktop) {

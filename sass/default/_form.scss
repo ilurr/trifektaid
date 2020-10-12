@@ -1,3 +1,7 @@
+textarea {
+	resize: vertical;
+	min-height: 42px;
+}
 textarea,
 input:not([type=checkbox]) {
 	@include reset-appearance();
@@ -40,6 +44,71 @@ input:not([type=checkbox]) {
 	}
 }
 input[type=checkbox] {
+	@include reset-appearance();
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+	background: #F6F6F6;
+	border: 1px solid #e7e7e7;
+}
+input[type=range] {
+	position: relative;
+	@include reset-appearance();
+	padding: 0;
+	width: 100%;
+	height: 30px;
+	border: transparent;
+	background: transparent;
+	outline: 0;
+	vertical-align: middle;
+	overflow: hidden;
+	&:focus {
+		border: transparent;
+		background: transparent;
+	}
+	// Webkit
+	&::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 2px;
+		background: $color-theme;
+		// background: linear-gradient(to bottom, $color-theme, $color-disabled) 100% 50% / 100% 2px no-repeat transparent;
+	}
+	&::-webkit-slider-thumb {
+		position: relative;
+		@include reset-appearance();
+		height: 30px;
+		width: 30px;
+		background: #fff;
+		border-radius: 100%;
+		border: 1px solid #B5B5B6;
+		top: 50%;
+		margin-top: (-30px/2);
+		box-shadow: webkit-slider-thumb-shadow();
+		// box-shadow: 0 2px 4px rgba(0,0,0,.5);
+		@include transition(all .2s ease);
+	}
+	// Firefox
+	&::-moz-range-track,
+	&::-moz-range-progress {
+		width: 100%;
+		height: 2px;
+		background: #B5B5B6;
+	}
+	&::-moz-range-progress {
+		background: $color-theme;
+	}
+	&::-moz-range-thumb {
+		appearance: none;
+		margin: 0;
+		height: 20px;
+		width: 20px;
+		background: #fff;
+		border: 1px solid #B5B5B6;
+		border-radius: 100%;
+		@include transition(all .2s ease);
+	}
+}
+input[type=radio] {
 	@include reset-appearance();
 	width: 18px;
 	height: 18px;

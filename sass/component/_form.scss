@@ -80,6 +80,7 @@
 	&-toggle {
 		position: relative;
 		display: inline-block;
+		padding-right: 2px;
 		& > span {
 			position: relative;
 			display: block;
@@ -141,6 +142,68 @@
 		// 	background: darken(#ADB4BC, 50%);
 		// 	clip-path: polygon(100% 0%, 0 0%, 50% 100%);		  
 		// }
+	}
+	&-radio {
+		position: relative;
+		display: inline-block;
+		padding-right: 2px;
+		& > span {
+			position: relative;
+			display: block;
+			// vertical-align: top;
+			width: 20px;
+			height: 20px;
+			background: transparent;
+			// &:before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: calc(50% - 9px);
+			// 	left: -28px;
+			// 	width: 18px;
+			// 	height: 18px;
+			// 	z-index: 1;
+			// 	background: #F6F6F6;
+			// 	border: 1px solid #e7e7e7;
+			// 	border-radius: 3px;
+			// }
+			&:after {
+				content: '';
+				position: absolute;
+				left: 3px;
+				width: 14px;
+				height: 7px;
+				z-index: 2;
+				top: 6px;
+				border-left: 2px solid transparent;
+				border-bottom: 2px solid transparent;
+				@include transform(rotate(-40deg));
+			}
+		}
+		& > input[type=radio] {
+			opacity: 0;
+			width: 20px;
+			height: 20px;
+			margin: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			&:checked + span {
+				// border: 1px solid $color-theme;
+				// background: $color-theme;
+				&:after {
+					border-left: 2px solid $color-theme;
+					border-bottom: 2px solid $color-theme;	
+				}
+			}
+			&:checked:disabled + span {
+				// border: 1px solid $color-theme;
+				// background: $color-theme;
+				&:after {
+					border-left: 2px solid $color-disabled;
+					border-bottom: 2px solid $color-disabled;	
+				}
+			}
+		}
 	}
 
 	// utility

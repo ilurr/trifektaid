@@ -177,13 +177,15 @@
 				</div>
 
 				<div class="grid-col -wide">
+
 					<div class="discover box">
+
 						<div id="discoverBg" class="discover-block discover-flex discover-bg -animate">
 							<div class="discover-user">
 								<img src="../asset/images/dummy/avatar.jpg" alt="">
 							</div>
 							<div id="discoverCard" class="discover-card -hide" data-card="false">
-					
+						
 								<!-- item -->
 								<div class="discover-card-item" data-swipe="swipe">
 									<div class="discover-img">
@@ -200,7 +202,7 @@
 										</div>
 									</div>
 								</div>
-					
+						
 								<!-- item -->
 								<div class="discover-card-item" data-swipe="swipe">
 									<div class="discover-img">
@@ -217,7 +219,7 @@
 										</div>
 									</div>
 								</div>
-					
+						
 								<!-- item -->
 								<div class="discover-card-item" data-swipe="swipe">
 									<div class="discover-img">
@@ -234,7 +236,7 @@
 										</div>
 									</div>
 								</div>
-					
+						
 								<!-- item -->
 								<div class="discover-card-item" data-swipe="swipe">
 									<div class="discover-img">
@@ -251,10 +253,11 @@
 										</div>
 									</div>
 								</div>
-					
+						
 								<!-- last item refresh / load more -->
 								<div class="discover-card-item">
 									<div class="discover-message">
+										<!-- <span>Couldn't find any matches places or people right now.</span> -->
 									</div>
 									<div class="discover-action">
 										<div class="form-row">
@@ -262,10 +265,10 @@
 										</div>
 									</div>
 								</div>
-					
+						
 							</div>
 						</div>
-					
+						
 						<!-- guide -->
 						<div class="discover-guide -hide" id="discoverGuide">
 							<div class="discover-guide-body">
@@ -273,11 +276,157 @@
 								<span>Drag and swipe this card to discover more</span>
 							</div>
 						</div>
+
+						<!-- button trigger filter -->
+						<button type="button" class="button discover-filter-trigger" role="button" data-toggle="filter">Filter</button>
+
+						<!-- filter -->
+						<div class="discover-filter">
+							<div id="discoverFilter" class="discover-filter-box">
+								<form action="#">
+									<div class="discover-filter-form">
+						
+										<div class="discover-filter-item">
+											<div class="discover-filter-row">
+												<div class="discover-filter-text">Location</div>
+												<div class="discover-filter-location">
+													<button type="button" class="button -transparent" name="filter-location" id="discoverLocationChange" data-toggle="modal" data-target="#modalLocation">
+														<input type="hidden" id="discoverLocationResultInput" value="Gambir, Central Jakarta">
+														<div class="discover-filter-current">My Current Location <span id="discoverLocationResult">Gambir, Central Jakarta</span></div>
+														<span class="icon-arrow icon-arrow-right"></span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="discover-filter-item">
+											<div class="discover-filter-row">
+												<div class="discover-filter-text">Distance</div>
+												<div class="discover-filter-subtext"><span id="discoverFilterRangeValue">50</span> km</div>
+											</div>
+											<div class="discover-filter-range">
+												<div class="discover-range form-range">
+													<input type="range" min="1" max="100" value="50" class="range" id="discoverFilterRange" name="filter-range">
+												</div>
+											</div>
+										</div>
+										<div class="discover-filter-item -divider">
+											<div class="discover-filter-text">Result Include</div>
+										</div>
+										<div class="discover-filter-item">
+											<label for="discoverFilterPeople">
+												<div class="discover-filter-row">
+													<div class="discover-filter-text">People</div>
+													<div class="discover-toggle form-toggle">
+														<input name="filter-people" id="discoverFilterPeople" type="checkbox" autocomplete="off" checked="checked">
+														<span></span>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="discover-filter-item -group" id="discoverFilterPeopleItem">
+											<div class="discover-filter-item">
+												<label for="filter-people-male">
+													<div class="discover-filter-row">
+														<div class="discover-filter-text">Male</div>
+														<div class="discover-radio form-radio">
+															<input name="filter-people-gender" id="filter-people-male" type="radio" autocomplete="off">
+															<span></span>
+														</div>
+													</div>
+												</label>
+											</div>
+											<div class="discover-filter-item">
+												<label for="filter-people-female">
+													<div class="discover-filter-row">
+														<div class="discover-filter-text">Female</div>
+														<div class="discover-radio form-radio">
+															<input name="filter-people-gender" id="filter-people-female" type="radio" autocomplete="off">
+															<span></span>
+														</div>
+													</div>
+												</label>
+											</div>
+											<div class="discover-filter-item">
+												<label for="filter-people-all">
+													<div class="discover-filter-row">
+														<div class="discover-filter-text">Everyone</div>
+														<div class="discover-radio form-radio">
+															<input name="filter-people-gender" id="filter-people-all" type="radio" autocomplete="off" checked="checked">
+															<span></span>
+														</div>
+													</div>
+												</label>
+											</div>
+										</div>
+										<div class="discover-filter-item">
+											<label for="filter-place">
+												<div class="discover-filter-row">
+													<div class="discover-filter-text">Place</div>
+													<div class="discover-toggle form-toggle">
+														<input name="filter-place" id="filter-place" type="checkbox" autocomplete="off" checked="checked">
+														<span></span>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="discover-filter-item">
+											<div class="discover-filter-action">
+												<button type="button" id="discoverFilterSave" name="btn-filter-save" class="button -primary">Save Changes</button>
+											</div>
+										</div>
+						
+									</div>
+								</form>
+							</div>
+						</div>
+
 					</div>
+
+					<!-- map location change -->
+					<div id="modalLocation" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLocation" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+								<div class="modal-header">
+									<h5 class="modal-title">Change Location</h5>
+								</div>
+								<div class="modal-body">
+									<!-- modal loc -->
+									<div class="discover-location-modal">
+										<div class="discover-location-search">
+											<span class="icon-general icon-search"></span>
+											<input type="text" id="discoverLocationSearch" class="input" name="filter-loc-search" placeholder="Search Location" autocomplete="off">
+											<button type="button" class="clear" id="discoverLocationClear">
+												<span class="icon-close" aria-hidden="true"></span>
+											</button>
+										</div>
+										<div class="discover-location-body" id="discoverLocationList">
+											<button type="button" role="button" class="button" value="National Gallery of Indonesia" data-loc="send">National Gallery of Indonesia</button>
+											<button type="button" role="button" class="button" value="National Monument" data-loc="send">National Monument</button>
+											<button type="button" role="button" class="button" value="National Library" data-loc="send">National Library</button>
+											<button type="button" role="button" class="button" value="Istiqlal Mosque" data-loc="send">Istiqlal Mosque</button>
+											<button type="button" role="button" class="button" value="Jakarta Cathedral" data-loc="send">Jakarta Cathedral</button>
+											<button type="button" role="button" class="button" value="National Museum" data-loc="send">National Museum</button>
+											<button type="button" role="button" class="button" value="Gambir Railway Station" data-loc="send">Gambir Railway Station</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 
 			</div>
 
+		</div>
+
+		<!-- notify message -->
+		<div id="success-msg" class="panel-alert -fixed -success">
+			<p>Yeay! You were successful.</p>
+		</div>
+		<div id="error-msg" class="panel-alert -fixed -error">
+			<p>Failed, there was a problem, try again later.</p>
 		</div>
 
 	</div>
@@ -305,6 +454,43 @@ if(!!ds) {
 
 // swipe
 initSwipe();
+
+// dummy filter
+let boxFilter = document.getElementById('discoverFilter');
+let save = document.getElementById('discoverFilterSave');
+if(!!save) {
+	save.addEventListener('click', function(e){
+
+		// close
+		closeFilter(boxFilter);
+
+		// open
+		//openFilter(boxFilter);
+	});
+}
+
+// dummy auto complete location change
+$(document).ready(function(){
+	var url = '../asset/json/place.json'
+
+	$("#discoverLocationSearch").keyup(function(){
+		var isi = this.value;
+		$.getJSON( url, function (data) {
+			var items = [];
+			$.each(data.place, function (index, item) {
+				if(item.title.substr(0, isi.length).toUpperCase()==isi.toUpperCase()) {
+					items.push('<button type="button" role="button" class="button" value="'+ item.title +'" data-loc="send">'+ item.title +'</button>');
+				}
+			});
+			$("#discoverLocationList").html(items);
+		});
+	});
+
+	$(document).on('click','[data-loc="send"]',function(e){
+		$('#modalLocation').modal('hide')
+	});
+});
+
 
 </script>
 </body>

@@ -118,7 +118,7 @@
 		}
 		&-footer {
 			text-align: right;
-			padding: 10px;
+			padding: 0 10px;
 			a {
 				text-transform: uppercase;
 				@include font-pack(false, 0.688rem, 500, false, #818488);

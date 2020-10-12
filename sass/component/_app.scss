@@ -2,13 +2,16 @@
 	&-badge {
 		@include display-flex();
 		justify-content: space-between;
-		padding-top: 1.250rem;
-		padding-bottom: 1.250rem;
+		padding-top: 1.063rem;
+		padding-bottom: 1.063rem;
 		img {
 			height: 32px;
 			@include min-responsive($screen-large-desktop) {
 				height: 38px;
 			}
 		}
+	}
+	&-modal {
+		padding: 1rem 1rem 2rem;
 	}
 }

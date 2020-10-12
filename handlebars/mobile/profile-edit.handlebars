@@ -50,6 +50,7 @@
 					</div>
 
 					<!-- modal change avatar -->
+					<form action="profile.html">
 					<div id="modalAvatar" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="changeAvatar" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
@@ -60,22 +61,32 @@
 								<div class="modal-body">
 									<div class="user-modal-body">
 										<p>Your profile avatar will look like this. Best image ratio should be 1:1 (square)</p>
+										<div class="user-modal-img">
+											<img src="../asset/images/dummy/avatar.jpg" alt="">
+										</div>
 										<p>* Maximum size 2Mb. File type should be .jpg, .jpeg or .png format</p>
 									</div>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="button" data-dismiss="modal">Cancel</button>
-									<button type="button" class="button -primary">Save</button>
+									<button name="btn-avatar-save" class="button -primary">Save</button>
 								</div>
 							</div>
 						</div>
 					</div>
+					</form>
 					
 				</div>
 
 			</div>
 
 		</div>
+
+		<!-- notify message -->
+		{{>panel_alert}}
+
+		<!-- modal apps -->
+		{{>app_modal}}
 
 	</div>
 	<!-- e: root -->

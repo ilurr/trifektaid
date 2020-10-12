@@ -24,6 +24,22 @@
 		&.-error {
 			background: $color-error;
 		}
+		&.-fixed {
+			position: fixed;
+			z-index: 9;
+			margin-left: 1rem;
+			margin-right: 1rem;
+			margin-bottom: 0;
+			padding: .5rem .75rem;
+			bottom: 2rem;
+			width: calc(100% - 2rem);
+			display: none;
+			@include min-responsive($screen-tablet) {
+				// max-width: 300px;
+				width: auto;
+				left: 1rem;
+			}
+		}
 	}
 	&-body {
 		@include font-pack(false, .75rem, false, false, false);

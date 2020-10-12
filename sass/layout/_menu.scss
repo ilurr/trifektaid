@@ -16,20 +16,60 @@
 			&:hover {
 				background: transparent;
 			}
-		}	
+		}
+		// mobile
+		.button.menu-button {
+			width: 42px;
+			vertical-align: top;
+			border: transparent;
+			background: transparent;
+			.nav-badge {
+				right: 5px;
+				top: 5px;
+				min-width: 14px;
+				min-height: 14px;
+				padding: 0 2px;
+				align-items: center;
+				justify-content: center;
+				@include display-flex();
+				&:empty {
+					min-width: 8px;
+					min-height: 8px;
+					top: 8px;
+					right: 8px;
+				}
+			}
+			.icon-general {
+				opacity: .7;
+				@include transform(scale(1.25));
+			}
+			.icon-nav {
+				color: #ccc;
+				font-size: 22px;
+			}
+			.button.menu-button.-active {
+				.icon-general {
+					opacity: 1;
+				}
+				.icon-nav {
+					color: #5c5c5c;
+				}
+			}
+		}
 	}
 	&-user {
 		position: relative;
 		@include display-flex();
 		align-items: center;
 		&-img {
+			position: relative;
 			width: 32px;
 			height: 32px;
 			border-radius: 15px;
 			margin-right: 5px;
 			overflow: hidden;
 			img {
-				width: 100%;
+				@include ratio-flexible(auto, 100%);
 			}
 		}
 	}

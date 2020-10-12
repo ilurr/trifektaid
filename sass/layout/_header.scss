@@ -5,8 +5,9 @@
 	align-items: center;
 	height: 55px;
 	background: #fff;
-	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: none;
 	@include min-responsive($screen-tablet) {
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 		height: 70px;
 	}
 	&.-fixed {
@@ -21,16 +22,16 @@
 		padding-right: 0;
 		margin-right: auto;
 		margin-left: auto;
-		@include min-responsive($screen-tablet) {
+		width: calc(100% / 3);
+		// @include min-responsive($screen-tablet) {
+			// width: 30%;
+			// &:nth-child(2) {
+			// 	width: 40%;
+			// }
+		// }
+		@include min-responsive($screen-desktop) {
 			padding-left: 0.938rem;
 			padding-right: 0.938rem;
-			width: 30%;
-			&:nth-child(2) {
-				width: 40%;
-			}
-		}
-		@include min-responsive($screen-desktop) {
-			width: calc(100% / 3);
 		}
 		@include min-responsive($screen-super-desktop) {
 			padding-left: 1.563rem;
@@ -42,10 +43,87 @@
 .logo {
 	position: relative;
 	text-align: center;
+	margin: 0 -30px;
+	@include min-responsive($screen-tablet) {
+		margin: 0;
+	}
+	a {
+		display: block;
+		@include min-responsive($screen-tablet) {
+			display: inline-block;
+			vertical-align: middle;
+			padding: .5rem;
+		}
+	}
 	img {
 		height: 25px;
+		display: block;
+		margin: 0 auto;
 		@include min-responsive($screen-tablet) {
 			height: 36px;
 		}
 	}
+}
+
+.header.-mobile {
+	justify-content: flex-start;
+	.logo {
+		margin: 0;
+		a {
+			padding: .5rem 1rem;
+		}
+		img {
+			height: 15px;
+			@include min-responsive($screen-tablet) {
+				margin: 0;
+			} 
+		}
+	}
+	.menu-header {
+		padding: 0;
+	}
+	.header-col {
+		margin-left: 0;
+		margin-right: 0;
+		width: auto;
+		&.-right {
+			position: absolute;
+			right: 1rem;
+			top: calc(50% - 21px);
+			z-index: 2;
+		}
+	}
+	.search-bg {
+		position: absolute;
+		top: 58px;
+		left: 0;
+		width: 100%;
+		height: calc(100vh - 55px - 53px - 58px);
+		pointer-events: none;
+		background: rgba(0,0,0,.5);
+		@include min-responsive($screen-tablet) {
+			height: calc(100vh - 70px - 58px);
+		}
+	}
+	.search-header {
+		position: absolute;
+		z-index: 10;
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+		background: #fff;
+		top: 108px;
+		left: 0;
+		width: 100%;
+		@include min-responsive($screen-tablet) {
+			top: 70px;
+			display: none;
+		}
+		.input {
+			height: 42px;
+		}
+		&.-show {
+			display: block;
+		}
+	}
+	
 }

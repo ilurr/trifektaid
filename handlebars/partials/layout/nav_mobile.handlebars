@@ -10,9 +10,21 @@
 						{{#eq mobile compare="2"}}
 						<span class="nav-badge"></span>
 						{{/eq}}
+						{{#if ../showAvatar}}
+						{{#eq icon compare="user"}}
+						<div class="nav-avatar">
+							<img src="../asset/images/dummy/avatar.jpg" alt="">
+						</div>
+						{{else}}
 						<svg class="icon-nav icon-{{icon}}" title="icon-{{icon}}">
 							<use xlink:href="../asset/images/icon/icon.svg#icon-{{icon}}" />
 						</svg>
+						{{/eq}}
+						{{else}}
+						<svg class="icon-nav icon-{{icon}}" title="icon-{{icon}}">
+							<use xlink:href="../asset/images/icon/icon.svg#icon-{{icon}}" />
+						</svg>
+						{{/if}}
 					</div>
 					<div class="nav-text">{{title}}</div>
 				</div>

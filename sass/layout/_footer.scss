@@ -1,24 +1,28 @@
 .footer {
 	position: relative;
 	background: #585858;
-	padding: 0 0 3rem;
 	width: 100%;
-	// @include min-responsive($screen-tablet) {
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	@include min-responsive($screen-desktop) {
+		padding-top: 0;
+		padding-bottom: 2.5rem;
 	// 	width: $screen-tablet;
-	// }
+	}
 	.grid-flex {
 		flex-wrap: wrap;
 	}
 	&-col {
 		width: 100%;
-		padding-top: 3rem;
+		padding-top: 1.5rem;
 		padding-left: 0.938rem;
 		padding-right: 0.938rem;
-		@include min-responsive($screen-tablet) {
-			width: calc(100% / 2);
-			&:first-child {
-				width: 100%;
-			}
+		@include min-responsive($screen-desktop) {
+			padding-top: 3rem;
+		// 	width: calc(100% / 2);
+		// 	&:first-child {
+		// 		width: 100%;
+		// 	}
 		}
 		@include min-responsive($screen-desktop) {
 			width: calc(100% / 3);
@@ -28,6 +32,10 @@
 		}
 	}
 	&-logo {
+		text-align: center;
+		@include min-responsive($screen-desktop) {
+			text-align: left;
+		}
 		img {
 			height: 30px;
 		}
@@ -37,8 +45,12 @@
 		@include font-pack(false, 0.875rem, 400, false, rgba(#fff, .5));
 	}
 	&-copy {
+		text-align: center;
 		padding: .75rem 0;
 		@include font-pack(false, 0.625rem, 400, false, rgba(#fff, .5));
+		@include min-responsive($screen-desktop) {
+			text-align: left;
+		}
 	}
 	&-nav {
 		position: relative;
@@ -47,10 +59,17 @@
 			display: block;
 			@include display-flex();
 			flex-wrap: wrap;
+			justify-content: center;
+			@include min-responsive($screen-desktop) {
+				justify-content: flex-start;
+			}
 		}
 		li {
 			display: block;
-			width: 50%;
+			width: auto;
+			@include min-responsive($screen-desktop) {
+				width: 50%;
+			}
 			a {
 				display: inline-block;
 				padding: 0.500rem;
@@ -64,21 +83,50 @@
 	&-social {
 		@include display-flex();
 		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		@include min-responsive($screen-desktop) {
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+		}
 		&-text {
-			padding-right: 20px;
+			width: 100%;
+			text-align: center;
+			padding-right: 0;
+			padding-bottom: .5rem;
 			@include font-pack(false, .75rem, false, false, rgba(#fff, .5));
+			@include min-responsive($screen-desktop) {
+				width: auto;
+				text-align: left;
+				padding-bottom: 0;
+				padding-right: 20px;
+			}
 		}
 	}
 	&-subscribe {
 		position: relative;
 		padding: 1rem 0;
+		text-align: center;
+		@include min-responsive($screen-desktop) {
+			text-align: left;
+		}
 		&-text {
 			@include font-pack(false, .75rem, false, false, rgba(#fff, .5));
+			text-align: center;
+			@include min-responsive($screen-desktop) {
+				text-align: left;
+			}
 		}
 		&-form {
 			position: relative;
 			padding: .5rem 0;
 			width: 260px;
+			margin-left: auto;
+			margin-right: auto;
+			@include min-responsive($screen-desktop) {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 		.input {
 			height: 40px;
@@ -103,7 +151,7 @@
 		position: relative;
 		text-align: center;
 		padding: 0 0;
-		margin: .938rem 0;
+		margin: .875rem 0;
 		.footer-nav ul {
 			display: block;
 		}
@@ -123,6 +171,7 @@
 		.footer-copy {
 			text-transform: uppercase;
 			font-weight: 600;
+			text-align: center;
 			color: rgba(#818488, .6);
 		}
 	}

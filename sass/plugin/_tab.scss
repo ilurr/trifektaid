@@ -14,11 +14,12 @@
 	}
 	&-item {
 		position: relative;
-		padding: .75rem .25rem;
 		border-bottom: 2px solid transparent;
 		margin-bottom: -2px;
 		margin-right: 1rem;
 		a {
+			display: block;
+			padding: .75rem .25rem;
 			@include font-pack(false, 1rem, 700, false, #B8B8B8);
 			&:hover {
 				color: $color-theme;

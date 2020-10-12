@@ -22,10 +22,19 @@
 
 	// override
 	.panel {
-		width: 100%;
-		margin: 0 auto;
+		width: calc(100% - 2rem);
+		margin: 0 1rem;
 		@include min-responsive($screen-tablet) {
 			width: 450px;
+			margin: 0 auto;
+		}
+	}
+	.app-badge {
+		width: calc(100% - 2rem);
+		margin: 0 1rem;
+		@include min-responsive($screen-tablet) {
+			width: 450px;
+			margin: 0 auto;
 		}
 	}
 }

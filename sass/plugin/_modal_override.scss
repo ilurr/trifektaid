@@ -12,11 +12,11 @@
 		@include font-pack(false, 1.250rem, 700, false, $color-theme);
 	}
 	&-body {
-		max-height: 80vh;
+		max-height: 78vh;
 	}
 	&-header {
 		& + .modal-body {
-			max-height: calc(80vh - 59px);
+			max-height: calc(78vh - 59px);
 		}
 	}
 	&-footer {

@@ -42,6 +42,9 @@
 
 		</div>
 
+		<!-- notify message -->
+		{{>panel_alert}}
+
 	</div>
 	<!-- e: root -->
 
@@ -51,5 +54,15 @@
 	</div>
 
 {{>js}}
+
+<script>
+// dummy alert succes / failed message
+let msg = document.getElementById('success-msg');
+if(!!msg) {
+	setTimeout(function(){
+		$('#success-msg').fadeIn(300).delay(3000).fadeOut(1000);
+	}, 2000);
+}
+</script>
 </body>
 </html>

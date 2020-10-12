@@ -50,10 +50,10 @@
 				<!-- menu -->
 				<div class="menu-header">
 					<div class="menu-header-col">
-						<a class="button menu-icon-search" href="javascript:void(0)" role="button" data-toggle="search">
+						<a class="button menu-button" href="javascript:void(0)" role="button" data-toggle="search">
 							<span class="icon-general icon-search"></span>
 						</a>
-						<a class="button menu-icon-notify" href="notification.html" role="link">
+						<a class="button menu-button" href="notification.html" role="link">
 							<span class="nav-badge">5</span>
 							<svg class="icon-nav icon-bell" title="icon-bell">
 								<use xlink:href="../asset/images/icon/icon.svg#icon-bell" />
@@ -161,7 +161,7 @@
 					</div>
 
 					<!-- map box hover -->
-					<div id="mapOverlay" class="map-overlay -show" data-overlay="true" aria-hidden="true">
+					<div id="mapOverlay" class="map-overlay" data-overlay="true" aria-hidden="true">
 						<div class="map-box-google">
 							<div class="map-title">Istiqlal Mosque</div>
 							<div class="map-rating">
@@ -177,291 +177,55 @@
 								</div>
 								<div class="map-col">
 									<div class="map-lead">This mosque features a contemporary design & is the largest in Southeast Asia.</div>
-									<button id="modalMap1" type="button" data-toggle="modal" data-target="#modalMap" class="button -map">Explore</button>
+									<a href="map-place-detail.html" class="button -primary">Explore</a>
 								</div>
-							</div>
-							<div class="map-checkin">
-								<div class="map-checkin-user">
-									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="Stevy"></div>
-									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="Stevy"></div>
-									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="Stevy"></div>
-									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="Stevy"></div>
-									<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="Stevy"></div>
-								</div>
-								<div class="map-checkin-text"><a href="#" role="button" data-toggle="modal" data-target="#modalPeopleCheckin">+82 More have been here</a></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- map detail modal -->
-					<div id="modalMap" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalMapExplore" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
-								<div class="modal-body">
-									<!-- modal content -->
-									<div class="map-box-modal">
-										<div class="map-img">
-											<span><img src="https://source.unsplash.com/3qPQtPoyqUg/500x333"></span>
-										</div>
-										<div class="map-nearby">1.3 Km nearby</div>
-										<div class="map-title">Istiqlal Mosque</div>
-										<div class="map-rating">
-											<div class="icon-rating">
-												<div class="icon-general icon-star" data-rating="3.7"></div>
-												<div class="icon-general icon-star-bg"></div>
-											</div>
-										</div>
-										<div class="map-suptitle">4-Star Hotel</div>
-										<div class="map-row">
-											<div class="map-info-icon">
-												<span class="icon-general icon-location"></span>
-											</div>
-											<div class="map-info-content">
-												Jl. Melawai 7 No.6 - 8, RT.3/RW.1, Melawai, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160
-											</div>
-										</div>
-										<div class="map-row">
-											<div class="map-info-icon">
-												<span class="icon-general icon-web"></span>
-											</div>
-											<div class="map-info-content">
-												mysantika.com
-											</div>
-										</div>
-										<div class="map-row">
-											<div class="map-info-icon">
-												<span class="icon-general icon-phone"></span>
-											</div>
-											<div class="map-info-content">
-												021 7637789
-											</div>
-										</div>
-										<div class="map-row">
-											<div class="map-info-content">This mosque features a contemporary design & is the largest in Southeast Asia.</div>
-										</div>
-										<div class="map-checkin">
-											<div class="map-checkin-user">
-												<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="Stevy"></div>
-												<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="Stevy"></div>
-												<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="Stevy"></div>
-												<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="Stevy"></div>
-												<div class="map-checkin-avatar"><img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="Stevy"></div>
-											</div>
-											<div class="map-checkin-text"><a href="#" role="button" data-toggle="modal" data-target="#modalPeopleCheckin">+82 More have been here</a></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 
 					<!-- place whos been here modal -->
-					<!-- modal above modal -front -->
-					<div id="modalPeopleCheckin" class="modal -front fade" tabindex="-1" role="dialog" aria-labelledby="modalPeopleHere" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
-								<div class="modal-header">
-									<h5 class="modal-title">National Monument</h5>
-								</div>
-								<div class="modal-body">
-									<!-- people here -->
-									<div class="people-block -modal">
-										<div class="people-block">
-											<div class="people-list">
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/26CFEFB3-21C8-49FC-8C19-8E6A62B6D2E0-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Stevy Michienzi</a></h4>
-															<div class="people-bio">Run Enthusiast</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Following"></button>
-														</div>
-													</div>
-												</div>
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Abagael Tanguma</a></h4>
-															<div class="people-bio">Bike Addict</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
-														</div>
-													</div>
-												</div>
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/FBEBF655-4886-455A-A4A4-D62B77DD419B-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Cobbie Javarone</a></h4>
-															<div class="people-bio">Full-time Traveler</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
-														</div>
-													</div>
-												</div>
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/03F55412-DE8A-4F83-AAA6-D67EE5CE48DA-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Daisi Widdows</a></h4>
-															<div class="people-bio">Love Swimming</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
-														</div>
-													</div>
-												</div>
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/282A12CA-E0D7-4011-8BDD-1FAFAAB035F7-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Constantin Hoeffliger</a></h4>
-															<div class="people-bio">Urban Traveler</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
-														</div>
-													</div>
-												</div>
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/1C4EEDC2-FE9C-40B3-A2C9-A038873EE692-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Brody Wilch</a></h4>
-															<div class="people-bio">Run! Run! Run!</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
-														</div>
-													</div>
-												</div>
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Olaf Dobos</a></h4>
-															<div class="people-bio">Biker</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
-														</div>
-													</div>
-												</div>
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/344CFC24-61FB-426C-B3D1-CAD5BCBD3209-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Clinten Donohoe</a></h4>
-															<div class="people-bio">Sport Lover</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
-														</div>
-													</div>
-												</div>
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/BA0CB1F2-8C79-4376-B13B-DD5FB8772537-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Averill Vonner</a></h4>
-															<div class="people-bio">Runner</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
-														</div>
-													</div>
-												</div>
-												<div class="people-item">
-													<div class="people-row">
-														<div class="people-img">
-															<a href="profile-view.html">
-																<img src="https://tinyfac.es/data/avatars/B3CF5288-34B0-4A5E-9877-5965522529D6-200w.jpeg" alt="">
-															</a>
-														</div>
-														<div class="people-info">
-															<h4 class="people-name"><a href="profile-view.html">Geof Vaughner</a></h4>
-															<div class="people-bio">Swimmer</div>
-														</div>
-													</div>
-													<div class="people-action">
-														<div class="form-row">
-															<button type="button" name="btn-follow" class="button" data-follow="Follow"></button>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 
 				</div>
 
 			</div>
 
+		</div>
+
+		<!-- notify message -->
+		<div id="success-msg" class="panel-alert -fixed -success">
+			<p>Yeay! You were successful.</p>
+		</div>
+		<div id="error-msg" class="panel-alert -fixed -error">
+			<p>Failed, there was a problem, try again later.</p>
+		</div>
+
+		<!-- modal apps -->
+		<div id="modalApps" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="onlyApss" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+					<div class="modal-header">
+						<h5 class="modal-title" id="onlyApss">Only on Mobile App</h5>
+					</div>
+					<div class="modal-body">
+						<div class="app-modal">
+							<div class="app-modal-text">
+								Only available on mobile app. <br>Download it now on the <a href="#" target="_blank">Google Play</a> or <a href="#" target="_blank">Apple App Store</a>.
+							</div>
+							<div class="app-badge">
+								<a href="#" target="_blank">
+									<img src="../asset/images/google-play-badge.png" alt="Get it on Google Play">
+								</a>
+								<a href="#" target="_blank">
+									<img src="../asset/images/app-store-badge.png" alt="Download on the App Store">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</div>
@@ -572,5 +336,21 @@ HTMLMarker.prototype.draw = function () {
 
 
 
-</script></body>
+</script><script>
+
+	// buat contoh aja, asumsi muncul pas di klik buletan, 
+	let kl = document.getElementById('mapOverlay');
+	if(!!kl) {
+		setTimeout(function(){
+
+			// open
+			openOverlay(kl);
+
+			// close
+			// closeOverlay(kl);
+			
+		}, 2500);
+	}
+</script>
+</body>
 </html>

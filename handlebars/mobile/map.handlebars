@@ -28,7 +28,7 @@
 					</div>
 
 					<!-- map box hover -->
-					<div id="mapOverlay" class="map-overlay -show" data-overlay="true" aria-hidden="true">
+					<div id="mapOverlay" class="map-overlay" data-overlay="true" aria-hidden="true">
 						<div class="map-box-google">
 							<div class="map-title">Istiqlal Mosque</div>
 							<div class="map-rating">
@@ -44,40 +44,31 @@
 								</div>
 								<div class="map-col">
 									<div class="map-lead">This mosque features a contemporary design & is the largest in Southeast Asia.</div>
+									<a href="map-place-detail.html" class="button -primary">Explore</a>
 									{{!-- <a href="#modalMap" class="button -primary -mapGl" data-toggle="modal">Explore</a> --}}
-									<button id="modalMap1" type="button" data-toggle="modal" data-target="#modalMap" class="button -map">Explore</button>
+									{{!-- <button id="modalMap1" type="button" data-toggle="modal" data-target="#modalMap" class="button -map">Explore</button> --}}
 								</div>
-							</div>
-							<div class="map-checkin">
-								<div class="map-checkin-user">
-									<div class="map-checkin-avatar"><img src="{{people.[0].avatars.[0].url}}" alt="{{people.[0].first_name}}"></div>
-									<div class="map-checkin-avatar"><img src="{{people.[1].avatars.[0].url}}" alt="{{people.[0].first_name}}"></div>
-									<div class="map-checkin-avatar"><img src="{{people.[2].avatars.[0].url}}" alt="{{people.[0].first_name}}"></div>
-									<div class="map-checkin-avatar"><img src="{{people.[3].avatars.[0].url}}" alt="{{people.[0].first_name}}"></div>
-									<div class="map-checkin-avatar"><img src="{{people.[4].avatars.[0].url}}" alt="{{people.[0].first_name}}"></div>
-								</div>
-								<div class="map-checkin-text"><a href="#" role="button" data-toggle="modal" data-target="#modalPeopleCheckin">+82 More have been here</a></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- map detail modal -->
-					<div id="modalMap" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalMapExplore" aria-hidden="true">
+					{{!-- <div id="modalMap" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalMapExplore" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
 								<div class="modal-body">
 									<!-- modal content -->
 									<div class="map-box-modal">
-										{{>map_place_detail}}
+										{{!>map_place_detail}}
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 
 					<!-- place whos been here modal -->
-					{{>place_whoshere}}
+					{{!>place_whoshere}}
 
 				</div>
 
@@ -85,11 +76,33 @@
 
 		</div>
 
+		<!-- notify message -->
+		{{>panel_alert}}
+
+		<!-- modal apps -->
+		{{>app_modal}}
+
 	</div>
 	<!-- e: root -->
 
 {{>js mobile="true"}}
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJHXsHMriUDEQKsw5F6BNkNlGy572LhFw&callback=initMap&libraries=&v=weekly" defer ></script>
 {{>dev_map}}
+<script>
+
+	// buat contoh aja, asumsi muncul pas di klik buletan, 
+	let kl = document.getElementById('mapOverlay');
+	if(!!kl) {
+		setTimeout(function(){
+
+			// open
+			openOverlay(kl);
+
+			// close
+			// closeOverlay(kl);
+			
+		}, 2500);
+	}
+</script>
 </body>
 </html>

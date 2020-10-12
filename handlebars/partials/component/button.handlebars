@@ -3,7 +3,7 @@
 	<input type="{{type}}" name="{{name}}" id="{{name}}" value="{{label}}" class="button{{#if class}} {{class}}{{/if}}"{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}>
 	{{/eq}}
 	{{#eq type compare="button"}}
-	<button name="{{name}}" id="{{name}}" class="button{{#if class}} {{class}}{{/if}}"{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}>{{label}}</button>
+	<button name="{{name}}" id="{{#if id}}{{id}}{{else}}{{name}}{{/if}}" class="button{{#if class}} {{class}}{{/if}}"{{#eq disabled compare="true"}} disabled="disabled"{{/eq}}>{{label}}</button>
 	{{/eq}}
 	{{#eq type compare="link"}}
 	<a href="{{href}}" class="button{{#if class}} {{class}}{{/if}}" role="link">{{#if icon}}<span class="icon icon-general icon-{{icon}}"></span> {{/if}}{{label}}</a>

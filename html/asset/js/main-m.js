@@ -47,7 +47,7 @@ if(!!elem) {
 }
 
 
-// swipe discover
+// discover
 /* swipe script modified from https://codepen.io/RobVermeer/pen/japZpY, credit to Rob Vermeer */
 // swipe
 
@@ -105,7 +105,7 @@ function getSwipe(el) {
 		var xMulti = ev.deltaX * 0.03;
 		var yMulti = ev.deltaY / 80;
 		var rotate = xMulti * yMulti;
-		console.log(ev.deltaX)
+		// console.log(ev.deltaX)
 		// console.log(ev.deltaY)
 	
 		ev.target.style.transform = 'translate(' + ev.deltaX + 'px, ' + ev.deltaY + 'px) rotate(' + rotate + 'deg)';
@@ -123,7 +123,7 @@ function getSwipe(el) {
 		var moveOutWidth = document.getElementById('discoverCard').clientWidth;
 		var keep = Math.abs(ev.deltaX) < 125;
 		// var keep = Math.abs(ev.deltaX) < 80 || Math.abs(ev.velocityX) < 0.5;
-		console.log(keep)
+		//console.log(keep)
 	
 		ev.target.classList.toggle('hide', !keep);
 	
@@ -186,6 +186,134 @@ function checkCookies(cname) {
         return false
     }
 }
+
+let fb = document.querySelector('[data-toggle="filter"]');
+if(!!fb) {
+	document.addEventListener('click', function(e){
+		let ft = e.target.dataset.toggle;
+		let ma = document.querySelector('.modal-open');
+		let fbx = document.getElementById('discoverFilter');
+		// console.log(ma)
+		if(!!ma) {
+			if(ma.contains(e.target)) {
+			} else {
+				closeFilter(fbx);
+			}
+		} else if(!!fbx) {
+			if(fbx.contains(e.target)) {
+			} else {
+				closeFilter(fbx);
+			}
+		}
+		if(!!ft && ft=="filter") {
+			if(!!fbx) {
+				openFilter(fbx);
+			}
+		}
+	});
+}
+
+function openFilter(el) {
+	el.classList.add('-show');
+}
+
+function closeFilter(el) {
+	el.classList.remove('-show');
+}
+let dp = document.getElementById('discoverFilterPeople');
+let dpi = document.getElementById('discoverFilterPeopleItem');
+
+if(!!dp && !!dpi) {
+	// console.log(dp)
+	dp.addEventListener('click', function(e){
+		let status = dp.checked;
+		let dpir = dpi.querySelectorAll('[type="radio"]');
+		// console.log(status)
+		if(status) {
+			dpi.classList.remove('-disabled');
+			if(!!dpir) {
+				dpir.forEach(function(item){
+					setRadioActive(item, 1);
+				});
+			}
+		} else {
+			dpi.classList.add('-disabled');
+			if(!!dpir) {
+				dpir.forEach(function(item){
+					setRadioActive(item, 0);
+				});
+			}
+		}
+	});
+}
+
+function setRadioActive(el, status) {
+	if(!!el) {
+		if(status==1) {
+			el.removeAttribute('disabled');
+		} else {
+			el.setAttribute('disabled','disabled');
+		}
+	}
+}
+var rng = document.getElementById("discoverFilterRange");
+
+if(!!rng) {
+	var listener = function () {
+		//window.requestAnimationFrame(function () {
+			document.getElementById("discoverFilterRangeValue").innerHTML = rng.value;
+		//});
+	};
+	
+	rng.addEventListener("mousedown", function () {
+		listener();
+		rng.addEventListener("mousemove", listener);
+	});
+	rng.addEventListener("mouseup", function () {
+		rng.removeEventListener("mousemove", listener);
+	});
+
+	// mobile
+	rng.addEventListener("input", function () {
+		listener();
+		rng.addEventListener("change", listener);
+	});
+	rng.addEventListener("change", function () {
+		listener();
+		rng.removeEventListener("input", listener);
+	});
+	  
+	// include the following line to maintain accessibility
+	// by allowing the listener to also be fired for
+	// appropriate keyboard events
+	rng.addEventListener("keydown", listener);
+}
+	
+// clear input location
+let clr = document.getElementById('discoverLocationClear');
+let locSearch = document.getElementById('discoverLocationSearch');
+let locList = document.getElementById('discoverLocationList');
+if(!!clr && !!locSearch && !!locList) {
+	clr.addEventListener('click', function(e){
+		locSearch.value = '';
+		locList.innerHTML = '';
+		locSearch.focus();
+	});
+}
+
+// button location search
+let targ = document.getElementById('discoverLocationResult');
+let targ_inp = document.getElementById('discoverLocationResultInput');
+document.addEventListener('click', function(e){
+	let loc = e.target.dataset.loc;
+	if(loc=='send') {
+		let v = e.target.value;
+		if(!!targ && !!targ_inp) {
+			targ_inp.value = v;
+			targ.innerHTML = v;
+		}
+	}
+});
 
 
 // rating

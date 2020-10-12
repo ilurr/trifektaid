@@ -55,7 +55,7 @@ function getSwipe(el) {
 		var xMulti = ev.deltaX * 0.03;
 		var yMulti = ev.deltaY / 80;
 		var rotate = xMulti * yMulti;
-		console.log(ev.deltaX)
+		// console.log(ev.deltaX)
 		// console.log(ev.deltaY)
 	
 		ev.target.style.transform = 'translate(' + ev.deltaX + 'px, ' + ev.deltaY + 'px) rotate(' + rotate + 'deg)';
@@ -73,7 +73,7 @@ function getSwipe(el) {
 		var moveOutWidth = document.getElementById('discoverCard').clientWidth;
 		var keep = Math.abs(ev.deltaX) < 125;
 		// var keep = Math.abs(ev.deltaX) < 80 || Math.abs(ev.velocityX) < 0.5;
-		console.log(keep)
+		//console.log(keep)
 	
 		ev.target.classList.toggle('hide', !keep);
 	

@@ -9,3 +9,121 @@
 @include max-responsive($screen-mobile-max) {
 	@import 'mobile/mobile';
 }
+// sign
+.sign {
+	margin-top: -55px;
+	padding: 0;
+	align-items: flex-start;
+	background: #fff;
+	@include min-responsive($screen-tablet) {
+		margin-top: -4.375rem;
+		flex-wrap: wrap;
+	}
+	&-wrap {
+		min-height: 70vh;
+		.app-badge {
+			padding-top: 1rem;
+		    padding-bottom: 1rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			background: #fff;
+		}
+	}
+	&-text {
+		margin: 0;
+	}
+	.wp-hero {
+		min-height: 20vh;
+		@include min-responsive($screen-tablet) {
+			width: 100%;
+		}
+	}
+	.panel {
+		padding: 1rem 0;
+		box-shadow: none;
+		// min-height: 70vh;
+	}
+}
+
+// wp
+.wp {
+	margin-top: -55px;
+	@include min-responsive($screen-tablet) {
+		margin-top: -4.375rem;
+	}
+	&-hero {
+		min-height: 50vh;
+		@include display-flex();
+		flex-wrap: wrap;
+		@include min-responsive($screen-desktop) {
+			min-height: 70vh;
+		}
+		.title-big {
+			width: 100%;
+			text-align: center;
+			align-self: flex-end;
+			color: #fff;
+			z-index: 2;
+			@include min-responsive($screen-tablet) {
+				font-size: 1.5rem;
+				font-weight: 500;
+			}
+		}
+	}
+	&-logo {
+		position: relative;
+		width: 100%;
+		padding: 1rem;
+		text-align: center;
+		align-self: flex-start;
+		z-index: 2;
+		img {
+			height: 70px;
+		}
+	}
+	&-splash {
+		height: 70px;
+	}
+	&-img {
+		z-index: 1;
+		background-position: left center;
+	}
+	&-form {
+		margin-top: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	&-line {
+		margin: .125rem 0;
+		span {
+			font-size: .625rem;
+		}
+	}
+	&-modal {
+		padding: 1rem;
+		height: 200px;
+		.form-row {
+			padding: .25rem 0;
+		}
+		.title {
+			font-size: 1rem;
+		}
+		p {
+			margin: .5rem 0;
+			font-size: .75rem;
+		}
+	}
+}
+
+.discover {
+	&-filter {
+		overflow: hidden;
+		&-trigger {
+			top: 5px;
+			@include min-responsive($screen-tablet) {
+				top: -10px;
+				right: 0;
+			}
+		}
+	}
+}

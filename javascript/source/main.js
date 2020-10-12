@@ -22,8 +22,12 @@ if(!!slider) {
 //=include '../partials/plugin-datepicker-config.js'
 
 // swipe discover
-//=include '../partials/swipe-discover.js'
+//=include '../partials/discover-swipe.js'
 //=include '../partials/cookies.js'
+//=include '../partials/discover-filter.js'
+//=include '../partials/discover-people.js'
+//=include '../partials/discover-range.js'
+//=include '../partials/discover-location.js'
 
 // rating
 //=include '../partials/rating.js'

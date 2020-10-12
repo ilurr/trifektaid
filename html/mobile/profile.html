@@ -50,10 +50,10 @@
 				<!-- menu -->
 				<div class="menu-header">
 					<div class="menu-header-col">
-						<a class="button menu-icon-search" href="javascript:void(0)" role="button" data-toggle="search">
+						<a class="button menu-button" href="javascript:void(0)" role="button" data-toggle="search">
 							<span class="icon-general icon-search"></span>
 						</a>
-						<a class="button menu-icon-notify" href="notification.html" role="link">
+						<a class="button menu-button" href="notification.html" role="link">
 							<span class="nav-badge">5</span>
 							<svg class="icon-nav icon-bell" title="icon-bell">
 								<use xlink:href="../asset/images/icon/icon.svg#icon-bell" />
@@ -137,9 +137,9 @@
 									<div class="nav-flex">
 										<div class="nav-icon">
 											<span class="nav-badge"></span>
-											<svg class="icon-nav icon-user" title="icon-user">
-												<use xlink:href="../asset/images/icon/icon.svg#icon-user" />
-											</svg>
+											<div class="nav-avatar">
+												<img src="../asset/images/dummy/avatar.jpg" alt="">
+											</div>
 										</div>
 										<div class="nav-text">Profile</div>
 									</div>
@@ -153,7 +153,7 @@
 
 					<h1 class="title-section">
 						Profile
-						<a class="button" href="setting.html" role="link">
+						<a class="button setting-menu-button" href="setting.html" role="link">
 							<svg class="icon-nav icon-setting" title="icon-setting">
 								<use xlink:href="../asset/images/icon/icon.svg#icon-setting" />
 							</svg>
@@ -1464,6 +1464,41 @@
 
 		</div>
 
+		<!-- notify message -->
+		<div id="success-msg" class="panel-alert -fixed -success">
+			<p>Yeay! You were successful.</p>
+		</div>
+		<div id="error-msg" class="panel-alert -fixed -error">
+			<p>Failed, there was a problem, try again later.</p>
+		</div>
+
+		<!-- modal apps -->
+		<div id="modalApps" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="onlyApss" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+					<div class="modal-header">
+						<h5 class="modal-title" id="onlyApss">Only on Mobile App</h5>
+					</div>
+					<div class="modal-body">
+						<div class="app-modal">
+							<div class="app-modal-text">
+								Only available on mobile app. <br>Download it now on the <a href="#" target="_blank">Google Play</a> or <a href="#" target="_blank">Apple App Store</a>.
+							</div>
+							<div class="app-badge">
+								<a href="#" target="_blank">
+									<img src="../asset/images/google-play-badge.png" alt="Get it on Google Play">
+								</a>
+								<a href="#" target="_blank">
+									<img src="../asset/images/app-store-badge.png" alt="Download on the App Store">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 	<!-- e: root -->
 
@@ -1472,5 +1507,15 @@
 <script type="text/javascript" src="../asset/js/plugin-pack.min.js"></script>
 <script type="text/javascript" src="../asset/js/main-m.js"></script>
 <script type="text/javascript" src="../asset/js/svgxuse.min.js" defer></script>
+
+<script>
+// dummy alert succes / failed message
+let msg = document.getElementById('success-msg');
+if(!!msg) {
+	setTimeout(function(){
+		$('#success-msg').fadeIn(300).delay(3000).fadeOut(1000);
+	}, 2000);
+}
+</script>
 </body>
 </html>

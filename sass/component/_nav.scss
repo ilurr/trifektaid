@@ -20,6 +20,11 @@
 	&-wrap {
 		position: relative;
 		margin: .5rem 0;
+		@include range-responsive(375px, $screen-mobile-max) {
+			// margin: 0;
+			@include display-flex();
+			justify-content: space-between;
+		}
 	}
 	&-item {
 		padding: 0;
@@ -80,11 +85,21 @@
 			}
 		}
 	}
+	&-avatar {
+		position: relative;
+		width: 22px;
+		height: 22px;
+		border-radius: 22px;
+		overflow: hidden;
+		img {
+			@include ratio-flexible(auto, 100%);
+		}
+	}
 
 	// static
 	&.-static {
 		.nav-wrap {
-			margin: 1.5rem 0;
+			margin: 1rem 0;
 		}
 		.nav-text {
 			display: inline-block;

@@ -37,6 +37,29 @@
 		}
 	}
 
+	// trigger
+	&-menu {
+		&-button {
+			width: auto;
+			height: auto;
+			display: inline-block;
+			position: absolute;
+			top: calc(50% - (38px / 2));
+			padding: 0.5rem;
+			right: .5rem;
+			border: transparent;
+			background: transparent;
+			margin-right: .5rem;
+			&:hover {
+				color: #000;
+			}
+			.icon-nav {
+				font-size: 22px;
+				vertical-align: top;
+			}
+		}
+	}
+
 	// override 
 	&-block {
 		label {

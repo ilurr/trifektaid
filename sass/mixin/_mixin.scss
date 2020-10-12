@@ -103,3 +103,14 @@
     @if $lh { line-height: $lh; }
     @if $colour { color: $colour; }
 }
+//
+@function webkit-slider-thumb-shadow($i: 1) {
+	$val: #{$i}px 0 0 -#{(30px - 2px) / 2} #{#B5B5B6};
+	@if $i==1 {
+		@for $k from 2 through 1000 {
+			$val: #{$val},
+			webkit-slider-thumb-shadow($k);
+		}
+	}
+	@return $val;
+}
