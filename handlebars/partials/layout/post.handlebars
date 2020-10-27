@@ -63,7 +63,7 @@
 								</span>
 							</div>
 							<!-- place -->
-							<!-- <div class="post-modal-place">
+							<div class="post-modal-place" style="display: none;">
 								<button type="button" class="close" aria-label="Remove"><span class="icon-close" aria-hidden="true"></span></button>
 								<div class="post-modal-place-loc">
 									<img src="../asset/images/dummy/feed-place.png" alt="">	
@@ -74,7 +74,7 @@
 									</div>
 									<div class="post-modal-place-title">Istiqlal Mosque <span>Mosquee</span></div>
 								</div>
-							</div> -->
+							</div>
 						</div>
 						<div class="post-modal-icon">
 							<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
@@ -83,7 +83,7 @@
 								</svg>
 								Add Photos
 							</button>
-							<button type="button" data-toggle="modal" data-target="#modalPost" class="button">
+							<button type="button" data-toggle="modal" data-target="#modalPostLocation" class="button">
 								<svg class="icon-post icon-place" title="icon-place">
 									<use xlink:href="../asset/images/icon/icon.svg#icon-place" />
 								</svg>
@@ -103,6 +103,35 @@
 							{{>button type="submit" name="btn-post" class="-primary" label="Post"}}
 						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal post location -->
+<div id="modalPostLocation" class="modal fade -front" tabindex="-1" role="dialog" aria-labelledby="modalPostLocation" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-close" aria-hidden="true"></span></button>
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalPostLocationTitle">Tag Place</h5>
+			</div>
+			<div class="modal-body">
+				<!-- modal loc -->
+				<div class="discover-location-modal">
+					<div class="discover-location-search">
+						<span class="icon-general icon-search"></span>
+						<input type="text" id="discoverLocationSearch" class="input" name="filter-loc-search" placeholder="Search Location" autocomplete="off">
+						<button type="button" class="clear" id="discoverLocationClear">
+							<span class="icon-close" aria-hidden="true"></span>
+						</button>
+					</div>
+					<div class="discover-location-body" id="discoverLocationList">
+						{{#each place}}
+						<button type="button" role="button" class="button" value="{{title}}" data-loc="send">{{title}}</button>
+						{{/each}}
+					</div>
 				</div>
 			</div>
 		</div>

@@ -55,5 +55,31 @@
 	<!-- e: root -->
 
 {{>js mobile="true"}}
+<script>
+// dummy auto complete location change
+$(document).ready(function(){
+	var url = '../asset/json/place.json'
+
+	$("#discoverLocationSearch").keyup(function(){
+		var isi = this.value;
+		$.getJSON( url, function (data) {
+			var items = [];
+			$.each(data.place, function (index, item) {
+				if(item.title.substr(0, isi.length).toUpperCase()==isi.toUpperCase()) {
+					items.push('<button type="button" role="button" class="button" value="'+ item.title +'" data-loc="send">'+ item.title +'</button>');
+				}
+			});
+			$("#discoverLocationList").html(items);
+		});
+	});
+
+	$(document).on('click','[data-loc="send"]',function(e){
+		$('#modalPostLocation').modal('hide')
+		$('.post-modal-place').show()
+		$('.post-modal-img').hide()
+	});
+});
+
+</script>
 </body>
 </html>
