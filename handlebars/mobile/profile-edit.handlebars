@@ -40,7 +40,8 @@
 									{{>select type="select" label="Gender" name="gender" option="Male,Female,Other" placeholder="-" selected="Male"}}
 									{{>input type="text" label="Phone" name="phone" txtVal="0987654321"}}
 									{{>input type="text" label="Location" name="location" txtVal="South Jakarta, Indonesia"}}
-									{{>input type="text" label="Short Bio" name="short-bio" txtVal="Run Enthusiast"}}
+									{{!>input type="text" label="Short Bio" name="short-bio" txtVal="Run Enthusiast"}}
+									{{>select type="select" label="Short Bio" name="short-bio" option="Run Enthusiast,Bike Addict,Love Swimming" placeholder="-"}}
 								</div>
 								<div class="user-form-action">
 									{{>button type="submit" name="btn-save-user" class="-primary" label="Save"}}

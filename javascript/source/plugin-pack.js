@@ -6,6 +6,7 @@
 
 //// plugin 
 //=include '../partials/plugin-tiny-slider.js'
-//=include '../partials/plugin-datepicker.js'
-//=include '../partials/plugin-datepicker-locale.js'
+////=include '../partials/plugin-datepicker-locale.js'
 //=include '../partials/plugin-hammer.js'
+
+//=include '../partials/plugin-datepicker-jquery.js'

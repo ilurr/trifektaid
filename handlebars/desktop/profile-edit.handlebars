@@ -34,11 +34,12 @@
 								</div>
 								<div class="user-form-row">
 									{{>input type="text" label="Name" name="name" txtVal="Chelsea Islan"}}
-									{{>input type="text" label="Birthday" name="birthday" txtVal="19 Jan 1990" function="js-datepicker" parent="js-datepicker-container" readonly="true"}}
+									{{>input type="text" label="Birthday" name="birthday" txtVal="12 Mar 1999" function="js-datepicker" parent="js-datepicker-container" readonly="true"}}
 									{{>select type="select" label="Gender" name="gender" option="Male,Female,Other" placeholder="-" selected="Male"}}
 									{{>input type="text" label="Phone" name="phone" txtVal="0987654321"}}
 									{{>input type="text" label="Location" name="location" txtVal="South Jakarta, Indonesia"}}
-									{{>input type="text" label="Short Bio" name="short-bio" txtVal="Run Enthusiast"}}
+									{{!>input type="text" label="Short Bio" name="short-bio" txtVal="Run Enthusiast"}}
+									{{>select type="select" label="Short Bio" name="short-bio" option="Run Enthusiast,Bike Addict,Love Swimming" placeholder="-"}}
 								</div>
 								<div class="user-form-action">
 									{{>button type="submit" name="btn-save-user" class="-primary" label="Save"}}

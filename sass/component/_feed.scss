@@ -78,7 +78,8 @@
 			span {
 				position: relative;
 				display: block;
-				padding-top: calc(2 / 3 * 100%);
+				padding-top: calc(1280 / 1080 * 100%);
+				// padding-top: calc(2 / 3 * 100%);
 				overflow: hidden;
 				background: #f0f0f0;
 				// border-radius: 3px;

@@ -19,33 +19,7 @@ if(!!slider) {
 }
 
 // datepicker
-let elem = gc('.js-datepicker', document);
-let now = new Date();
-let twnty = now.setFullYear(now.getFullYear() - 20);
-
-let options = {
-	maxDate: new Date(),
-	format: "dd MM yyyy",
-	leftArrow: '<',
-	language: 'id',
-	rightArrow: '>',
-	//endDate: '+dd',
-	// disableTouchKeyboard: true,
-	container: '#js-datepicker-container',
-	orientation: "bottom auto",
-	// todayHighlight: true,
-	defaultViewDate: twnty,
-	// beforeShowYear: true,
-	startView: 2, 
-	autohide: true
-}
-if(!!elem) {
-	const datepicker = new Datepicker(elem, options);
-	// elem.addEventListener('changeDate', function() {
-	// 	elem.value = datepicker.getDate();
-	// });
-}
-
+////=include '../partials/plugin-datepicker-config.js'
 
 // discover
 /* swipe script modified from https://codepen.io/RobVermeer/pen/japZpY, credit to Rob Vermeer */
@@ -419,3 +393,12 @@ function OnInput() {
 }
 
 
+//datepicker
+$('.js-datepicker').datepicker({
+	// format: 'yyyy/mm/dd',
+	format: 'dd M yyyy',
+	container: '#js-datepicker-container',
+	autoclose: true,
+	zIndexOffset: 8,
+	endDate: '0d'
+});    

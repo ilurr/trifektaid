@@ -201,7 +201,7 @@
 									<div class="form-row" id="js-datepicker-container">
 										<label for="birthday">Birthday</label>
 										<div class="form-input">
-											<input type="text" id="birthday" name="birthday" class="input js-datepicker" placeholder="" readonly="readonly" value="19 Jan 1990">
+											<input type="text" id="birthday" name="birthday" class="input js-datepicker" placeholder="" readonly="readonly" value="12 Mar 1999">
 										</div>
 										<div class="form-hint"></div>
 									</div>
@@ -232,10 +232,14 @@
 									</div>
 									<div class="form-row">
 										<label for="short-bio">Short Bio</label>
-										<div class="form-input">
-											<input type="text" id="short-bio" name="short-bio" class="input" placeholder="" value="Run Enthusiast">
+										<div class="form-select" data-placeholder="-">
+											<select id="short-bio" name="short-bio" class="select ">
+												<option value="0" selected="selected" disabled="disabled">-</option>
+												<option value="Run Enthusiast">Run Enthusiast</option>
+												<option value="Bike Addict">Bike Addict</option>
+												<option value="Love Swimming">Love Swimming</option>
+											</select>
 										</div>
-										<div class="form-hint"></div>
 									</div>
 								</div>
 								<div class="user-form-action">

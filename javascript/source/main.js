@@ -19,7 +19,7 @@ if(!!slider) {
 }
 
 // datepicker
-//=include '../partials/plugin-datepicker-config.js'
+////=include '../partials/plugin-datepicker-config.js'
 
 // swipe discover
 //=include '../partials/discover-swipe.js'
@@ -43,3 +43,13 @@ if(!!slider) {
 
 // emoji picker
 //=include '../partials/emoji.js'
+
+//datepicker
+$('.js-datepicker').datepicker({
+	// format: 'yyyy/mm/dd',
+	format: 'dd M yyyy',
+	container: '#js-datepicker-container',
+	autoclose: true,
+	zIndexOffset: 8,
+	endDate: '0d'
+});    
